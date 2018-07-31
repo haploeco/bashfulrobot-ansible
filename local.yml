@@ -7,19 +7,23 @@
   ### Add APT Repos
   # Kind of a chicken/egg issue with needing
   # ansible-pull to run this script.
-  - apt_repository:
-      repo: ppa:ansible/ansible
-      state: present
+  - name: Add Repositories
+    apt_repository: repo={{item}} update_cache=yes
+    with_items:
+      - ppa:ansible/ansible
+      - ppa:ubuntubudgie/backports
+    state: present
 
   ### Install APT Packages
   - name: Install APT Packages
-    apt: name={{item}}
+    apt: name={{item}} state=present update_cache=yes
     with_items:
       - git
       - ncdu
       - tmux
       - openssh-server
       - fish
+      - ubuntu-restricted-extras
 
   ### Remove APT Packages
   - name: Remove APT Packages
