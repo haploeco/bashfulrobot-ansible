@@ -2,18 +2,14 @@
   become: true
   tasks:
   
+
+  
   ### Add APT Repos
   # Kind of a chicken/egg issue with needing
   # ansible-pull to run this script.
   - apt_repository:
       repo: ppa:ansible/ansible
       state: present
-
-  ### Add my github pub key to the server
-  - name: Install SSH Pub keys
-    authorized_key: user=dustin key=https://github.com/{{item}}.keys
-    with_items:
-      - bashfulrobot
 
   ### Install APT Packages
   - name: Install APT Packages
@@ -23,6 +19,7 @@
       - ncdu
       - tmux
       - openssh-server
+      - fish
 
   ### Install Snap Packages
   - name: Install Snap Packages
@@ -36,3 +33,19 @@
     command: snap install {{item}} --classic
     with_items:
       - vscode
+
+    ### Add my user
+  - name: Add Dustin user
+    user:
+      name: dustin
+      comment: Dustin Krysak
+      # shell: /usr/bin/fish
+      shell: /bin/bash
+      groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare
+      append: yes
+      
+  ### Add my github pub key to the server
+  - name: Install SSH Pub keys
+    authorized_key: user=dustin key=https://github.com/{{item}}.keys
+    with_items:
+      - bashfulrobot
