@@ -16,6 +16,7 @@
     command: snap install {{item}}
     with_items:
       - firefox
+      - qownnotes
 
   # Install Classic Snap Packages
   - name: Install Classic Snap Packages
