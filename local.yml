@@ -2,7 +2,20 @@
   become: true
   tasks:
   
-  # Install APT Packages
+  ### Add APT Repos
+  # Kind of a chicken/egg issue with needing
+  # ansible-pull to run this script.
+  - apt_repository:
+    repo: ppa:ansible/ansible
+    state: present
+
+  ### Add my github pub key to the server
+  - name: Install SSH Pub keys
+    authorized_key: user=dustin key=https://github.com/{{item}}.keys
+    with_items:
+      - bashfulrobot
+
+  ### Install APT Packages
   - name: Install APT Packages
     apt: name={{item}}
     with_items:
@@ -11,14 +24,14 @@
       - tmux
       - openssh-server
 
-  # Install Snap Packages
+  ### Install Snap Packages
   - name: Install Snap Packages
     command: snap install {{item}}
     with_items:
       - firefox
       - qownnotes
 
-  # Install Classic Snap Packages
+  ### Install Classic Snap Packages
   - name: Install Classic Snap Packages
     command: snap install {{item}} --classic
     with_items:
