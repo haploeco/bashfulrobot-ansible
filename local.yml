@@ -21,6 +21,13 @@
       - openssh-server
       - fish
 
+  ### Remove APT Packages
+  - name: Remove APT Packages
+    apt: name={{item}}
+    with_items:
+      - chromium*
+    state: absent
+
   ### Install Snap Packages
   - name: Install Snap Packages
     command: snap install {{item}}
