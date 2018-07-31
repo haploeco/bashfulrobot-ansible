@@ -14,6 +14,12 @@
       - ppa:ubuntubudgie/backports
     state: present
 
+  ### Initial Update
+  - name: Updating Base System
+    apt:
+      upgrade: yes
+      update_cache: yes
+
   ### Install APT Packages
   - name: Install APT Packages
     apt: name={{item}} state=present update_cache=yes
