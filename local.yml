@@ -26,6 +26,7 @@
     apt: name={{item}}
     with_items:
       - chromium*
+      - geary
     state: absent
 
   ### Install Snap Packages
@@ -34,6 +35,7 @@
     with_items:
       - firefox
       - qownnotes
+      - hiri
 
   ### Install Classic Snap Packages
   - name: Install Classic Snap Packages
