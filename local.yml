@@ -6,8 +6,8 @@
   # Kind of a chicken/egg issue with needing
   # ansible-pull to run this script.
   - apt_repository:
-    repo: ppa:ansible/ansible
-    state: present
+      repo: ppa:ansible/ansible
+      state: present
 
   ### Add my github pub key to the server
   - name: Install SSH Pub keys
