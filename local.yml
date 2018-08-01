@@ -32,6 +32,7 @@
       - fish
       - ubuntu-restricted-extras
       - seafile-gui
+      - debconf-utils
 
   ### Remove APT Packages
   - name: Remove APT Packages
