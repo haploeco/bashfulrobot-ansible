@@ -12,7 +12,7 @@
     with_items:
       - ppa:ansible/ansible
       - ppa:ubuntubudgie/backports
-    #state: present
+    state: present
 
   ### Initial Update
   - name: Updating Base System
@@ -22,7 +22,9 @@
 
   ### Install APT Packages
   - name: Install APT Packages
-    apt: name={{item}} state=present update_cache=yes
+    apt: name={{item}}
+    state: present
+    update_cache: yes
     with_items:
       - git
       - ncdu
