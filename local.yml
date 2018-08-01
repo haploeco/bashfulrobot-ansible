@@ -22,9 +22,7 @@
 
   ### Install APT Packages
   - name: Install APT Packages
-    apt: name={{item}}
-    state: present
-    update_cache: yes
+    apt: name={{item}}state=present update_cache=yes
     with_items:
       - git
       - ncdu
