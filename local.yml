@@ -66,6 +66,15 @@
       - restic
       - snapcraft
 
+  ### Remmina Snap CFG
+  - name: Remmina Snap CFG
+    command: sudo snap connect remmina:{{item}} :{{item}}
+    with_items:
+      - avahi-observe
+      - cups-control
+      - mount-observe
+      - password-manager-service
+
     ### Add my user
   - name: Add Dustin user
     user:
