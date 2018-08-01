@@ -12,6 +12,7 @@
     with_items:
       - ppa:ansible/ansible
       - ppa:ubuntubudgie/backports
+      - ppa:seafile/seafile-client
     state: present
 
   ### Initial Update
@@ -30,6 +31,7 @@
       - openssh-server
       - fish
       - ubuntu-restricted-extras
+      - seafile-gui
 
   ### Remove APT Packages
   - name: Remove APT Packages
