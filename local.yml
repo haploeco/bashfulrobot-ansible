@@ -8,41 +8,54 @@
   # Kind of a chicken/egg issue with needing
   # ansible-pull to run this script.
   - name: Add Repositories
-    apt_repository: repo={{item}} update_cache=yes
-    with_items:
-      - ppa:ansible/ansible
-      - ppa:ubuntubudgie/backports
-      - ppa:seafile/seafile-client
-    state: present
+    apt_repository:
+      repo: {{item}}
+      update_cache: yes
+      with_items:
+        - ppa:ansible/ansible
+        - ppa:ubuntubudgie/backports
+        - ppa:seafile/seafile-client
+      state: present
 
   ### Initial Update
   - name: Updating Base System
     apt:
-      upgrade: dist
       update_cache: yes
+      upgrade: dist
 
   ### Install APT Packages
   - name: Install APT Packages
-    apt: name={{item}} state=present update_cache=yes
-    with_items:
-      - git
-      - xclip
-      - ncdu
-      - tmux
-      - openssh-server
-      - fish
-      - ubuntu-restricted-extras
-      - seafile-gui
-      - debconf-utils
+    apt:
+      name: {{item}}
+      state: present
+      update_cache: yes
+      with_items:
+        - git
+        - xclip
+        - ncdu
+        - tmux
+        - openssh-server
+        - fish
+        - ubuntu-restricted-extras
+        - seafile-gui
+        - debconf-utils
 
   ### Remove APT Packages
   - name: Remove APT Packages
-    apt: name={{item}}
-    with_items:
-      - chromium-*
-      - geary
-      - libreoffice-*
-    state: absent
+    apt:
+      name: {{item}}
+      with_items:
+        - chromium-*
+        - geary
+        - libreoffice-*
+      state: absent
+
+  ### Clean out unwanted apt stuff
+  - name: Autoremove and Purge APT Packages
+    apt:
+      autoremove: yes
+      autoclean: yes
+      purge: yes
 
   ### Install Snap Packages
   - name: Install Snap Packages
@@ -89,6 +102,8 @@
       
   ### Add my github pub key to the server
   - name: Install SSH Pub keys
-    authorized_key: user=dustin key=https://github.com/{{item}}.keys
-    with_items:
-      - bashfulrobot
+    authorized_key:
+      user: dustin
+      key: https://github.com/{{item}}.keys
+      with_items:
+        - bashfulrobot
