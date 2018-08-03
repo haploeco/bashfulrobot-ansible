@@ -39,12 +39,14 @@
 
   ### Remove APT Packages
   - name: Remove APT Packages
-    apt: name="{{ item }}"
-    with_items:
-      - chromium-*
-      - geary
-      - libreoffice-*
-    state: absent
+    apt:
+      name: "{{ rempckages }}"
+      state: absent
+    vars:
+      rempackages:
+        - chromium-*
+        - geary
+        - libreoffice-*
 
   ### Clean out unwanted apt stuff
   - name: Autoremove and Purge APT Packages
