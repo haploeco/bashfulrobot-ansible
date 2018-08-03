@@ -18,7 +18,7 @@
   ### Initial Update
   - name: Updating Base System
     apt:
-      upgrade: yes
+      upgrade: dist
       update_cache: yes
 
   ### Install APT Packages
