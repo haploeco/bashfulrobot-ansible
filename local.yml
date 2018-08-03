@@ -98,11 +98,11 @@
       append: yes
       
   ### Add my github pub key to the server
-  - name: Install SSH Pub keys
+  - name: Install GH SSH Pub keys
     authorized_key:
       user: dustin
       state: present
-      key: "{{ sshkeys }}" 
+      key: https://github.com/{{ sshkeys }}.keys"
     vars:
       sshkeys:
-        - https://github.com/bashfulrobot.keys
+        - bashfulrobot
