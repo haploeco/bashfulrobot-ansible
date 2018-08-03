@@ -26,6 +26,7 @@
     apt: name={{item}} state=present update_cache=yes
     with_items:
       - git
+      - xclip
       - ncdu
       - tmux
       - openssh-server
@@ -38,9 +39,9 @@
   - name: Remove APT Packages
     apt: name={{item}}
     with_items:
-      - chromium*
+      - chromium-*
       - geary
-      - libreoffice*
+      - libreoffice-*
     state: absent
 
   ### Install Snap Packages
