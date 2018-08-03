@@ -101,6 +101,8 @@
   - name: Install SSH Pub keys
     authorized_key:
       user: dustin
-      key: https://github.com/"{{ item }}".keys
-      with_items:
-        - bashfulrobot
+      state: present
+      key: "{{ sshkeys }}" 
+    vars:
+      sshkeys:
+        - https://github.com/bashfulrobot.keys
