@@ -40,7 +40,7 @@
   ### Remove APT Packages
   - name: Remove APT Packages
     apt:
-      name: "{{ rempckages }}"
+      name: "{{ rempackages }}"
       state: absent
     vars:
       rempackages:
