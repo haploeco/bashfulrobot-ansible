@@ -52,7 +52,6 @@
   - name: Autoremove and Purge APT Packages
     apt:
       autoremove: yes
-      autoclean: yes
       purge: yes
 
   ### Install Snap Packages
