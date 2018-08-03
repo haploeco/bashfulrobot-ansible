@@ -70,7 +70,7 @@
 
   ### Remmina Snap CFG
   - name: Remmina Snap CFG
-    command: sudo snap connect remmina:{{item}} :{{item}}
+    command: snap connect remmina:{{item}} :{{item}}
     with_items:
       - avahi-observe
       - cups-control
