@@ -9,7 +9,7 @@
   # ansible-pull to run this script.
   - name: Add Repositories
     apt_repository:
-      repo: {{item}}
+      repo: "{{ item }}"
       update_cache: yes
       with_items:
         - ppa:ansible/ansible
@@ -26,7 +26,7 @@
   ### Install APT Packages
   - name: Install APT Packages
     apt:
-      name: {{item}}
+      name: "{{ item }}"
       state: present
       update_cache: yes
       with_items:
@@ -43,7 +43,7 @@
   ### Remove APT Packages
   - name: Remove APT Packages
     apt:
-      name: {{item}}
+      name: "{{ item }}"
       with_items:
         - chromium-*
         - geary
@@ -59,7 +59,7 @@
 
   ### Install Snap Packages
   - name: Install Snap Packages
-    command: snap install {{item}}
+    command: snap install "{{ item }}"
     with_items:
       - firefox
       - qownnotes
@@ -74,7 +74,7 @@
 
   ### Install Classic Snap Packages
   - name: Install Classic Snap Packages
-    command: snap install {{item}} --classic
+    command: snap install "{{ item }}" --classic
     with_items:
       - vscode
       - go
@@ -83,7 +83,7 @@
 
   ### Remmina Snap CFG
   - name: Remmina Snap CFG
-    command: snap connect remmina:{{item}} :{{item}}
+    command: snap connect remmina:"{{ item }}" :"{{ item }}"
     with_items:
       - avahi-observe
       - cups-control
@@ -104,6 +104,6 @@
   - name: Install SSH Pub keys
     authorized_key:
       user: dustin
-      key: https://github.com/{{item}}.keys
+      key: https://github.com/"{{ item }}".keys
       with_items:
         - bashfulrobot
