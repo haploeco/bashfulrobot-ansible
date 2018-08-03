@@ -102,6 +102,6 @@
     authorized_key:
       user: dustin
       state: present
-      key: https://github.com/{{item}}.keys"
+      key: https://github.com/{{item}}.keys
     with_items:
         - bashfulrobot
