@@ -23,20 +23,19 @@
 
   ### Install APT Packages
   - name: Install APT Packages
-    apt:
-      name: "{{ item }}"
-      state: present
-      update_cache: yes
-      with_items:
-        - git
-        - xclip
-        - ncdu
-        - tmux
-        - openssh-server
-        - fish
-        - ubuntu-restricted-extras
-        - seafile-gui
-        - debconf-utils
+    apt: name="{{ item }}"
+    state: present
+    update_cache: yes
+    with_items:
+      - git
+      - xclip
+      - ncdu
+      - tmux
+      - openssh-server
+      - fish
+      - ubuntu-restricted-extras
+      - seafile-gui
+      - debconf-utils
 
   ### Remove APT Packages
   - name: Remove APT Packages
