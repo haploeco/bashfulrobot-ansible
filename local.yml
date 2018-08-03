@@ -8,14 +8,12 @@
   # Kind of a chicken/egg issue with needing
   # ansible-pull to run this script.
   - name: Add Repositories
-    apt_repository:
-      repo: "{{ item }}"
-      update_cache: yes
-      with_items:
-        - ppa:ansible/ansible
-        - ppa:ubuntubudgie/backports
-        - ppa:seafile/seafile-client
-      state: present
+    apt_repository: repo="{{ item }}" update_cache=yes
+    with_items:
+      - ppa:ansible/ansible
+      - ppa:ubuntubudgie/backports
+      - ppa:seafile/seafile-client
+    state: present
 
   ### Initial Update
   - name: Updating Base System
