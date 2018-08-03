@@ -102,7 +102,7 @@
     authorized_key:
       user: dustin
       state: present
-      key: https://github.com/{{ sshkeys }}.keys"
+      key: https://github.com/{{sshkeys}}.keys"
     vars:
       sshkeys:
         - bashfulrobot
