@@ -36,6 +36,7 @@
       - ubuntu-restricted-extras
       - seafile-gui
       - debconf-utils
+      - lftp
 
   ### Remove APT Packages
   - name: Remove APT Packages
