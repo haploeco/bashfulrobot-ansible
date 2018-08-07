@@ -14,6 +14,7 @@
     - seafile-gui
     - debconf-utils
     - lftp
+    - htop
 
 ### Remove APT Packages
 - name: Remove APT Packages
