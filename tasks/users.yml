@@ -19,8 +19,10 @@
 
 ### Passwwordless commands
 - name: Copy sudoers_ansible_pull
-  copy: src=files/sudoers_ansible_pull dest=/etc/sudoers.d/ansible_pull owner=root group=root mode=0440
-
-### Fix new line bug in Ansible copy
-- name: Fix new-line issue 
-  replace: dest=/etc/sudoers.d/ansible_pull regexp='^\n' replace=''
+  copy:
+    src: files/sudoers_ansible_pull
+    dest: /etc/sudoers.d/ansible_pull
+    owner: root
+    group: root
+    mode: 0440
+    validate: /usr/sbin/visudo -cf %s
