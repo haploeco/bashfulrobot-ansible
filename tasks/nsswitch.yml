@@ -2,5 +2,6 @@
   lineinfile:
     path: /etc/nsswitch.conf
     regexp: '^hosts\s'
+    state: present
     line: 'hosts:          files dns'
   become: true
