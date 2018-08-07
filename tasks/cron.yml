@@ -1,0 +1,2 @@
+- name: Install cron jobs
+  cron: user="dustin" name="Ansible provision" minute="*/10" job="/usr/bin/ansible-pull -o -U https://github.com/bashfulrobot/bashfulrobot-ansible.git > /dev/null"
