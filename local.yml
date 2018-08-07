@@ -1,108 +1,20 @@
 - hosts: localhost
   become: true
+
+  pre_tasks:
+    - name: Update Repositories
+      apt: update_cache=yes
+      # This line on an individual task stops Ansible from reporting the results of the play as changed even when it results in a change in the system. In this case, we don't care if the repository index contains new data; it almost always will, since repositories are always changing. We don't care about changes to apt repositories, as index changes are par for the course. If we omit this line, we'll see the summary at the end of the process report that something has changed, even if it was merely about the repository being updated. It's better to ignore these types of changes.
+      changed_when: False
+  
   tasks:
-  
-
-  
-  ### Add APT Repos
-  # Kind of a chicken/egg issue with needing
-  # ansible-pull to run this script.
-  - name: Add Repositories
-    apt_repository: repo="{{ item }}" update_cache=yes
-    with_items:
-      - ppa:ansible/ansible
-      - ppa:ubuntubudgie/backports
-      - ppa:seafile/seafile-client
-    state: present
-
-  ### Initial Update
-  - name: Updating Base System
-    apt:
-      update_cache: yes
-      upgrade: dist
-
-  ### Install APT Packages
-  - name: Install APT Packages
-    apt:
-      name: "{{ packages }}"
-    vars:
-      packages:
-      - git
-      - xclip
-      - ncdu
-      - tmux
-      - openssh-server
-      - fish
-      - ubuntu-restricted-extras
-      - seafile-gui
-      - debconf-utils
-      - lftp
-
-  ### Remove APT Packages
-  - name: Remove APT Packages
-    apt:
-      name: "{{ rempackages }}"
-      state: absent
-    vars:
-      rempackages:
-        - chromium-*
-        - geary
-        - libreoffice-*
-
-  ### Clean out unwanted apt stuff
-  - name: Autoremove and Purge APT Packages
-    apt:
-      autoremove: yes
-      purge: yes
-
-  ### Install Snap Packages
-  - name: Install Snap Packages
-    command: snap install "{{ item }}"
-    with_items:
-      - firefox
-      - qownnotes
-      - hiri
-      - irccloud-desktop
-      - hugo
-      - libreoffice
-      - remmina
-      - spotify
-      - lxd
-      - telegram-desktop
-
-  ### Install Classic Snap Packages
-  - name: Install Classic Snap Packages
-    command: snap install "{{ item }}" --classic
-    with_items:
-      - vscode
-      - go
-      - restic
-      - snapcraft
-
-  ### Remmina Snap CFG
-  - name: Remmina Snap CFG
-    command: snap connect remmina:"{{ item }}" :"{{ item }}"
-    with_items:
-      - avahi-observe
-      - cups-control
-      - mount-observe
-      - password-manager-service
-
-    ### Add my user
-  - name: Add Dustin user
-    user:
-      name: dustin
-      comment: Dustin Krysak
-      # shell: /usr/bin/fish
-      shell: /bin/bash
-      groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare
-      append: yes
-      
-  ### Add my github pub key to the server
-  - name: Install GH SSH Pub keys
-    authorized_key:
-      user: dustin
-      state: present
-      key: https://github.com/{{item}}.keys
-    with_items:
-        - bashfulrobot
+    # Add APT repos
+    - include: tasks/repos.yml
+    # Update the system
+    - include: tasks/update-system.yml
+    # Install/remove APT packages
+    - include: tasks/apt.yml
+    # Install/remove SNAP packages
+    - include: tasks/snap.yml
+    # Manage system users
+    - include: tasks/users.yml

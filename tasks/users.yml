@@ -1,0 +1,18 @@
+  ### Add my user
+- name: Add Dustin user
+  user:
+    name: dustin
+    comment: Dustin Krysak
+    # shell: /usr/bin/fish
+    shell: /bin/bash
+    groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare
+    append: yes
+    
+### Add my github pub key to the server
+- name: Install GH SSH Pub keys
+  authorized_key:
+    user: dustin
+    state: present
+    key: https://github.com/{{item}}.keys
+  with_items:
+      - bashfulrobot

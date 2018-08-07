@@ -1,0 +1,33 @@
+### Install APT Packages
+- name: Install APT Packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - git
+    - xclip
+    - ncdu
+    - tmux
+    - openssh-server
+    - fish
+    - ubuntu-restricted-extras
+    - seafile-gui
+    - debconf-utils
+    - lftp
+
+### Remove APT Packages
+- name: Remove APT Packages
+  apt:
+    name: "{{ rempackages }}"
+    state: absent
+  vars:
+    rempackages:
+      - chromium-*
+      - geary
+      - libreoffice-*
+
+### Clean out unwanted apt stuff
+- name: Autoremove and Purge APT Packages
+  apt:
+    autoremove: yes
+    purge: yes
