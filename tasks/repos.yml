@@ -1,10 +1,10 @@
-  ### Add APT Repos
-  # Kind of a chicken/egg issue with needing
-  # ansible-pull to run this script.
-  - name: Add Repositories
-    apt_repository: repo="{{ item }}" update_cache=yes
-    with_items:
-      - ppa:ansible/ansible
-      - ppa:ubuntubudgie/backports
-      - ppa:seafile/seafile-client
-    state: present
+### Add APT Repos
+# Incorrect type. Expected "object".
+# VSCODE - reports the above, but works fine.
+- name: Add Repositories
+  apt_repository: repo="{{ item }}" update_cache=yes
+  with_items:
+    - ppa:ansible/ansible
+    - ppa:ubuntubudgie/backports
+    - ppa:seafile/seafile-client
+  state: present
