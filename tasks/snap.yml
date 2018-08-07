@@ -21,6 +21,7 @@
     - go
     - restic
     - snapcraft
+    - hiri
 
 ### Remmina Snap CFG
 - name: Remmina Snap CFG
