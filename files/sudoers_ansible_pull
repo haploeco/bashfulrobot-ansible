@@ -1,1 +1,1 @@
-dustin ALL=(ALL) NOPASSWD:/usr/bin/ansible-pull
+dustin ALL=(ALL) NOPASSWD: /usr/bin/ansible-pull
