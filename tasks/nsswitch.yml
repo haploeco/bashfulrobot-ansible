@@ -1,7 +1,8 @@
 - name: Fixing .local Name Resolution - Ubuntu
   lineinfile:
     path: /etc/nsswitch.conf
-    regexp: '^hosts\s'
+    regex: '^(.*)hosts:(.*)$'
+    # regexp: '^hosts\s'
     state: present
     line: 'hosts:          files dns'
   become: true
