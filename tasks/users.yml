@@ -16,3 +16,7 @@
     key: https://github.com/{{item}}.keys
   with_items:
       - bashfulrobot
+
+### Passwwordless commands
+- name: Copy sudoers_ansible_pull
+  copy: src=files/sudoers_ansible_pull dest=/etc/sudoers.d/ansible_pull owner=root group=root mode=0440
