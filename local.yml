@@ -18,5 +18,7 @@
     - include: tasks/snap.yml
     # Manage system users
     - include: tasks/users.yml
+    # Sudo settings
+    - include: tasks/sudoers.yml
     # Manage cron jobs
     - include: tasks/cron.yml

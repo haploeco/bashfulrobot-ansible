@@ -1,1 +1,0 @@
-dustin ALL=(ALL) NOPASSWD: /usr/bin/ansible-pull
