@@ -22,3 +22,5 @@
     - include: tasks/sudoers.yml
     # Manage cron jobs
     - include: tasks/cron.yml
+    # Fix .local Ubuntu name resolutuion
+    - include: tasks/nsswitch.yml

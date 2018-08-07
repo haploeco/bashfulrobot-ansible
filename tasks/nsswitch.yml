@@ -1,0 +1,6 @@
+- name: Fixing .local Name Resolution - Ubuntu
+  lineinfile:
+    path: /etc/nsswitch.conf
+    state: present
+    regexp: '^hosts\s'
+    line: 'hosts:          files dns'
