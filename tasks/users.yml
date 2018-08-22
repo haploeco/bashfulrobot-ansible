@@ -24,7 +24,18 @@
     recurse: yes
     owner: dustin
     group: dustin
+    mode: 0700
+  file:
+    path: "{{ myhome }}.ssh/id_rsa"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
     mode: 0600
+  file:
+    path: "{{ myhome }}.ssh/id_rsa.pub"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0600
+
 
 ### Add SSH Authorized Key
 - name: Adding SSH Authorized Keys
