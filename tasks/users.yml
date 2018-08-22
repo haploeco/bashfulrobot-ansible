@@ -19,6 +19,7 @@
 
 ### Fix SSH key Permissions
 - name: Fixing SSH Key Permissions
+  become: yes
   file:
     path: /home/dustin/.ssh/
     recurse: yes
