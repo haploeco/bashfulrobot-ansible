@@ -13,6 +13,7 @@
     - lxd
     - telegram-desktop
     - opera
+    - simplescreenrecorder
 
 ### Install Classic Snap Packages
 - name: Install Classic Snap Packages
