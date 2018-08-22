@@ -22,18 +22,18 @@
   file:
     path: /home/dustin/.ssh/
     recurse: yes
-    owner: dustin
-    group: dustin
+    owner: "dustin"
+    group: "dustin"
     mode: 0700
   file:
-    path: "{{ myhome }}.ssh/id_rsa"
-    owner: "{{ myusername }}"
-    group: "{{ myusername }}"
+    path: "/home/dustin/.ssh/id_rsa"
+    owner: "dustin"
+    group: "dustin"
     mode: 0600
   file:
-    path: "{{ myhome }}.ssh/id_rsa.pub"
-    owner: "{{ myusername }}"
-    group: "{{ myusername }}"
+    path: "/home/dustin/.ssh/id_rsa.pub"
+    owner: "dustin"
+    group: "dustin"
     mode: 0600
 
 
