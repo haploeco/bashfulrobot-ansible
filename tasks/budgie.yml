@@ -6,12 +6,17 @@
 - name: Copy Default Wallpaper
   copy:
     src: files/Rubiks-HDPI.jpg
-    dest: "{{ myhome }}.wallpaper.jpg"
+    dest: "{{ myhome }}Pictures/wallpaper.jpg"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 700
+    mode: 775
 # Set Wallpaper
-# - name: Set Default Wallpaper
-#   dconf:
-#     key: "/org/gnome/desktop/background/picture-uri"
-#     value: "'file://{{ myhome }}.wallpaper.jpg'"
+- name: Set Default Wallpaper
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file://{{ myhome }}Picures/wallpaper.jpg'"
+# Set Lockscreen
+- name: Set Default Lockscreen Wallpaper
+  dconf:
+    key: "/org/gnome/desktop/screensaver/picture-uri"
+    value: "'file://{{ myhome }}Picures/wallpaper.jpg'"
