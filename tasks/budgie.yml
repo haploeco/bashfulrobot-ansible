@@ -6,9 +6,9 @@
 - name: Copy Default Wallpaper
   copy:
     src: files/Rubiks-HDPI.jpg
-    dest: {{ myhome }}.wallpaper.jpg
-    owner: {{ myusername }}
-    group: {{ myusername }}
+    dest: "{{ myhome }}".wallpaper.jpg
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
     mode: 600
 # Set Wallpaper
 - name: Set Default Wallpaper
