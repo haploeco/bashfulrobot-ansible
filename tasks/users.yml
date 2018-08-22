@@ -32,8 +32,8 @@
     mode: 0600
   file:
     path: "/home/dustin/.ssh/id_rsa.pub"
-    owner: "dustin"
-    group: "dustin"
+    owner: "{{  myusername }}"
+    group: "{{ myusername }}"
     mode: 0600
 
 
