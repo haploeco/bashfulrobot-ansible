@@ -25,3 +25,9 @@
     owner: dustin
     group: dustin
     mode: 0600
+
+### Add SSH Authorized Key
+- name: Adding SSH Authorized Keys
+  shell: |
+    eval "$(ssh-agent)"
+    ssh-add ~/.ssh/id_rsa
