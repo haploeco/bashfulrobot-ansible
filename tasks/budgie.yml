@@ -11,7 +11,7 @@
     group: "{{ myusername }}"
     mode: 700
 # Set Wallpaper
-- name: Set Default Wallpaper
-  dconf:
-    key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file://{{ myhome }}.wallpaper.jpg'"
+# - name: Set Default Wallpaper
+#   dconf:
+#     key: "/org/gnome/desktop/background/picture-uri"
+#     value: "'file://{{ myhome }}.wallpaper.jpg'"
