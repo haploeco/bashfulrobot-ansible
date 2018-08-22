@@ -16,3 +16,12 @@
     key: https://github.com/{{item}}.keys
   with_items:
       - bashfulrobot
+
+### Fix SSH key Permissions
+- name: Fixing SSH Key Permissions
+  file:
+    path: /home/dustin/.ssh/
+    recurse: yes
+    owner: dustin
+    group: dustin
+    mode: 0600
