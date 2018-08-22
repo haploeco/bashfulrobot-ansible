@@ -1,4 +1,4 @@
-- name: Fixing .local Name Resolution - Ubuntu
+#- name: Fixing .local Name Resolution - Ubuntu
   # lineinfile:
   #   path: /etc/nsswitch.conf
   #   regex: '^(.*)hosts:(.*)$\s'
