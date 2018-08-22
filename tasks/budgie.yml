@@ -9,7 +9,7 @@
     dest: "{{ myhome }}.wallpaper.jpg"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 600
+    mode: 700
 # Set Wallpaper
 - name: Set Default Wallpaper
   dconf:
