@@ -1,5 +1,8 @@
 - hosts: localhost
   become: true
+  vars:
+    myusername: dustin
+    myhome: /home/dustin/
 
   pre_tasks:
     - name: Update Repositories
@@ -23,4 +26,6 @@
     # Manage cron jobs
     - include: tasks/cron.yml
     # Fix .local Ubuntu name resolutuion
-    - include: tasks/nsswitch.yml
+    #- include: tasks/nsswitch.yml
+    # Set Budgie Desktop Gsettings
+    - include: tasks/budgie.yml
