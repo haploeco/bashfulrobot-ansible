@@ -12,7 +12,6 @@
     - spotify
     - lxd
     - telegram-desktop
-    - opera
 
 ### Install Classic Snap Packages
 - name: Install Classic Snap Packages
