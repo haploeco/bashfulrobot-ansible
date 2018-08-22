@@ -13,12 +13,14 @@
 # Set Wallpaper
 - name: Set Default Wallpaper
   dconf:
+    user: "{{ myusername }}"
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///home/dustin/Picures/wallpaper.jpg'"
     state: present
 # Set Lockscreen
 - name: Set Default Lockscreen Wallpaper
   dconf:
+    user: "{{ myusername }}"
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///home/dustin/Picures/wallpaper.jpg'"
     state: present
