@@ -17,7 +17,7 @@
   with_items:
       - bashfulrobot
 
-### Fix SSH key Permissions
+### Fix SSH Folder key Permissions
 - name: Fixing SSH Key Permissions
   become: yes
   file:
@@ -26,16 +26,25 @@
     owner: "dustin"
     group: "dustin"
     mode: 0700
+
+### Fix SSH key Permissions
+- name: Fixing SSH Key Permissions
+  become: yes
   file:
     path: "/home/dustin/.ssh/id_rsa"
     owner: "dustin"
     group: "dustin"
     mode: 0600
+
+### Fix SSH pub key Permissions
+- name: Fixing SSH Key Permissions
+  become: yes
   file:
     path: "/home/dustin/.ssh/id_rsa.pub"
     owner: "{{  myusername }}"
     group: "{{ myusername }}"
     mode: 0600
+
 
 
 ### Add SSH Authorized Key
