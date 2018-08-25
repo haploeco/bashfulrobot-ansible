@@ -22,3 +22,4 @@
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///home/dustin/Picures/wallpaper.jpg'"
     state: present
+# WIP
