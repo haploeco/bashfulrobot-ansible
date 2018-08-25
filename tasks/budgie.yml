@@ -10,7 +10,7 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 775
-# Set Wallpaper
+### Set Wallpaper
 - name: Set Default Wallpaper
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
