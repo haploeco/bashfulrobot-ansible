@@ -28,4 +28,4 @@
     # Fix .local Ubuntu name resolutuion
     #- include: tasks/nsswitch.yml
     # Set Budgie Desktop Gsettings
-    - include: tasks/budgie.yml
+    - include: tasks/dconf.yml
