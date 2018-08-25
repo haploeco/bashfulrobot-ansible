@@ -1,7 +1,11 @@
 ### Needed for dconf
 - name: Install psutils python-psutil package
   apt:
-    name: python-psutil psutils
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - python-psutil
+    - psutils
 ### Set default Wallpaper
 - name: Copy Default Wallpaper
   copy:
