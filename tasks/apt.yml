@@ -15,6 +15,7 @@
     - debconf-utils
     - lftp
     - htop
+    - deluge-gtk
 
 ### Remove APT Packages
 - name: Remove APT Packages
