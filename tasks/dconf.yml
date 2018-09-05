@@ -71,14 +71,6 @@
     value: "'<Super>space'"
     state: present
 
-- name: Changing Run Application Keyboard Shortcut
-  become: true
-  become_user: "dustin"
-  dconf:
-    key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
-    value: "'<Super>space'"
-    state: present
-
 ### Change Touchpad Scroll Direction
 - name: Changing Run Application Keyboard Shortcut
   become: true
