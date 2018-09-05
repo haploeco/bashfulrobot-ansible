@@ -26,6 +26,7 @@
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
+    state: present
 
 ### Set Lockscreen
 - name: Set Default Lockscreen Wallpaper
@@ -34,3 +35,4 @@
   dconf:
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
+    state: present
