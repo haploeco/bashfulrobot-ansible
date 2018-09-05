@@ -36,3 +36,12 @@
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
     state: present
+
+### Enable Nightlight
+- name: Enable Nightlight
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "'true'"
+    state: present

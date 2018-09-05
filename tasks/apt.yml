@@ -30,6 +30,7 @@
       - chromium-*
       - geary
       - libreoffice-*
+      - plank
 
 ### Clean out unwanted apt stuff
 - name: Autoremove and Purge APT Packages

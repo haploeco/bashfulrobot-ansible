@@ -1,24 +1,103 @@
-[net/launchpad/plank/docks/dock1]
-icon-size=32
-show-dock-item=false
-position='left'
-dock-items=['org.gnome.Nautilus.dockitem', 'com.gexperts.Tilix.dockitem', 'firefox_firefox.dockitem', 'opera_opera.dockitem']
-unhide-delay=0
-items-alignment='center'
-theme='Gtk+'
-hide-mode='dodge-maximized'
-pinned-only=false
-auto-pinning=true
+[com/github/cybre/budgie-screenshot-applet/{c0594f8e-b149-11e8-b3ff-548ca0a413c9}]
+save-path='~/Pictures/Screenshots'
+upload-provider='0x0'
+
+[com/solus-project/budgie-panel]
+dark-theme=true
+migration-level=1
+panels=['ff805230-9a82-11e8-ac5e-23b5427f3c19']
+
+[com/solus-project/budgie-panel/panels/{ff805230-9a82-11e8-ac5e-23b5427f3c19}]
+size=39
+location='top'
+applets=['ff805234-9a82-11e8-ac5e-23b5427f3c19', 'c0594f8e-b149-11e8-b3ff-548ca0a413c9', 'e5dabbd0-b149-11e8-b3ff-548ca0a413c9', 'ff805232-9a82-11e8-ac5e-23b5427f3c19', 'ff805231-9a82-11e8-ac5e-23b5427f3c19', 'ff805239-9a82-11e8-ac5e-23b5427f3c19', 'ff80523f-9a82-11e8-ac5e-23b5427f3c19', '13fd4efc-b149-11e8-b3ff-548ca0a413c9', '43abbc7e-b149-11e8-b3ff-548ca0a413c9', 'ff80523e-9a82-11e8-ac5e-23b5427f3c19', 'ff805241-9a82-11e8-ac5e-23b5427f3c19', 'ff80523d-9a82-11e8-ac5e-23b5427f3c19', 'ff805235-9a82-11e8-ac5e-23b5427f3c19', 'ff805236-9a82-11e8-ac5e-23b5427f3c19', 'ff805240-9a82-11e8-ac5e-23b5427f3c19', 'ff80523c-9a82-11e8-ac5e-23b5427f3c19']
+transparency='dynamic'
+
+[com/solus-project/budgie-panel/applets/{ff80523f-9a82-11e8-ac5e-23b5427f3c19}]
+position=10
+alignment='end'
+name='Spacer'
+
+[com/solus-project/budgie-panel/applets/{ff805240-9a82-11e8-ac5e-23b5427f3c19}]
+position=11
+alignment='end'
+name='User Indicator'
+
+[com/solus-project/budgie-panel/applets/{ff80523d-9a82-11e8-ac5e-23b5427f3c19}]
+position=8
+alignment='end'
+name='Status Indicator'
+
+[com/solus-project/budgie-panel/applets/{ff805234-9a82-11e8-ac5e-23b5427f3c19}]
+position=0
 alignment='center'
-zoom-percent=150
-hide-delay=500
-zoom-enabled=false
-monitor=''
-lock-items=false
-tooltips-enabled=true
-pressure-reveal=false
-offset=0
-current-workspace-only=false
+name='Clock'
+
+[com/solus-project/budgie-panel/applets/{c0594f8e-b149-11e8-b3ff-548ca0a413c9}]
+position=3
+alignment='end'
+name='Screenshot'
+
+[com/solus-project/budgie-panel/applets/{ff805236-9a82-11e8-ac5e-23b5427f3c19}]
+position=2
+alignment='end'
+name='System Tray'
+
+[com/solus-project/budgie-panel/applets/{ff805232-9a82-11e8-ac5e-23b5427f3c19}]
+position=1
+alignment='start'
+name='Spacer'
+
+[com/solus-project/budgie-panel/applets/{13fd4efc-b149-11e8-b3ff-548ca0a413c9}]
+position=0
+alignment='end'
+name='DropBy'
+
+[com/solus-project/budgie-panel/applets/{e5dabbd0-b149-11e8-b3ff-548ca0a413c9}]
+position=1
+alignment='center'
+name='ShowTime'
+
+[com/solus-project/budgie-panel/applets/{ff805241-9a82-11e8-ac5e-23b5427f3c19}]
+position=12
+alignment='end'
+name='Raven Trigger'
+
+[com/solus-project/budgie-panel/applets/{ff805239-9a82-11e8-ac5e-23b5427f3c19}]
+position=6
+alignment='end'
+name='Spacer'
+
+[com/solus-project/budgie-panel/applets/{ff80523e-9a82-11e8-ac5e-23b5427f3c19}]
+position=9
+alignment='end'
+name='Separator'
+
+[com/solus-project/budgie-panel/applets/{ff80523c-9a82-11e8-ac5e-23b5427f3c19}]
+position=7
+alignment='end'
+name='Notifications'
+
+[com/solus-project/budgie-panel/applets/{43abbc7e-b149-11e8-b3ff-548ca0a413c9}]
+position=2
+alignment='start'
+name='Kangaroo'
+
+[com/solus-project/budgie-panel/applets/{ff805235-9a82-11e8-ac5e-23b5427f3c19}]
+position=1
+alignment='end'
+name='AppIndicator Applet'
+
+[com/solus-project/budgie-panel/applets/{ff805231-9a82-11e8-ac5e-23b5427f3c19}]
+position=0
+alignment='start'
+name='Budgie Menu'
+
+[com/solus-project/budgie-wm]
+button-layout='appmenu:minimize,maximize,close'
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1536117254
 
 [org/gnome/nautilus/preferences]
 search-view='list-view'
@@ -30,7 +109,7 @@ geometry='890x550+66+100'
 maximized=false
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='wifi'
 
 [org/gnome/nm-applet/eap/c03779a0-4ac6-4587-b1e4-8b6458a4f8db]
 ignore-phase2-ca-cert=false
@@ -38,12 +117,16 @@ ignore-ca-cert=false
 
 [org/gnome/software]
 first-run=false
-check-timestamp=int64 1534943252
+check-timestamp=int64 1536172697
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
 
 [org/gnome/settings-daemon/plugins/media-keys]
 screenshot-clip=''
 area-screenshot-clip=''
 screenshot=''
+terminal='<Super>Return'
 window-screenshot-clip=''
 screencast=''
 window-screenshot=''
@@ -139,9 +222,12 @@ name='suse-yast.directory'
 [org/gnome/desktop/screensaver]
 picture-uri='file:///home/dustin/Pictures/wallpaper.jpg'
 color-shading-type='solid'
-primary-color='#000000000000'
+primary-color='#000000'
 picture-options='zoom'
-secondary-color='#000000000000'
+secondary-color='#000000'
+
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=false
 
 [org/gnome/desktop/peripherals/touchscreens/04f3:20d0]
 display=['SHP', '0x144a', '0x00000000']
@@ -149,26 +235,33 @@ display=['SHP', '0x144a', '0x00000000']
 [org/gnome/desktop/background]
 picture-uri='file:///home/dustin/Pictures/wallpaper.jpg'
 color-shading-type='solid'
-primary-color='#000000000000'
+primary-color='#000000'
 picture-options='zoom'
-secondary-color='#000000000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
 sources=[('xkb', 'us')]
 
 [org/gnome/desktop/wm/keybindings]
-switch-to-workspace-right=['']
+close=['<Super>q']
+panel-run-dialog=['<Super>space']
+switch-input-source-backward=@as []
 switch-to-workspace-left=['']
 show-desktop=['']
+switch-input-source=@as []
+switch-to-workspace-right=['']
 
 [org/gnome/desktop/interface]
+icon-theme='Pocillo'
 gtk-im-module='gtk-im-context-simple'
+cursor-theme='DMZ-White'
+gtk-theme='Pocillo'
 
 [org/gtk/settings/file-chooser]
 sort-column='name'
 sidebar-width=148
-window-position=(-26, 89)
+window-position=(331, 144)
 show-size-column=true
 show-hidden=false
 window-size=(938, 682)
@@ -177,95 +270,47 @@ date-format='regular'
 sort-order='ascending'
 location-mode='path-bar'
 
+[net/launchpad/plank/docks/dock1]
+icon-size=32
+show-dock-item=false
+position='left'
+dock-items=['org.gnome.Nautilus.dockitem', 'com.gexperts.Tilix.dockitem', 'firefox_firefox.dockitem', 'qownnotes_QOwnNotes.dockitem', 'seafile.dockitem']
+unhide-delay=0
+items-alignment='center'
+theme='Gtk+'
+hide-mode='dodge-maximized'
+pinned-only=false
+auto-pinning=true
+alignment='center'
+zoom-percent=150
+hide-delay=500
+zoom-enabled=false
+monitor=''
+lock-items=false
+tooltips-enabled=true
+pressure-reveal=false
+offset=0
+current-workspace-only=false
+
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings/custom2]
+binding='<Control><Alt>s'
+command='/usr/lib/budgie-desktop/plugins/budgie-wmover/wmover_run -singlespace'
+name='wmover_workspace'
+
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings/custom1]
+binding='<Control><Alt>w'
+command='/usr/lib/budgie-desktop/plugins/budgie-wmover/wmover_run -single'
+name='wmover_window'
+
 [apps/update-manager]
 first-run=false
-launch-time=int64 1534802111
+launch-time=int64 1535425604
 
-[com/solus-project/budgie-panel]
-migration-level=1
-panels=['ff805230-9a82-11e8-ac5e-23b5427f3c19']
-
-[com/solus-project/budgie-panel/panels/{ff805230-9a82-11e8-ac5e-23b5427f3c19}]
-size=39
-location='top'
-applets=['ff805234-9a82-11e8-ac5e-23b5427f3c19', 'ff80523b-9a82-11e8-ac5e-23b5427f3c19', 'ff80523a-9a82-11e8-ac5e-23b5427f3c19', 'ff805232-9a82-11e8-ac5e-23b5427f3c19', 'ff805231-9a82-11e8-ac5e-23b5427f3c19', 'ff805239-9a82-11e8-ac5e-23b5427f3c19', 'ff80523f-9a82-11e8-ac5e-23b5427f3c19', 'ff80523e-9a82-11e8-ac5e-23b5427f3c19', 'ff805241-9a82-11e8-ac5e-23b5427f3c19', 'ff80523d-9a82-11e8-ac5e-23b5427f3c19', 'ff805235-9a82-11e8-ac5e-23b5427f3c19', 'ff805236-9a82-11e8-ac5e-23b5427f3c19', 'ff805240-9a82-11e8-ac5e-23b5427f3c19', 'ff80523c-9a82-11e8-ac5e-23b5427f3c19']
-transparency='dynamic'
-
-[com/solus-project/budgie-panel/applets/{ff80523f-9a82-11e8-ac5e-23b5427f3c19}]
-position=10
-alignment='end'
-name='Spacer'
-
-[com/solus-project/budgie-panel/applets/{ff805240-9a82-11e8-ac5e-23b5427f3c19}]
-position=11
-alignment='end'
-name='User Indicator'
-
-[com/solus-project/budgie-panel/applets/{ff80523d-9a82-11e8-ac5e-23b5427f3c19}]
-position=8
-alignment='end'
-name='Status Indicator'
-
-[com/solus-project/budgie-panel/applets/{ff805234-9a82-11e8-ac5e-23b5427f3c19}]
-position=0
-alignment='center'
-name='Clock'
-
-[com/solus-project/budgie-panel/applets/{ff805236-9a82-11e8-ac5e-23b5427f3c19}]
-position=1
-alignment='end'
-name='System Tray'
-
-[com/solus-project/budgie-panel/applets/{ff80523b-9a82-11e8-ac5e-23b5427f3c19}]
-position=6
-alignment='end'
-name='Places'
-
-[com/solus-project/budgie-panel/applets/{ff805232-9a82-11e8-ac5e-23b5427f3c19}]
-position=1
-alignment='start'
-name='Spacer'
-
-[com/solus-project/budgie-panel/applets/{ff805241-9a82-11e8-ac5e-23b5427f3c19}]
-position=12
-alignment='end'
-name='Raven Trigger'
-
-[com/solus-project/budgie-panel/applets/{ff805239-9a82-11e8-ac5e-23b5427f3c19}]
-position=4
-alignment='end'
-name='Spacer'
-
-[com/solus-project/budgie-panel/applets/{ff80523e-9a82-11e8-ac5e-23b5427f3c19}]
-position=9
-alignment='end'
-name='Separator'
-
-[com/solus-project/budgie-panel/applets/{ff80523a-9a82-11e8-ac5e-23b5427f3c19}]
-position=5
-alignment='end'
-name='Night Light'
-
-[com/solus-project/budgie-panel/applets/{ff80523c-9a82-11e8-ac5e-23b5427f3c19}]
-position=7
-alignment='end'
-name='Notifications'
-
-[com/solus-project/budgie-panel/applets/{ff805235-9a82-11e8-ac5e-23b5427f3c19}]
-position=0
-alignment='end'
-name='AppIndicator Applet'
-
-[com/solus-project/budgie-panel/applets/{ff805231-9a82-11e8-ac5e-23b5427f3c19}]
-position=0
-alignment='start'
-name='Budgie Menu'
-
-[com/solus-project/budgie-wm]
-button-layout='appmenu:minimize,maximize,close'
-
-[com/ubuntu/update-notifier]
-release-check-time=uint32 1534907252
+[ca/desrt/dconf-editor]
+saved-view='/org/gnome/desktop/background/picture-uri'
+window-height=600
+window-width=800
+window-is-maximized=false
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
