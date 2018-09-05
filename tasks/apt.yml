@@ -18,6 +18,7 @@
     - deluge-gtk
     - network-manager-vpnc
     - network-manager-vpnc-gnome
+    - budgie-*-applet
 
 ### Remove APT Packages
 - name: Remove APT Packages

@@ -25,9 +25,9 @@
     - include: tasks/sudoers.yml
     # Manage cron jobs
     - include: tasks/cron.yml
+    # Set Budgie Desktop Gsettings
+    - include: tasks/dconf.yml
 
 
     # Fix .local Ubuntu name resolutuion
     #- include: tasks/nsswitch.yml
-    # Set Budgie Desktop Gsettings
-    - include: tasks/dconf.yml
