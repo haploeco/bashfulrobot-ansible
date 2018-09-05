@@ -42,6 +42,6 @@
   become: true
   become_user: "dustin"
   dconf:
-    key: "org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
     value: true
     state: present
