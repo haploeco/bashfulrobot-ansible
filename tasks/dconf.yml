@@ -59,8 +59,8 @@
   become: true
   become_user: "dustin"
   dconf:
-    key: "/org/gnome/desktop/wm/keybindings/close"
-    value: "'<Super>q'"
+    key: "org/gnome/desktop/wm/keybindings/close"
+    value: "['<Super>q']"
     state: present
 
 - name: Changing Run Application Keyboard Shortcut
@@ -68,7 +68,7 @@
   become_user: "dustin"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
-    value: "'<Super>space'"
+    value: "['<Super>space']"
     state: present
 
 ### Change Touchpad Scroll Direction
