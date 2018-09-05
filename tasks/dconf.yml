@@ -21,12 +21,16 @@
 
 ### Set Wallpaper
 - name: Set Default Wallpaper
+  become: true
+  become_user: "dustin"
   dconf:
-    key: /org/gnome/desktop/background/picture-uri
+    key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
 
 ### Set Lockscreen
 - name: Set Default Lockscreen Wallpaper
+  become: true
+  become_user: "dustin"
   dconf:
-    key: /org/gnome/desktop/screensaver/picture-uri
+    key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
