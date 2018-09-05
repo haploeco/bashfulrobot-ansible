@@ -11,20 +11,20 @@
       changed_when: False
   
   tasks:
-    # Add APT repos
-    - include: tasks/repos.yml
-    # Update the system
-    - include: tasks/update-system.yml
-    # Install/remove APT packages
-    - include: tasks/apt.yml
-    # Install/remove SNAP packages
-    - include: tasks/snap.yml
-    # Manage system users
-    - include: tasks/users.yml
-    # Sudo settings
-    - include: tasks/sudoers.yml
-    # Manage cron jobs
-    - include: tasks/cron.yml
+    # # Add APT repos
+    # - include: tasks/repos.yml
+    # # Update the system
+    # - include: tasks/update-system.yml
+    # # Install/remove APT packages
+    # - include: tasks/apt.yml
+    # # Install/remove SNAP packages
+    # - include: tasks/snap.yml
+    # # Manage system users
+    # - include: tasks/users.yml
+    # # Sudo settings
+    # - include: tasks/sudoers.yml
+    # # Manage cron jobs
+    # - include: tasks/cron.yml
     # Set Budgie Desktop Gsettings
     - include: tasks/dconf.yml
 
