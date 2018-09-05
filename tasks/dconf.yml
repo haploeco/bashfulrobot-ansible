@@ -45,3 +45,45 @@
     key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
     value: "true"
     state: present
+
+### Enable Keyboard shortcuts
+- name: Changing Terminal Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/terminal"
+    value: "'<Super>Return'"
+    state: present
+
+- name: Changing Close Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/close"
+    value: "'<Super>q'"
+    state: present
+
+- name: Changing Run Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
+    value: "'<Super>space'"
+    state: present
+
+- name: Changing Run Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
+    value: "'<Super>space'"
+    state: present
+
+### Change Touchpad Scroll Direction
+- name: Changing Run Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
+    value: "false"
+    state: present
