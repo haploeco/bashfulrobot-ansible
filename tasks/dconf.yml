@@ -79,3 +79,13 @@
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
     state: present
+
+### Set theme to dark
+
+- name: Set Theme to Dark
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/com/solus-project/budgie-panel/dark-theme"
+    value: "true"
+    state: present
