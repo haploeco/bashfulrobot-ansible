@@ -15,32 +15,32 @@
 - name: Set Wallpaper File Permissions
   file:
     path: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
-    owner: "dustin"
-    group: "dustin"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
     mode: 0775
 
 ### Set Wallpaper
 - name: Set Default Wallpaper
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
+    value: "'file:///home/{{ myusername }}/Pictures/wallpaper.jpg'"
     state: present
 
 ### Set Lockscreen
 - name: Set Default Lockscreen Wallpaper
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/screensaver/picture-uri"
-    value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
+    value: "'file:///home/{{ myusername }}/Pictures/wallpaper.jpg'"
     state: present
 
 ### Enable Nightlight
 - name: Enable Nightlight
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
     value: "true"
@@ -49,7 +49,7 @@
 ### Enable Keyboard shortcuts
 - name: Changing Terminal Keyboard Shortcut
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/terminal"
     value: "'<Super>Return'"
@@ -57,7 +57,7 @@
 
 - name: Changing Close Application Keyboard Shortcut
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/close"
     value: "['<Super>q']"
@@ -65,7 +65,7 @@
 
 - name: Changing Run Application Keyboard Shortcut
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
     value: "['<Super>space']"
@@ -74,7 +74,7 @@
 ### Change Touchpad Scroll Direction
 - name: Changing Run Application Keyboard Shortcut
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
@@ -84,7 +84,7 @@
 
 - name: Set Theme to Dark
   become: true
-  become_user: "dustin"
+  become_user: "{{ myusername }}"
   dconf:
     key: "/com/solus-project/budgie-panel/dark-theme"
     value: "true"
