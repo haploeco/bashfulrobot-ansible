@@ -16,6 +16,8 @@
     - lftp
     - htop
     - deluge-gtk
+    - network-manager-vpnc
+    - network-manager-vpnc-gnome
 
 ### Remove APT Packages
 - name: Remove APT Packages

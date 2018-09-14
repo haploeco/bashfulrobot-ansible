@@ -14,6 +14,7 @@
     - telegram-desktop
     - opera
     - simplescreenrecorder
+    - bitwarden
 
 ### Install Classic Snap Packages
 - name: Install Classic Snap Packages
