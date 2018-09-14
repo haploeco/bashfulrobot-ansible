@@ -5,7 +5,7 @@
 - name: Fix .ansible Folder Permissions
   file:
     path: "/home/{{ myusername }}/.ansible"
-    owner: "dustin"
-    group: "dustin"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
     mode: 0775
     recurse: yes
