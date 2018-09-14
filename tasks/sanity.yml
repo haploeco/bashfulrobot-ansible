@@ -8,4 +8,4 @@
     owner: "dustin"
     group: "dustin"
     mode: 0775
-    recursive: yes
+    recurse: yes
