@@ -28,7 +28,7 @@
     # Manage cron jobs
     - include: tasks/cron.yml
     # Set Budgie Desktop Gsettings
-    #- include: tasks/dconf.yml
+    - include: tasks/dconf.yml
     # Set sysctl paramters
     - include: tasks/sysctl.yml
 
