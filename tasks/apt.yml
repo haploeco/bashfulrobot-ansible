@@ -18,6 +18,10 @@
     - deluge-gtk
     - network-manager-vpnc
     - network-manager-vpnc-gnome
+<<<<<<< HEAD
+=======
+    - budgie-*-applet
+>>>>>>> 9646b35993f3a00397d4d8993422d72383d82f53
 
 ### Remove APT Packages
 - name: Remove APT Packages
@@ -29,6 +33,7 @@
       - chromium-*
       - geary
       - libreoffice-*
+      - plank
 
 ### Clean out unwanted apt stuff
 - name: Autoremove and Purge APT Packages

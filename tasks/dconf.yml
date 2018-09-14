@@ -11,18 +11,81 @@
   copy:
     src: files/Rubiks-HDPI.jpg
     dest: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
-    owner: "{{ myusername }}"
-    group: "{{ myusername }}"
-    mode: 775
+### Set Wallpaper permission
+- name: Set Wallpaper File Permissions
+  file:
+    path: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
+    owner: "dustin"
+    group: "dustin"
+    mode: 0775
+
 ### Set Wallpaper
 - name: Set Default Wallpaper
+  become: true
+  become_user: "dustin"
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///home/dustin/Picures/wallpaper.jpg'"
+    value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
     state: present
+
 ### Set Lockscreen
 - name: Set Default Lockscreen Wallpaper
+  become: true
+  become_user: "dustin"
   dconf:
     key: "/org/gnome/desktop/screensaver/picture-uri"
-    value: "'file:///home/dustin/Picures/wallpaper.jpg'"
+    value: "'file:///home/dustin/Pictures/wallpaper.jpg'"
+    state: present
+
+### Enable Nightlight
+- name: Enable Nightlight
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
+    state: present
+
+### Enable Keyboard shortcuts
+- name: Changing Terminal Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/terminal"
+    value: "'<Super>Return'"
+    state: present
+
+- name: Changing Close Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/close"
+    value: "['<Super>q']"
+    state: present
+
+- name: Changing Run Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
+    value: "['<Super>space']"
+    state: present
+
+### Change Touchpad Scroll Direction
+- name: Changing Run Application Keyboard Shortcut
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
+    value: "false"
+    state: present
+
+### Set theme to dark
+
+- name: Set Theme to Dark
+  become: true
+  become_user: "dustin"
+  dconf:
+    key: "/com/solus-project/budgie-panel/dark-theme"
+    value: "true"
     state: present
