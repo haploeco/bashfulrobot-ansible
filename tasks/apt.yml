@@ -1,29 +1,27 @@
-### Install APT Packages
 - name: Install APT Packages
   apt:
-    name: "{{ packages }}"
+    name: '{{ packages }}'
   vars:
     packages:
-    - git
-    - xclip
-    - ncdu
-    - tmux
-    - openssh-server
-    - fish
-    - ubuntu-restricted-extras
-    - seafile-gui
-    - debconf-utils
-    - lftp
-    - htop
-    - deluge-gtk
-    - network-manager-vpnc
-    - network-manager-vpnc-gnome
-    - budgie-*-applet
-    
-### Remove APT Packages
+      - git
+      - xclip
+      - ncdu
+      - tmux
+      - openssh-server
+      - fish
+      - ubuntu-restricted-extras
+      - seafile-gui
+      - debconf-utils
+      - lftp
+      - htop
+      - deluge-gtk
+      - network-manager-vpnc
+      - network-manager-vpnc-gnome
+      - budgie-*-applet
+      - gnome-mpv
 - name: Remove APT Packages
   apt:
-    name: "{{ rempackages }}"
+    name: '{{ rempackages }}'
     state: absent
   vars:
     rempackages:
@@ -31,8 +29,6 @@
       - geary
       - libreoffice-*
       - plank
-
-### Clean out unwanted apt stuff
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes

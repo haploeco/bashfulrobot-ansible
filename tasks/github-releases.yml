@@ -1,0 +1,6 @@
+- name: Get latest release of mvdan/sh
+  github_release:
+    token: tokenabc1234567890
+    user: bashfulrobot
+    repo: testrepo
+    action: latest_release
