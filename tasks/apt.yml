@@ -19,6 +19,8 @@
       - network-manager-vpnc-gnome
       - budgie-*-applet
       - gnome-mpv
+      - whois
+      
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
