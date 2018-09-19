@@ -1,3 +1,9 @@
+### Add Docker APT GPG Key
+- name: Add Docker GPG Key for APT
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
 ### Add APT Repos
 # Incorrect type. Expected "object".
 # VSCODE - reports the above, but works fine.
@@ -7,4 +13,5 @@
     - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
+    - deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
   state: present
