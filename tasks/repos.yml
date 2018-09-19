@@ -7,11 +7,17 @@
 ### Add APT Repos
 # Incorrect type. Expected "object".
 # VSCODE - reports the above, but works fine.
-- name: Add Repositories
+- name: Add Launchpad PPAs
   apt_repository: repo="{{ item }}" update_cache=yes
   with_items:
     - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
-    - deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
   state: present
+
+- name: Add Docker PPA
+  apt_repository:
+    repo: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable'
+    filename: 'docker'
+    update_cache: yes
+    state: present
