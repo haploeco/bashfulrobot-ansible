@@ -15,6 +15,7 @@
     - ppa:seafile/seafile-client
   state: present
 
+### Add Docker PPA
 - name: Add Docker PPA
   apt_repository:
     repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
