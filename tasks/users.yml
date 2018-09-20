@@ -5,7 +5,7 @@
     comment: Dustin Krysak
     # shell: /usr/bin/fish
     shell: /bin/bash
-    groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare
+    groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd
     append: yes
     
 ### Add my github pub key to the server
