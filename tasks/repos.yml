@@ -14,7 +14,9 @@
 # Incorrect type. Expected "object".
 # VSCODE - reports the above, but works fine.
 - name: Add Launchpad PPAs
-  apt_repository: repo="{{ item }}" update_cache=yes
+  apt_repository:
+    repo: "{{ item }}"
+    update_cache: yes
   with_items:
     - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
