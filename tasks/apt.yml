@@ -1,7 +1,6 @@
 - name: Remove APT Packages
   apt:
-    name:
-      '[object Object]': null
+    name: '{{ rempackages }}'
     state: absent
   vars:
     rempackages:
@@ -18,8 +17,7 @@
     purge: yes
 - name: Install APT Packages
   apt:
-    name:
-      '[object Object]': null
+    name: '{{ packages }}'
   vars:
     packages:
       - git
@@ -48,8 +46,7 @@
       - cowsay
 - name: Remove APT Packages
   apt:
-    name:
-      '[object Object]': null
+    name: '{{ rempackages }}'
     state: absent
   vars:
     rempackages:
