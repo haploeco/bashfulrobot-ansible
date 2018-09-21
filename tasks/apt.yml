@@ -45,6 +45,7 @@
       - docker-ce
       - cowsay
       - sublime-merge
+      - python-pip
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
