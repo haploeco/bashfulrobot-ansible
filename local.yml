@@ -20,6 +20,8 @@
     - include: tasks/apt.yml
     # Install/remove SNAP packages
     - include: tasks/snap.yml
+    # Install GitHub Releases packages
+    - include: tasks/github-releases.yml
     # Set sysctl paramters
     - include: tasks/sysctl.yml
     # Manage system users
