@@ -1,3 +1,20 @@
+- name: Remove APT Packages
+  apt:
+    name: '{{ rempackages }}'
+    state: absent
+  vars:
+    rempackages:
+      - chromium-*
+      - geary
+      - libreoffice-*
+      - plank
+      - docker
+      - docker-engine
+      - docker.io
+- name: Autoremove and Purge APT Packages
+  apt:
+    autoremove: yes
+    purge: yes
 - name: Install APT Packages
   apt:
     name: '{{ packages }}'
