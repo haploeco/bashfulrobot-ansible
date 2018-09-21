@@ -43,6 +43,7 @@
       - curl
       - software-properties-common
       - docker-ce
+      - cowsay
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
