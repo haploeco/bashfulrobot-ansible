@@ -19,6 +19,7 @@
       - network-manager-vpnc-gnome
       - budgie-*-applet
       - gnome-mpv
+      - calibre
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
