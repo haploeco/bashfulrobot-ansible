@@ -37,6 +37,12 @@
       - budgie-*-applet
       - gnome-mpv
       - calibre
+      - whois
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - docker-ce
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
