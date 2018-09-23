@@ -44,9 +44,7 @@
     owner: "{{  myusername }}"
     group: "{{ myusername }}"
     mode: 0600
-
-
-
+    
 ### Add SSH Authorized Key
 # - name: Adding SSH Authorized Keys
 #   shell: |

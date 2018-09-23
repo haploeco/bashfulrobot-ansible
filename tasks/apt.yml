@@ -46,6 +46,7 @@
       - cowsay
       - sublime-merge
       - python-pip
+      - meld
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
