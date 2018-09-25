@@ -1,37 +1,19 @@
 - hosts: localhost
   become: true
   vars:
-    myusername: "dustin"
-    myhome: "/home/dustin"
-
+    myusername: dustin
+    myhome: /home/dustin
   pre_tasks:
     - name: Update Repositories
       apt: update_cache=yes
-      # This line on an individual task stops Ansible from reporting the results of the play as changed even when it results in a change in the system. In this case, we don't care if the repository index contains new data; it almost always will, since repositories are always changing. We don't care about changes to apt repositories, as index changes are par for the course. If we omit this line, we'll see the summary at the end of the process report that something has changed, even if it was merely about the repository being updated. It's better to ignore these types of changes.
-      changed_when: False
-  
+      changed_when: false
   tasks:
-    # Add APT repos
     - include: tasks/repos.yml
-    # Update the system
     - include: tasks/update-system.yml
-    # Install/remove APT packages
     - include: tasks/apt.yml
-    # Install/remove SNAP packages
     - include: tasks/snap.yml
-    # Install GitHub Releases packages
-    - include: tasks/github-releases.yml
-    # Set sysctl paramters
     - include: tasks/sysctl.yml
-    # Manage system users
     - include: tasks/users.yml
-    # Sudo settings
     - include: tasks/sudoers.yml
-    # Manage cron jobs
     - include: tasks/cron.yml
-    # Set Budgie Desktop Gsettings
     - include: tasks/dconf.yml
-
-
-    # Fix .local Ubuntu name resolutuion
-    #- include: tasks/nsswitch.yml

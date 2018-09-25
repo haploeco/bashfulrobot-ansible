@@ -13,4 +13,4 @@ if ! grep -q "$MYPPA" /etc/apt/sources.list.d/*; then
     sudo apt-get install git ansible -y
 fi
 
-sudo $APULL -U $MYREPO
+$APULL -U $MYREPO
