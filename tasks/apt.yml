@@ -44,6 +44,7 @@
       - sublime-merge
       - python-pip
       - meld
+      - figlet
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
