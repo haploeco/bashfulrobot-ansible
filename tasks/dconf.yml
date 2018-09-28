@@ -98,3 +98,12 @@
     key: "/org/gnome/nautilus/desktop/trash-icon-visible"
     value: "true"
     state: present
+
+### Show mounted volume icon on the desktop
+- name: Add Mounted Volume Icon to the Desktop
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/nautilus/desktop/volumes-visible"
+    value: "true"
+    state: present
