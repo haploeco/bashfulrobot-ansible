@@ -16,7 +16,8 @@ fi
 
 if [ ! -f $HOME/.ansible.cfg ]; then
     touch $HOME/.ansible.cfg
-    echo 'remote_tmp     = /tmp/$USER/ansible' > $HOME/.ansible.cfg
+    echo '[defaults]' > $HOME/.ansible.cfg
+    echo 'remote_tmp     = /tmp/$USER/ansible' >> $HOME/.ansible.cfg
 fi
 
 $APULL -U $MYREPO
