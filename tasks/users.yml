@@ -11,7 +11,7 @@
 ### Add my github pub key to the server
 - name: Install GH SSH Pub keys
   authorized_key:
-    user: dustin
+    user: "{{ myusername }}"
     state: present
     key: https://github.com/{{item}}.keys
   with_items:
@@ -21,26 +21,26 @@
 - name: Fixing SSH Key Permissions
   become: yes
   file:
-    path: /home/dustin/.ssh/
+    path: "/home/{{ myusername }}/.ssh/"
     recurse: yes
-    owner: "dustin"
-    group: "dustin"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
     mode: 0700
 
 ### Fix SSH key Permissions
 - name: Fixing SSH Key Permissions
   become: yes
   file:
-    path: "/home/dustin/.ssh/id_rsa"
-    owner: "dustin"
-    group: "dustin"
+    path: "/home/{{ myusername }}/.ssh/id_rsa"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
     mode: 0600
 
 ### Fix SSH pub key Permissions
 - name: Fixing SSH Key Permissions
   become: yes
   file:
-    path: "/home/dustin/.ssh/id_rsa.pub"
+    path: "/home/{{ myusername }}/.ssh/id_rsa.pub"
     owner: "{{  myusername }}"
     group: "{{ myusername }}"
     mode: 0600
