@@ -13,4 +13,10 @@ if ! grep -q "$MYPPA" /etc/apt/sources.list.d/*; then
     sudo apt-get install git ansible -y
 fi
 
+
+if [ ! -f $HOME/.ansible.cfg ]; then
+    touch $HOME/.ansible.cfg
+    echo 'remote_tmp     = /tmp/$USER/ansible' > $HOME/.ansible.cfg
+fi
+
 $APULL -U $MYREPO
