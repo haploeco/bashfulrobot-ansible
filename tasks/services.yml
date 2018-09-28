@@ -1,0 +1,9 @@
+- name: Enable SSH Server
+  systemd:
+    enabled: yes
+    name: ssh
+
+- name: Making Sure SSH is Started
+  systemd:
+    state: started
+    name: ssh

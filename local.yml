@@ -17,3 +17,5 @@
     - include: tasks/sudoers.yml
     - include: tasks/cron.yml
     - include: tasks/dconf.yml
+    - include: tasks/services.yml
+    - include: tasks/ufw.yml
