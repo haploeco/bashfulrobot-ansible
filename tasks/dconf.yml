@@ -89,3 +89,12 @@
     key: "/com/solus-project/budgie-panel/dark-theme"
     value: "true"
     state: present
+
+### Show trash icon on the desktop
+- name: Add Trash Icon to the Desktop
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/nautilus/desktop/trash-icon-visible"
+    value: "true"
+    state: present
