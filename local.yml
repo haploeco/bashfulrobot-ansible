@@ -10,3 +10,4 @@
   tasks:
   
     - include: tasks/repos.yml
+    - include: tasks/update-system.yml
