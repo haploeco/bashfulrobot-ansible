@@ -10,4 +10,13 @@
   tasks:
   
     - include: tasks/repos.yml
-    - include: tasks/update-system.yml
+    # - include: tasks/update-system.yml
+    # - include: tasks/apt.yml
+    # - include: tasks/snap.yml
+    # - include: tasks/sysctl.yml
+    # - include: tasks/users.yml
+    # - include: tasks/sudoers.yml
+    # - include: tasks/cron.yml
+    # - include: tasks/dconf.yml
+    # - include: tasks/services.yml
+    # - include: tasks/ufw.yml
