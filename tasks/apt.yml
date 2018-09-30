@@ -45,6 +45,8 @@
       - python-pip
       - meld
       - figlet
+      - fish
+
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
