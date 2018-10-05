@@ -40,7 +40,7 @@
 ### Add Typora PPA
 - name: Add Typora PPA
   apt_repository:
-    repo: deb https://typora.io/linux ./
+    repo: "deb https://typora.io/linux ./"
     filename: typora
     update_cache: yes
     state: present
