@@ -46,6 +46,7 @@
       - meld
       - figlet
       - fish
+      - typora
 
 - name: Remove APT Packages
   apt:
