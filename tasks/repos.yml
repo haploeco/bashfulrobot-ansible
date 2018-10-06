@@ -18,9 +18,9 @@
     repo: "{{ item }}"
     update_cache: yes
     with_items:
-    - ppa:ansible/ansible
-    - ppa:ubuntubudgie/backports
-    - ppa:seafile/seafile-client
+      - ppa:ansible/ansible
+      - ppa:ubuntubudgie/backports
+      - ppa:seafile/seafile-client
   state: present
 
 ### Add Docker PPA
