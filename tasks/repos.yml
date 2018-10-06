@@ -17,7 +17,7 @@
   apt_repository:
     repo: "{{ item }}"
     update_cache: yes
-  with_items:
+    with_items:
     - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
