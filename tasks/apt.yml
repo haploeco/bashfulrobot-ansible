@@ -47,6 +47,7 @@
       - figlet
       - fish
       - typora
+      - nomacs
 
 - name: Remove APT Packages
   apt:
