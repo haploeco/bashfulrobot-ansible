@@ -3,11 +3,9 @@
   user:
     name: dustin
     comment: Dustin Krysak
-    shell: /usr/bin/fish
     shell: /bin/bash
     groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd
     append: yes
-    
 ### Add my github pub key to the server
 - name: Install GH SSH Pub keys
   authorized_key:
@@ -16,7 +14,6 @@
     key: https://github.com/{{item}}.keys
   with_items:
       - bashfulrobot
-
 ### Fix SSH Folder key Permissions
 - name: Fixing SSH Key Permissions
   become: yes
@@ -26,7 +23,6 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0700
-
 ### Fix SSH key Permissions
 - name: Fixing SSH Key Permissions
   become: yes
@@ -35,7 +31,6 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0600
-
 ### Fix SSH pub key Permissions
 - name: Fixing SSH Key Permissions
   become: yes
@@ -44,7 +39,6 @@
     owner: "{{  myusername }}"
     group: "{{ myusername }}"
     mode: 0600
-    
 ### Add SSH Authorized Key
 # - name: Adding SSH Authorized Keys
 #   shell: |
