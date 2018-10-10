@@ -21,3 +21,4 @@
     - include: tasks/services.yml
     - include: tasks/ufw.yml
     - include: tasks/timezone.yml
+    - include: tasks/nsswitch.yml
