@@ -3,6 +3,10 @@
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
+- name: Add Typora GPG Key
+  apt_key:
+    url: https://typora.io/linux/public-key.asc
+    state: present
 
 ### Add Sublime Merge APT GPG Key
 - name: Add Sublime Merge GPG Key for APT
@@ -28,7 +32,12 @@
     filename: docker
     update_cache: yes
     state: present
-
+- name: Add Typora PPA
+  apt_repository:
+    repo: deb https://typora.io/linux ./
+    filename: typora
+    update_cache: yes
+    state: present
 ### Add Sublime Merge PPA
 - name: Add Sublime Merge PPA
   apt_repository:
