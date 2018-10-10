@@ -20,3 +20,4 @@
     - include: tasks/dconf.yml
     - include: tasks/services.yml
     - include: tasks/ufw.yml
+    - include: tasks/timezone.yml
