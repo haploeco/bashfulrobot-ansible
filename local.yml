@@ -12,6 +12,7 @@
     - include: tasks/update-system.yml
     - include: tasks/apt.yml
     - include: tasks/snap.yml
+    - include: tasks/pip.yml
     - include: tasks/sysctl.yml
     - include: tasks/users.yml
     - include: tasks/sudoers.yml

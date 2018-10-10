@@ -1,0 +1,5 @@
+- name: Install PIP apps
+  pip:
+    name:
+      - ansible-lint
+      - awscli
