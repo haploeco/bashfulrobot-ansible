@@ -17,7 +17,7 @@
         - ppa:ansible/ansible
         - ppa:ubuntubudgie/backports
         - ppa:seafile/seafile-client
-  state: present
+    state: present
 
 
 ### Add Docker PPA
