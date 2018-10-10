@@ -1,4 +1,3 @@
-### Create sudoers file for Ansible
 - name: Add ansible-pull Sudoer File
   file:
     path: /etc/sudoers.d/ansible_pull
@@ -7,7 +6,6 @@
     group: root
     mode: 0440
 
-### Add ansible-pull and Validate the sudoers file before saving
 - name: Allow ansible-pull With No Password
   lineinfile:
     path: /etc/sudoers.d/ansible_pull
