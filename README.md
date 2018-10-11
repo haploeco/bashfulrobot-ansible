@@ -1,5 +1,5 @@
 # bashfulrobot-ansible
-Ansible Repo that utilizes an ansible-pull command to configure my laptop
+Ansible Repo that utilizes an ansible-pull command to configure my workstations.
 
 ## My Workflow
 
