@@ -1,6 +1,8 @@
 - hosts: localhost
   become: true
 
+  vars_files:
+    - vars/dotfiles-var.yml
   vars:
     myusername: dustin
     myhome: /home/dustin
