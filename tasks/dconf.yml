@@ -1,4 +1,3 @@
-### Needed for dconf
 - name: Install psutils python-psutil package
   apt:
     name: "{{ packages }}"
@@ -6,12 +5,12 @@
     packages:
     - python-psutil
     - psutils
-### Set default Wallpaper
+
 - name: Copy Default Wallpaper
   copy:
     src: files/Rubiks-HDPI.jpg
     dest: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
-### Set Wallpaper permission
+
 - name: Set Wallpaper File Permissions
   file:
     path: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
@@ -19,7 +18,6 @@
     group: "{{ myusername }}"
     mode: 0775
 
-### Set Wallpaper
 - name: Set Default Wallpaper
   become: true
   become_user: "{{ myusername }}"
@@ -28,7 +26,6 @@
     value: "'file:///home/{{ myusername }}/Pictures/wallpaper.jpg'"
     state: present
 
-### Set Lockscreen
 - name: Set Default Lockscreen Wallpaper
   become: true
   become_user: "{{ myusername }}"
@@ -37,7 +34,6 @@
     value: "'file:///home/{{ myusername }}/Pictures/wallpaper.jpg'"
     state: present
 
-### Enable Nightlight
 - name: Enable Nightlight
   become: true
   become_user: "{{ myusername }}"
@@ -46,7 +42,6 @@
     value: "true"
     state: present
 
-### Enable Keyboard shortcuts
 - name: Changing Terminal Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
@@ -71,7 +66,6 @@
     value: "['<Super>space']"
     state: present
 
-### Change Touchpad Scroll Direction
 - name: Changing Run Application Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
@@ -79,8 +73,6 @@
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
     state: present
-
-### Set theme to dark
 
 - name: Set Theme to Dark
   become: true
@@ -90,7 +82,6 @@
     value: "true"
     state: present
 
-### Show trash icon on the desktop
 - name: Add Trash Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
@@ -99,7 +90,6 @@
     value: "true"
     state: present
 
-### Show mounted volume icon on the desktop
 - name: Add Mounted Volume Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
@@ -108,7 +98,6 @@
     value: "true"
     state: present
 
-### Show home icon on the desktop
 - name: Add Home Folder Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
@@ -117,7 +106,6 @@
     value: "true"
     state: present
 
-### Show network icon on the desktop
 - name: Add Network Icons to the Desktop
   become: true
   become_user: "{{ myusername }}"

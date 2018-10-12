@@ -1,8 +1,6 @@
-#- name: Fixing .local Name Resolution - Ubuntu
-  # lineinfile:
-  #   path: /etc/nsswitch.conf
-  #   regex: '^(.*)hosts:(.*)$\s'
-  #   # regexp: '^hosts\s'
-  #   state: present
-  #   line: 'hosts:          files dns'
-  # become: true
+- name: Fixing .local Name Resolution - Ubuntu
+  replace:
+    path: /etc/nsswitch.conf
+    regexp: '^hosts:(.*)files mdns.*'
+    replace: 'hosts:          files dns mdns4_minimal [NOTFOUND=return] myhostname'
+  become: true

@@ -1,29 +1,28 @@
-### Add Docker APT GPG Key
 - name: Add Docker GPG Key for APT
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
 
-### Add Sublime Merge APT GPG Key
+- name: Add Typora GPG Key
+  apt_key:
+    url: https://typora.io/linux/public-key.asc
+    state: present
+
 - name: Add Sublime Merge GPG Key for APT
   apt_key:
     url: https://download.sublimetext.com/sublimehq-pub.gpg
     state: present
 
-### Add APT Repos
-# Incorrect type. Expected "object".
-# VSCODE - reports the above, but works fine.
 - name: Add Launchpad PPAs
   apt_repository:
     repo: "{{ item }}"
     update_cache: yes
+    state: present
   with_items:
     - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
-  state: present
 
-### Add Docker PPA
 - name: Add Docker PPA
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
@@ -31,7 +30,13 @@
     update_cache: yes
     state: present
 
-### Add Sublime Merge PPA
+- name: Add Typora PPA
+  apt_repository:
+    repo: deb https://typora.io/linux ./
+    filename: typora
+    update_cache: yes
+    state: present
+
 - name: Add Sublime Merge PPA
   apt_repository:
     repo: deb https://download.sublimetext.com/ apt/stable/
