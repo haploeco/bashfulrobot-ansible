@@ -48,6 +48,7 @@
       - fish
       - typora
       - nomacs
+      - uncrustify
 
 - name: Remove APT Packages
   apt:
