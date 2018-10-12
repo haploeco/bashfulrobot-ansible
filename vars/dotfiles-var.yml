@@ -1,8 +1,6 @@
 # Used in dotfiles.yml
-# Access vars with:
-# {{ cfg[fish] }}
-cfg:
-  fish:
+vars:
+  fishcfg:
     - config.fish
     - functions/battery.fish
     - functions/do-update.fish
