@@ -1,9 +1,8 @@
 - hosts: localhost
   become: true
 
-  var_files:
-    - vars/main.yml
   vars:
+    include: vars/main.yml
     myusername: dustin
     myhome: /home/dustin
   pre_tasks:
