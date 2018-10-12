@@ -5,13 +5,13 @@
     dest: "/home/{{ myusername }}/.config/fish/{{ fishcfg}}"
   vars:
     fishcfg:
-      - config.fish
-      - functions/battery.fish
-      - functions/do-update.fish
-      - functions/get-octals.fish
-      - functions/img-up.fish
-      - functions/ntfy-send.fish
-      - functions/sucode.fish
+      config.fish
+      functions/battery.fish
+      functions/do-update.fish
+      functions/get-octals.fish
+      functions/img-up.fish
+      functions/ntfy-send.fish
+      functions/sucode.fish
 
 - name: Set Fish Cfg File Permissions
   file:
