@@ -2,9 +2,20 @@
   become: true
 
   vars:
-    include: vars/main.yml
     myusername: dustin
     myhome: /home/dustin
+    # Used in dotfiles.yml
+    # Access vars with:
+    # {{ cfg[fish] }}
+    cfg:
+      fish:
+        - config.fish
+        - functions/battery.fish
+        - functions/do-update.fish
+        - functions/get-octals.fish
+        - functions/img-up.fish
+        - functions/ntfy-send.fish
+        - functions/sucode.fish
   pre_tasks:
     - name: Update Repositories
       apt: update_cache=yes
