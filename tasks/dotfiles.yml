@@ -1,9 +1,7 @@
-- include_vars: vars/dotfiles-var.yml
-
 - name: Copy Fish Cfg Files
   copy:
     # {{ cfg[fish] }} - comes from vars/main.yml
-    src: files/fish/{{ fishcfg }}
+    src: "files/fish/{{ fishcfg }}"
     dest: "/home/{{ myusername }}/.config/fish/{{ fishcfg}}"
 
 - name: Set Fish Cfg File Permissions
