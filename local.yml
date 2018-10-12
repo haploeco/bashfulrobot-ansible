@@ -4,18 +4,6 @@
   vars:
     myusername: dustin
     myhome: /home/dustin
-    # Used in dotfiles.yml
-    # Access vars with:
-    # {{ cfg[fish] }}
-    cfg:
-      fish:
-        - config.fish
-        - functions/battery.fish
-        - functions/do-update.fish
-        - functions/get-octals.fish
-        - functions/img-up.fish
-        - functions/ntfy-send.fish
-        - functions/sucode.fish
   pre_tasks:
     - name: Update Repositories
       apt: update_cache=yes
@@ -35,4 +23,4 @@
     - include: tasks/ufw.yml
     - include: tasks/timezone.yml
     - include: tasks/nsswitch.yml
-    - include: tasks/dotfiles.yml
+    # - include: tasks/dotfiles.yml
