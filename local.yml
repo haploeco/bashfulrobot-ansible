@@ -1,6 +1,7 @@
 - hosts: localhost
   become: true
-  include_vars: vars/main.yml
+
+  include_vars: "vars/main.yml"
   vars:
     myusername: dustin
     myhome: /home/dustin
