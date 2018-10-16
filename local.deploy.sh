@@ -1,8 +1,8 @@
 #!/bin/bash
 
-APULL=$(which ansible-pull)
+ANSIBLE=$(which ansible-playbook)
 MYLOCBASE="$HOME/tmp"
-MYREPO="$MYLOCBASE/bashfulrobot-ansible/."
+MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="ssh://git@github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
 
@@ -24,10 +24,14 @@ fi
 
 # Get the repo
 
+if [ ! -f $MYREPO/local.yml ]; then
+
 mkdir -p $MYLOCBASE
 cd $MYLOCBASE
 git clone $MYREPORMT
+fi
+
 cd $MYREPO
 
 # Run ansible-pull no matter what (local dev iteration)
-sudo $APULL -f -U $MYREPO
+sudo $ANSIBLE $MYREPO/local.yml --connection=local
