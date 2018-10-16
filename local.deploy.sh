@@ -29,5 +29,5 @@ cd $MYLOCBASE
 git clone $MYREPORMT
 cd $MYREPO
 
-# Run ansible-pull
-sudo $APULL -U $MYREPO
+# Run ansible-pull no matter what (local dev iteration)
+sudo $APULL -f -U $MYREPO
