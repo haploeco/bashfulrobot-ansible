@@ -1,7 +1,9 @@
 #!/bin/bash
 
 APULL=$(which ansible-pull)
-MYREPO="$HOME/tmp/bashfulrobot-ansible/."
+MYLOCBASE="$HOME/tmp"
+MYREPO="$MYLOCBASE/bashfulrobot-ansible/."
+MYREPORMT="ssh://git@github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
 
 # Bootstrap Ansible
@@ -20,4 +22,12 @@ if [ ! -f $HOME/.ansible.cfg ]; then
     echo 'remote_tmp     = /tmp/$USER/ansible' >> $HOME/.ansible.cfg
 fi
 
+# Get the repo
+
+mkdir -p $MYLOCBASE
+cd $MYLOCBASE
+git clone $MYREPORMT
+cd $MYREPO
+
+# Run ansible-pull
 sudo $APULL -U $MYREPO
