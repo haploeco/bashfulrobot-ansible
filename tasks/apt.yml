@@ -49,6 +49,7 @@
       - typora
       - nomacs
       - uncrustify
+      - isomaster
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
