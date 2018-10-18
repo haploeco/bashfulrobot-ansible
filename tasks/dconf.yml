@@ -7,7 +7,8 @@
     - psutils
 - name: Copy Default Wallpaper
   copy:
-    src: files/Rubiks-HDPI.jpg
+    # src: files/Rubiks-HDPI.jpg
+    src: files/Halloween.jpg
     dest: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
 - name: Set Wallpaper File Permissions
   file:
