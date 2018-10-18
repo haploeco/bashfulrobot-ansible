@@ -7,12 +7,10 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0700
-
 - name: Copy Default User Ansible CFG
   copy:
     src: files/.ansible.cfg
     dest: "/home/{{ myusername }}/.ansible/.ansible.cfg"
-
 - name: Set Default User Ansible CFG Permissions
   file:
     path: "/home/{{ myusername }}/.ansible/.ansible.cfg"

@@ -35,3 +35,5 @@ cd $MYREPO
 
 # Run ansible-pull no matter what (local dev iteration)
 sudo $ANSIBLE $MYREPO/local.yml --connection=local
+
+sudo rm -rf $HOME/.ansible/

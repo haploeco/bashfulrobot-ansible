@@ -5,7 +5,6 @@
     shell: /bin/bash
     groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd
     append: yes
-
 - name: Install GH SSH Pub keys
   authorized_key:
     user: "{{ myusername }}"
@@ -13,7 +12,6 @@
     key: https://github.com/{{item}}.keys
   with_items:
       - bashfulrobot
-
 - name: Fixing SSH Key Permissions
   become: yes
   file:
@@ -22,7 +20,6 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0700
-
 - name: Fixing SSH Key Permissions
   become: yes
   file:
@@ -30,7 +27,6 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0600
-
 - name: Fixing SSH Key Permissions
   become: yes
   file:

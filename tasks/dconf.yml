@@ -5,19 +5,16 @@
     packages:
     - python-psutil
     - psutils
-
 - name: Copy Default Wallpaper
   copy:
     src: files/Rubiks-HDPI.jpg
     dest: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
-
 - name: Set Wallpaper File Permissions
   file:
     path: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0775
-
 - name: Set Default Wallpaper
   become: true
   become_user: "{{ myusername }}"
@@ -25,7 +22,6 @@
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///home/{{ myusername }}/Pictures/wallpaper.jpg'"
     state: present
-
 - name: Set Default Lockscreen Wallpaper
   become: true
   become_user: "{{ myusername }}"
@@ -33,7 +29,6 @@
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///home/{{ myusername }}/Pictures/wallpaper.jpg'"
     state: present
-
 - name: Enable Nightlight
   become: true
   become_user: "{{ myusername }}"
@@ -41,7 +36,6 @@
     key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
     value: "true"
     state: present
-
 - name: Changing Terminal Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
@@ -49,7 +43,6 @@
     key: "/org/gnome/settings-daemon/plugins/media-keys/terminal"
     value: "'<Super>Return'"
     state: present
-
 - name: Changing Close Application Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
@@ -57,7 +50,6 @@
     key: "/org/gnome/desktop/wm/keybindings/close"
     value: "['<Super>q']"
     state: present
-
 - name: Changing Run Application Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
@@ -65,7 +57,6 @@
     key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
     value: "['<Super>space']"
     state: present
-
 - name: Changing Run Application Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
@@ -73,7 +64,6 @@
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
     state: present
-
 - name: Set Theme to Dark
   become: true
   become_user: "{{ myusername }}"
@@ -81,7 +71,6 @@
     key: "/com/solus-project/budgie-panel/dark-theme"
     value: "true"
     state: present
-
 - name: Add Trash Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
@@ -89,7 +78,6 @@
     key: "/org/gnome/nautilus/desktop/trash-icon-visible"
     value: "true"
     state: present
-
 - name: Add Mounted Volume Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
@@ -97,7 +85,6 @@
     key: "/org/gnome/nautilus/desktop/volumes-visible"
     value: "true"
     state: present
-
 - name: Add Home Folder Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
@@ -105,7 +92,6 @@
     key: "/org/gnome/nautilus/desktop/home-icon-visible"
     value: "true"
     state: present
-
 - name: Add Network Icons to the Desktop
   become: true
   become_user: "{{ myusername }}"

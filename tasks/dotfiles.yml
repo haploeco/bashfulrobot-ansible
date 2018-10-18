@@ -3,6 +3,7 @@
     # {{ cfg[fish] }} - comes from vars/main.yml
     src: '{{ playbook_dir }}/files/fish/{{ fishcfg }}'
     dest: "/home/{{ myusername }}/.config/fish/{{ fishcfg}}"
+    
   vars:
     fishcfg:
       - config.fish
