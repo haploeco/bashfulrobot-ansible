@@ -23,3 +23,10 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
 * Add startup items
 * create skeleton for removing software
   * single one off runs.
+* Budgie panels have a unique ID.
+  * Need to identify (`dconf list /com/solus-project/budgie-panel/panels/ | cut -d "/" -f1`)
+  * Set ansible vars dynamically for each host to remember panels
+    * Need to keep it from slowing down later processing
+    * Need to figure out how to track state (i.e.) Panels added and removed
+    * How to add a panel via dconf (is it possible?)
+      * but can get and edit primary panel settings.
