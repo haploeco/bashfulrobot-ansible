@@ -34,3 +34,6 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
     * depends on panel work
   * Remove panel shadows
     * depends on panel work
+* Install NVIDIA drivers based on host
+  * `sudo ubuntu-drivers autoinstall`
+  * `sudo add-apt-repository ppa:graphics-drivers/ppa`
