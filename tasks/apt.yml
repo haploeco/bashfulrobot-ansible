@@ -11,6 +11,7 @@
       - docker
       - docker-engine
       - docker.io
+      - ibus
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
