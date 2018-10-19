@@ -100,3 +100,10 @@
     key: "/org/gnome/nautilus/desktop/network-icon-visible"
     value: "false"
     state: present
+- name: Changing IBUS Emjoi Keyboard Shortcut
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/desktop/ibus/panel/emoji/hotkey"
+    value: "['<Control><Alt><Shift>e']"
+    state: present
