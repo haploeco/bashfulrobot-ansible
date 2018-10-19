@@ -30,3 +30,7 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
     * Need to figure out how to track state (i.e.) Panels added and removed
     * How to add a panel via dconf (is it possible?)
       * but can get and edit primary panel settings.
+  * Add compact mode for budgie menu
+    * depends on panel work
+  * Remove panel shadows
+    * depends on panel work
