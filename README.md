@@ -35,3 +35,6 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
   * Remove panel shadows
     * depends on panel work
   * Add github release files such as shfmt, etc.
+  * Install NVIDIA drivers based on host
+  * `sudo ubuntu-drivers autoinstall`
+  * `sudo add-apt-repository ppa:graphics-drivers/ppa`
