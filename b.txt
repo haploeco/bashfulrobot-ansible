@@ -1,0 +1,313 @@
+[io/github/gnome-mpv/window-state]
+playlist-width=250
+show-controls=true
+show-playlist=false
+width=827
+volume=1.0
+height=711
+
+[io/github/gnome-mpv]
+settings-migrated=true
+
+[net/launchpad/plank/docks/dock1]
+icon-size=32
+show-dock-item=false
+position='left'
+dock-items=['org.gnome.Nautilus.dockitem', 'org.gnome.Software.dockitem', 'com.gexperts.Tilix.dockitem']
+unhide-delay=0
+items-alignment='center'
+theme='Gtk+'
+hide-mode='dodge-maximized'
+pinned-only=false
+auto-pinning=true
+alignment='center'
+zoom-percent=150
+hide-delay=500
+zoom-enabled=false
+monitor=''
+lock-items=false
+tooltips-enabled=true
+pressure-reveal=false
+offset=0
+current-workspace-only=false
+
+[org/gnome/gnome-screenshot]
+include-pointer=false
+include-border=true
+border-effect='none'
+last-save-directory='file:///home/dustin/Pictures/Screenshots'
+
+[org/gnome/control-center]
+last-panel='keyboard'
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+
+[org/gnome/settings-daemon/plugins/media-keys]
+screenshot-clip=''
+area-screenshot-clip=''
+screenshot=''
+terminal='<Super>Return'
+window-screenshot-clip=''
+screencast=''
+window-screenshot=''
+area-screenshot=''
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-area-clipboard/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-area/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-show-desktop/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-tilix-quake2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-show-files-test/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-window-clipboard/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-visualspace-right/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/windowshuffler/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-tilix-quake1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-window/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-visualspace-left/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='F12'
+command='/usr/bin/tilix --quake'
+name='tilix-quake'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-window]
+binding='<Alt>Print'
+command='gnome-screenshot -w'
+name='Save a screenshot of a window to Pictures'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot]
+binding='Print'
+command='gnome-screenshot'
+name='Save a screenshot to Pictures'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-visualspace-right]
+binding='<Control><Alt>Right'
+command='/usr/share/budgie-desktop/visualspace/visualspace next'
+name='Move to Workspace right'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-area]
+binding='<Shift>Print'
+command='gnome-screenshot -a'
+name='Save a screenshot of an area to Pictures'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-window-clipboard]
+binding='<Ctrl>Print'
+command='gnome-screenshot -w -c'
+name='Copy a screenshot of a window to clipboard'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-tilix-quake1]
+binding='<Alt>q'
+command='tilix --quake'
+name='Show/Hide Tilix Quake Console 1'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-tilix-quake2]
+binding='F12'
+command='tilix --quake'
+name='Show/Hide Tilix Quake Console 2'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-show-files-test]
+binding='<Super>e'
+command='nautilus --new-window %U'
+name='Show File Browser'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-visualspace-left]
+binding='<Control><Alt>Left'
+command='/usr/share/budgie-desktop/visualspace/visualspace prev'
+name='Move to Workspace left'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/windowshuffler]
+binding='<Super>s'
+command='/usr/share/budgie-desktop/windowshuffler/matrix_wrapper'
+name='Toggle Window Shuffler'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-show-desktop]
+binding='<Super>d'
+command='/usr/lib/budgie-desktop/plugins/budgie-hcorners/showdesktop'
+name='Hide/Show desktop'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie-screenshot-area-clipboard]
+binding='<Shift><Ctrl>Print'
+command='gnome-screenshot -a -c'
+name='Copy a screenshot of an area to clipboard'
+
+[org/gnome/settings-daemon/plugins/xsettings]
+overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/DecorationLayout': <'menu:minimize,maximize,close'>}
+
+[org/gnome/settings-daemon/peripherals/keyboard]
+numlock-state='off'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+geometry='800x818+25+34'
+maximized=false
+
+[org/gnome/nautilus/desktop]
+home-icon-visible=true
+network-icon-visible=false
+volumes-visible=true
+trash-icon-visible=true
+
+[org/gnome/desktop/interface]
+icon-theme='Pocillo'
+gtk-im-module='gtk-im-context-simple'
+cursor-theme='DMZ-White'
+gtk-theme='Pocillo'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'Sundry', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+translate=true
+categories=['X-GNOME-Utilities']
+apps=['org.gnome.baobab.desktop', 'deja-dup-preferences.desktop', 'eog.desktop', 'evince.desktop', 'org.gnome.FileRoller.desktop', 'gnome-calculator.desktop', 'gnome-dictionary.desktop', 'org.gnome.Characters.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-tweak-tool.desktop', 'gucharmap.desktop', 'seahorse.desktop', 'vinagre.desktop', 'yelp.desktop']
+name='X-GNOME-Utilities.directory'
+
+[org/gnome/desktop/app-folders/folders/Sundry]
+translate=true
+categories=['X-GNOME-Sundry']
+apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
+name='X-GNOME-Sundry.directory'
+
+[org/gnome/desktop/app-folders/folders/YaST]
+translate=true
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///home/dustin/Pictures/wallpaper.jpg'
+
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=false
+
+[org/gnome/desktop/peripherals/touchscreens/04f3:20d0]
+display=['SHP', '0x144a', '0x00000000']
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/privacy]
+remove-old-temp-files=true
+old-files-age=uint32 5
+remember-recent-files=false
+remove-old-trash-files=true
+
+[org/gnome/desktop/wm/keybindings]
+close=['<Super>q']
+panel-run-dialog=['<Super>space']
+switch-input-source-backward=@as []
+switch-to-workspace-left=['']
+show-desktop=['']
+switch-input-source=@as []
+switch-to-workspace-right=['']
+
+[org/gnome/desktop/background]
+picture-uri='file:///home/dustin/Pictures/wallpaper.jpg'
+
+[org/gnome/desktop/input-sources]
+current=uint32 0
+sources=[('xkb', 'us')]
+
+[org/gnome/software]
+check-timestamp=int64 1540052099
+
+[org/gtk/settings/file-chooser]
+sort-column='name'
+sidebar-width=157
+window-position=(909, 190)
+show-size-column=true
+show-hidden=false
+window-size=(600, 379)
+sort-directories-first=false
+date-format='regular'
+sort-order='ascending'
+location-mode='path-bar'
+
+[apps/update-manager]
+first-run=false
+launch-time=int64 1539724480
+
+[com/solus-project/budgie-panel]
+dark-theme=true
+migration-level=1
+panels=['d8f5fc4e-d2ab-11e8-9686-02426db52f67', 'e1a6e852-d2ac-11e8-9686-02426db52f67']
+layout='default'
+
+[com/solus-project/budgie-panel/panels/{d8f5fc4e-d2ab-11e8-9686-02426db52f67}]
+size=39
+dock-mode=false
+enable-shadow=false
+applets=['ec7c4d9a-d2ab-11e8-9686-02426db52f67', '6dc2175e-d2ac-11e8-9686-02426db52f67', '17e9677e-d2ac-11e8-9686-02426db52f67', '443b58a0-d2ac-11e8-9686-02426db52f67', '2e00847a-d2ac-11e8-9686-02426db52f67', 'fcdde412-d2ad-11e8-9686-02426db52f67', '5ae66c52-d2ac-11e8-9686-02426db52f67']
+transparency='dynamic'
+location='top'
+
+[com/solus-project/budgie-panel/panels/{e1a6e852-d2ac-11e8-9686-02426db52f67}]
+size=52
+dock-mode=false
+autohide='automatic'
+applets=['071404bc-d2ad-11e8-9686-02426db52f67', '8b3ead28-d2ad-11e8-9686-02426db52f67']
+enable-shadow=false
+location='right'
+transparency='always'
+
+[com/solus-project/budgie-panel/instance/spacer/{fcdde412-d2ad-11e8-9686-02426db52f67}]
+size=40
+
+[com/solus-project/budgie-panel/instance/spacer/{443b58a0-d2ac-11e8-9686-02426db52f67}]
+size=17
+
+[com/solus-project/budgie-panel/instance/spacer/{5ae66c52-d2ac-11e8-9686-02426db52f67}]
+size=40
+
+[com/solus-project/budgie-panel/instance/budgie-menu/{ec7c4d9a-d2ab-11e8-9686-02426db52f67}]
+menu-compact=true
+enable-menu-label=false
+
+[com/solus-project/budgie-panel/applets/{071404bc-d2ad-11e8-9686-02426db52f67}]
+position=0
+alignment='end'
+name='System Tray'
+
+[com/solus-project/budgie-panel/applets/{8b3ead28-d2ad-11e8-9686-02426db52f67}]
+position=1
+alignment='end'
+name='Calendar'
+
+[com/solus-project/budgie-panel/applets/{ec7c4d9a-d2ab-11e8-9686-02426db52f67}]
+position=0
+alignment='start'
+name='Budgie Menu'
+
+[com/solus-project/budgie-panel/applets/{2e00847a-d2ac-11e8-9686-02426db52f67}]
+position=0
+alignment='end'
+name='Kangaroo'
+
+[com/solus-project/budgie-panel/applets/{443b58a0-d2ac-11e8-9686-02426db52f67}]
+position=4
+alignment='end'
+name='Spacer'
+
+[com/solus-project/budgie-panel/applets/{fcdde412-d2ad-11e8-9686-02426db52f67}]
+position=2
+alignment='end'
+name='Spacer'
+
+[com/solus-project/budgie-panel/applets/{5ae66c52-d2ac-11e8-9686-02426db52f67}]
+position=1
+alignment='end'
+name='Spacer'
+
+[com/solus-project/budgie-panel/applets/{17e9677e-d2ac-11e8-9686-02426db52f67}]
+position=3
+alignment='end'
+name='User Indicator'
+
+[com/solus-project/budgie-panel/applets/{6dc2175e-d2ac-11e8-9686-02426db52f67}]
+position=0
+alignment='center'
+name='DropBy'
+
+[com/solus-project/budgie-wm]
+button-layout='appmenu:minimize,maximize,close'
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1539724476
+
+[desktop/ibus/general]
+preload-engines=['xkb:us::eng']
+version='1.5.17'
+
+[desktop/ibus/panel/emoji]
+hotkey=['<Control><Alt><Shift>e']

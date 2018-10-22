@@ -34,3 +34,4 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
     * depends on panel work
   * Remove panel shadows
     * depends on panel work
+  * Add github release files such as shfmt, etc.
