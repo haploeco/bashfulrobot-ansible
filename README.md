@@ -42,3 +42,5 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
   * dotfiles related
 * Install autojump
   * dotfiles related
+* Install gnome-boxes
+  * Apply 18.x fixes
