@@ -1,9 +1,10 @@
 # bashfulrobot-ansible
+
 Ansible Repo that utilizes an ansible-pull command to configure my workstations.
 
 ## My Workflow
 
-```
+```bash
 wget http://deploy.bashfulrobot.com/laptop
 chmod u+x ./laptop
 ./laptop
