@@ -1,9 +1,10 @@
 # bashfulrobot-ansible
+
 Ansible Repo that utilizes an ansible-pull command to configure my workstations.
 
 ## My Workflow
 
-```
+```bash
 wget http://deploy.bashfulrobot.com/laptop
 chmod u+x ./laptop
 ./laptop
@@ -38,3 +39,9 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
   * Install NVIDIA drivers based on host
   * `sudo ubuntu-drivers autoinstall`
   * `sudo add-apt-repository ppa:graphics-drivers/ppa`
+* Install bash-it
+  * dotfiles related
+* Install autojump
+  * dotfiles related
+* Install gnome-boxes
+  * Apply 18.x fixes
