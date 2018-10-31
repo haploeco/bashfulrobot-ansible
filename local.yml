@@ -8,7 +8,7 @@
       apt: update_cache=yes
       changed_when: false
   tasks:
-    - include: tasks/machine-state.yml
+    # - include: tasks/machine-state.yml
     - include: tasks/repos.yml
     - include: tasks/update-system.yml
     - include: tasks/apt.yml
