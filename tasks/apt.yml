@@ -50,6 +50,7 @@
       - typora
       - nomacs
       - uncrustify
+      - snapd-xdg-open
 - name: Remove APT Packages
   apt:
     name: '{{ rempackages }}'
