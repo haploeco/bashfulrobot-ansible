@@ -42,7 +42,7 @@
       - software-properties-common
       - docker-ce
       - cowsay
-      - sublime-merge
+      - fish
       - python-pip
       - meld
       - figlet

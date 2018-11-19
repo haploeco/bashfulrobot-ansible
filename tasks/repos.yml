@@ -19,6 +19,7 @@
     - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
+    - ppa:fish-shell/release-2
 - name: Add Docker PPA
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
@@ -29,11 +30,5 @@
   apt_repository:
     repo: deb https://typora.io/linux ./
     filename: typora
-    update_cache: yes
-    state: present
-- name: Add Sublime Merge PPA
-  apt_repository:
-    repo: deb https://download.sublimetext.com/ apt/stable/
-    filename: sublimehq
     update_cache: yes
     state: present

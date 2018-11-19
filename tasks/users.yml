@@ -2,7 +2,7 @@
   user:
     name: dustin
     comment: Dustin Krysak
-    shell: /bin/bash
+    shell: /usr/bin/fish
     groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd
     append: yes
 - name: Install GH SSH Pub keys
