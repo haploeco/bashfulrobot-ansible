@@ -8,7 +8,7 @@
 - name: Copy Default Wallpaper
   copy:
     # src: files/Rubiks-HDPI.jpg
-    src: files/Spock.jpg
+    src: files/Btf.jpg
     dest: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
 - name: Set Wallpaper File Permissions
   file:
