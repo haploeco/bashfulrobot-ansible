@@ -2,7 +2,6 @@
   command: 'snap install "{{ item }}"'
   with_items:
     - firefox
-    - qownnotes
     - irccloud-desktop
     - hugo
     - libreoffice
