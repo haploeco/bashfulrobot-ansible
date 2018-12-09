@@ -25,6 +25,8 @@
     - restic
     - snapcraft
     - slack
+    - snapdiff
+    - aws-cli
 - name: Remmina Snap CFG
   command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
   with_items:
