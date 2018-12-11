@@ -28,6 +28,8 @@
     - slack
     - snapdiff
     - aws-cli
+- name: Install Node Snap Package
+  command: 'sudo snap install node --channel=11/stable --classic'
 - name: Remmina Snap CFG
   command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
   with_items:
