@@ -46,3 +46,4 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
 * Configure/Install Fish
   * Dotfile
 * Install Standard Notes
+* Install https://github.com/kaepora/diskgem/releases
