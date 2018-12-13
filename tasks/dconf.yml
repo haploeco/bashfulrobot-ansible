@@ -112,33 +112,48 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
-    value: "Pocillo"
+    value: "'Pocillo'"
     state: present
 - name: Set gtk-im-module
   become: true
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/gtk-im-module"
-    value: "gtk-im-context-simple"
+    value: "'gtk-im-context-simple'"
     state: present
 - name: Set Cursor Theme
   become: true
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/cursor-theme"
-    value: "DMZ-White"
+    value: "'DMZ-White'"
     state: present
 - name: Set System Theme
   become: true
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
-    value: "Pocillo"
+    # Needed extra quotes due to unlnown key error
+    value: "'Pocillo'"
     state: present
 - name: Set Screen Idle Time
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "org/gnome/desktop/session/idle-delay"
+    key: "/org/gnome/desktop/session/idle-delay"
     value: "uint32 600"
+    state: present
+- name: Set Remove Super Space Defaults
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-input-source-backward"
+    value: "['<Primary><Alt><Super>space']"
+    state: present
+- name: Set Remove Super Space Defaults
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-input-source"
+    value: "['<Primary><Shift><Alt><Super>space']"
     state: present
