@@ -4,10 +4,8 @@
     state: absent
   vars:
     rempackages:
-      - chromium-*
       - geary
       - libreoffice-*
-      - plank
       - docker
       - docker-engine
       - docker.io
@@ -51,16 +49,6 @@
       - nomacs
       - uncrustify
       - snapd-xdg-open
-- name: Remove APT Packages
-  apt:
-    name: '{{ rempackages }}'
-    state: absent
-  vars:
-    rempackages:
-      - chromium-*
-      - geary
-      - libreoffice-*
-      - plank
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
