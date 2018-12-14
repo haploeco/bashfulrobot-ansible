@@ -49,6 +49,7 @@
       - nomacs
       - uncrustify
       - snapd-xdg-open
+      - rtv
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
