@@ -5,6 +5,7 @@
   vars:
     rempackages:
       - geary
+      - fish
       - libreoffice-*
       - docker
       - docker-engine
