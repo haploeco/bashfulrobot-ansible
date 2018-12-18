@@ -21,6 +21,7 @@
   vars:
     packages:
       - git
+      - hstr
       - xclip
       - ncdu
       - tmux
