@@ -1,7 +1,9 @@
 ##!/bin/bash
 
-sudo apt install qemu-kvm libvirt-bin
+sudo apt install qemu-kvm libvirt-bin gnome-boxes -y
 
-Add group=kvm to /etc/libvirt/qemu.conf
+sudo echo 'group="kvm"' >> /etc/libvirt/qemu.conf
 
 sudo usermod -a -G kvm $USER
+
+exit 0
