@@ -25,7 +25,6 @@
       - tmux
       - openssh-server
       - ubuntu-restricted-extras
-      - seafile-gui
       - debconf-utils
       - lftp
       - htop
@@ -40,11 +39,9 @@
       - software-properties-common
       - docker-ce
       - cowsay
-      - fish
       - python-pip
       - meld
       - figlet
-      - fish
       - typora
       - nomacs
       - uncrustify
