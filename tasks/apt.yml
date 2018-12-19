@@ -21,6 +21,7 @@
   vars:
     packages:
       - git
+      - neovim
       - hstr
       - xclip
       - ncdu
