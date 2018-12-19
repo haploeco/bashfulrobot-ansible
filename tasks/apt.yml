@@ -11,6 +11,7 @@
       - docker-engine
       - docker.io
       - ibus
+      - plank
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
