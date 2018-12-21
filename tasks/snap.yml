@@ -2,6 +2,7 @@
   command: 'snap install "{{ item }}"'
   with_items:
     - yakyak
+    - pockit
     - firefox
     - irccloud-desktop
     - hugo
