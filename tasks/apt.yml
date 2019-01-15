@@ -53,6 +53,9 @@
       - rtv
       - breeze-icon-theme
       - breeze-gtk-theme
+      - breeze-cursor-theme
+      - grub-theme-breeze
+
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
