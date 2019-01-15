@@ -52,6 +52,7 @@
       - snapd-xdg-open
       - rtv
       - breeze-icon-theme
+      - breeze-gtk-theme
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
