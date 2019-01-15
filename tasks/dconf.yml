@@ -3,8 +3,8 @@
     name: "{{ packages }}"
   vars:
     packages:
-    - python-psutil
-    - psutils
+      - python-psutil
+      - psutils
 - name: Copy Default Wallpaper
   copy:
     # src: files/Rubiks-HDPI.jpg
@@ -77,21 +77,21 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/nautilus/desktop/trash-icon-visible"
-    value: "true"
+    value: "false"
     state: present
 - name: Add Mounted Volume Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/nautilus/desktop/volumes-visible"
-    value: "true"
+    value: "false"
     state: present
 - name: Add Home Folder Icon to the Desktop
   become: true
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/nautilus/desktop/home-icon-visible"
-    value: "true"
+    value: "false"
     state: present
 - name: Add Network Icons to the Desktop
   become: true
@@ -112,7 +112,7 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
-    value: "'Pocillo'"
+    value: "'breeze-dark'"
     state: present
 - name: Set gtk-im-module
   become: true
@@ -126,7 +126,7 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/cursor-theme"
-    value: "'DMZ-White'"
+    value: "'Breeze_Snow'"
     state: present
 - name: Set System Theme
   become: true
@@ -134,7 +134,7 @@
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     # Needed extra quotes due to unlnown key error
-    value: "'Pocillo'"
+    value: "'Breeze-Dark'"
     state: present
 - name: Set Screen Idle Time
   become: true
