@@ -1,6 +1,6 @@
 - name: Remove APT Packages
   apt:
-    name: '{{ rempackages }}'
+    name: "{{ rempackages }}"
     state: absent
   vars:
     rempackages:
@@ -18,7 +18,7 @@
     purge: yes
 - name: Install APT Packages
   apt:
-    name: '{{ packages }}'
+    name: "{{ packages }}"
   vars:
     packages:
       - git
@@ -51,6 +51,7 @@
       - uncrustify
       - snapd-xdg-open
       - rtv
+      - breeze-icon-theme
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
