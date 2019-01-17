@@ -134,7 +134,7 @@
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     # Needed extra quotes due to unlnown key error
-    value: "'Breeze-Dark'"
+    value: "'Qogir-dark'"
     state: present
 - name: Set Screen Idle Time
   become: true
