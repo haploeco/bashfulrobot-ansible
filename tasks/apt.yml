@@ -23,7 +23,6 @@
     packages:
       - git
       - neovim
-      - hstr
       - xclip
       - ncdu
       - tmux
