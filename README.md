@@ -23,6 +23,7 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
 * Add dotfile cfg
   * https://github.com/bpaulin/DotFiles_Ansible Seems good
   * Create TPL files
+* Automate ffsend install
 * Add startup items
 * create skeleton for removing software
   * single one off runs.
