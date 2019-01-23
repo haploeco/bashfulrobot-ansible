@@ -54,6 +54,7 @@
       - breeze-gtk-theme
       - breeze-cursor-theme
       - grub-theme-breeze
+      - asciinema
 
 - name: Autoremove and Purge APT Packages
   apt:
