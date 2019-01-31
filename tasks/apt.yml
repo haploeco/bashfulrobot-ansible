@@ -55,6 +55,7 @@
       - breeze-cursor-theme
       - grub-theme-breeze
       - asciinema
+      - flameshot
 
 - name: Autoremove and Purge APT Packages
   apt:
