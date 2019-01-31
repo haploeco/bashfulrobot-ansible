@@ -1,0 +1,26 @@
+- name: Install FISH Shell
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - fish
+
+- name: Change current user shell
+  user:
+    name: "{{ myusername }}"
+    shell: /usr/bin/fish
+  become: yes
+
+- name: Fetch oh-my-fish
+  get_url:
+    url: https://get.oh-my.fish
+    dest: /tmp/install-oh-my-fish.sh
+    mode: 0755
+
+- name: Setup Bootstrap script for OMF
+  copy:
+    src: files/bootstrap-omf.sh
+    dest: "/tmp/bootstrap-omf.sh"
+
+- name: Install oh-my-fish
+  command: bash /tmp/bootstrap-omf.sh

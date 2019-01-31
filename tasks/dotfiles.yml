@@ -1,0 +1,42 @@
+- name: Create Fish Cfg Folder
+  file:
+    path: /home/{{ myusername }}/.config/fish
+    state: directory
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+
+- name: Create Fish Functions Folder
+  file:
+    path: /home/{{ myusername }}/.config/fish/functions
+    state: directory
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+
+- name: Placing Fish Dotfile - config.fish
+  copy:
+    src: files/dotfiles/fish/config.fish
+    dest: "/home/{{ myusername }}/.config/fish/config.fish"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+
+- name: Placing Fish Functions
+  copy:
+    # Trailing / changes behavior
+    src: files/dotfiles/fish/functions/{{item}}
+    dest: "/home/{{ myusername }}/.config/fish/functions"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+  with_items:
+    - battery.fish
+    - bu-std-notes.fish
+    - do-update.fish
+    - fish_prompt.fish
+    - img-up.fish
+    - mount-std-notes.fish
+    - ntfy-send.fish
+    - sucode.fish
+    - umount-std-notes.fish

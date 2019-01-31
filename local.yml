@@ -17,7 +17,9 @@
     - include: tasks/sysctl.yml
     - include: tasks/users.yml
     - include: tasks/sudoers.yml
+    - include: tasks/shell.yml
     - include: tasks/cron.yml
+    - include: tasks/dotfiles.yml
     - include: tasks/dconf.yml
     # - include: tasks/vscode.yml
     - include: tasks/services.yml
