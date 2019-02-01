@@ -22,5 +22,5 @@
     src: files/bootstrap-omf.sh
     dest: "/tmp/bootstrap-omf.sh"
 
-- name: Install oh-my-fish
-  command: bash /tmp/bootstrap-omf.sh
+# - name: Install oh-my-fish
+#   command: bash /tmp/bootstrap-omf.sh
