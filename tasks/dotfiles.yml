@@ -40,3 +40,4 @@
     - ntfy-send.fish
     - sucode.fish
     - umount-std-notes.fish
+    - find-sym-loop.fish
