@@ -19,7 +19,7 @@
 
 - name: Setup Bootstrap script for OMF
   copy:
-    src: files/bootstrap-omf.sh
+    src: files/wa/bootstrap-omf.sh
     dest: "/tmp/bootstrap-omf.sh"
 
 # - name: Install oh-my-fish
