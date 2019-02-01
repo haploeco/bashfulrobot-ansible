@@ -6,6 +6,8 @@
 set -U fish_key_bindings fish_vi_key_bindings
 set -U budspencer_nogreeting
 
+set -U -x fish_emoji_width 2
+
 # GO
 
 if test -e /snap/bin/go
