@@ -5,4 +5,40 @@
     group: "{{ myusername }}"
     mode: 0700
     state: directory
+
+# Have to separate until I can figure
+# out how to exclude the snap dir
+- name: Fix 'home' subfolder permissions
+  file:
+    path: "/home/{{ myusername }}/{{ item }}"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+    state: directory
     recurse: yes
+  with_items:
+    - appimg
+    - apps
+    - Desktop
+    - Documents
+    - dotfiles
+    - Downloads
+    - exercism
+    - fish-config
+    - go
+    - InputClass
+    - Music
+    - notes
+    - Pictures
+    - Projects
+    - Public
+    - qownnotes
+    - seafile-client
+    - Section
+    - snap
+    - "Standard Notes Backups"
+    - Steam
+    - Templates
+    - tmp
+    - vala
+    - Videos
