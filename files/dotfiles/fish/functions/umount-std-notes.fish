@@ -1,4 +1,4 @@
 function umount-std-notes
-  fusermount -u ~/notes 
+    fusermount -u ~/notes
 end
 

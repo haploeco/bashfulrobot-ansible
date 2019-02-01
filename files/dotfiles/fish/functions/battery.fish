@@ -1,3 +1,3 @@
 function battery
-	acpi $argv
-end 
+    acpi $argv
+end
