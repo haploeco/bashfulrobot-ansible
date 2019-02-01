@@ -112,7 +112,7 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
-    value: "'breeze-dark'"
+    value: "'Pocillo'"
     state: present
 - name: Set gtk-im-module
   become: true
@@ -134,7 +134,7 @@
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     # Needed extra quotes due to unlnown key error
-    value: "'Qogir-dark'"
+    value: "'Pocillo-dark-slim'"
     state: present
 - name: Set Screen Idle Time
   become: true
