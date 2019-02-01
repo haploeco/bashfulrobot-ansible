@@ -27,3 +27,4 @@
     - include: tasks/timezone.yml
     - include: tasks/nsswitch.yml
     #- include: tasks/dotfiles.yml
+    - include: tasks/permissions.yml
