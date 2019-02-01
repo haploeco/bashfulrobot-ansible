@@ -5,6 +5,7 @@
     group: "{{ myusername }}"
     mode: 0700
     state: directory
+    recurse: no
 
 # Have to separate until I can figure
 # out how to exclude the snap dir
@@ -35,7 +36,6 @@
     - qownnotes
     - seafile-client
     - Section
-    - snap
     - "Standard Notes Backups"
     - Steam
     - Templates
