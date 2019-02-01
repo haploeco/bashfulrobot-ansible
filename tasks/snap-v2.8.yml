@@ -1,0 +1,46 @@
+# https://docs.ansible.com/ansible/devel/modules/snap_module.html
+- name: Install Snap Packages
+  snap:
+    name:
+    - yakyak
+    - firefox
+    - irccloud-desktop
+    - hugo
+    - libreoffice
+    - remmina
+    - spotify
+    - lxd
+    - telegram-desktop
+    - simplescreenrecorder
+    - bitwarden
+    - bw
+    - discord
+    - mailspring
+    - serve
+    - icdiff
+    - pocket-casts
+    - gnome-twitch
+    - gotop
+- name: Install Snaps with option --classic
+  snap:
+    name:
+    - vscode
+    - go
+    - restic
+    - snapcraft
+    - slack
+    - snapdiff
+    - aws-cli
+    classic: yes
+- name: Install Node with option --channel=11/stable --classic
+  snap:
+    name: node
+    channel: 11/stable
+    classic: yes
+# - name: Remmina Snap CFG
+#   command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
+#   with_items:
+#     - avahi-observe
+#     - cups-control
+#     - mount-observe
+#     - password-manager-service
