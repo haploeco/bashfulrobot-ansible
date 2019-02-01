@@ -1,0 +1,31 @@
+- name: Enable Nightlight
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
+    state: present
+
+- name: Changing Scroll Direction
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
+    value: "false"
+    state: present
+
+- name: Set gtk-im-module
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-im-module"
+    value: "'gtk-im-context-simple'"
+    state: present
+
+- name: Set Screen Idle Time
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/session/idle-delay"
+    value: "uint32 600"
+    state: present

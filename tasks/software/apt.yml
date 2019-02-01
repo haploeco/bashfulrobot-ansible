@@ -55,6 +55,8 @@
       - grub-theme-breeze
       - asciinema
       - flameshot
+      - python-psutil
+      - psutils
 
 - name: Autoremove and Purge APT Packages
   apt:

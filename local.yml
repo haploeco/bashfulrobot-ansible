@@ -8,23 +8,33 @@
       apt: update_cache=yes
       changed_when: false
   tasks:
-    # - include: tasks/machine-state.yml
-    - include: tasks/repos.yml
-    - include: tasks/update-system.yml
-    - include: tasks/apt.yml
-    - include: tasks/snap.yml
-    - include: tasks/pip.yml
-    - include: tasks/sysctl.yml
-    - include: tasks/users.yml
-    - include: tasks/sudoers.yml
-    - include: tasks/shell.yml
-    - include: tasks/cron.yml
-    - include: tasks/dotfiles.yml
-    - include: tasks/dconf.yml
-    # - include: tasks/vscode.yml
-    - include: tasks/services.yml
-    - include: tasks/ufw.yml
-    - include: tasks/timezone.yml
-    - include: tasks/nsswitch.yml
-    #- include: tasks/dotfiles.yml
-    - include: tasks/permissions.yml
+    # Ansible Settings
+    - include: tasks/ansible/sudoers.yml
+
+    # Software Settings
+    - include: tasks/software/repos.yml
+    - include: tasks/software/apt.yml
+    - include: tasks/software/snap.yml
+    - include: tasks/software/pip.yml
+    - include: tasks/software/update-system.yml
+
+    # System Settings
+    - include: tasks/system/sysctl.yml
+    - include: tasks/system/nsswitch.yml
+    - include: tasks/system/services.yml
+    - include: tasks/system/timezone.yml
+    - include: tasks/system/ufw.yml
+
+    # User Settings
+    - include: tasks/user/users.yml
+    - include: tasks/user/cron.yml
+    - include: tasks/user/shell.yml
+    - include: tasks/user/shortcuts.yml
+    - include: tasks/user/general-user-settings.yml
+    - include: tasks/user/dotfiles.yml
+    - include: tasks/user/permissions.yml
+
+    # User Visual Settings
+    - include: tasks/user/visual/theme.yml
+    - include: tasks/user/visual/wallpaper.yml
+    - include: tasks/user/visual/desktop-icons.yml

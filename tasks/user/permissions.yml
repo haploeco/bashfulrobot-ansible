@@ -1,3 +1,4 @@
+# Sanity Home Permissions
 - name: Fix 'home' permissions
   file:
     path: "/home/{{ myusername }}"
@@ -42,3 +43,34 @@
     - tmp
     - vala
     - Videos
+    - .ansible
+    - .bazaar
+    - .cache
+    - .ccnet
+    - .config
+    - .fonts
+    - .gnupg
+    - .icons
+    - .local
+    - .mozilla
+    - .ssh
+    - .texpander
+    - .themes
+    - .vscode
+
+
+- name: Fixing SSH PRIV Key Permissions
+  become: yes
+  file:
+    path: "/home/{{ myusername }}/.ssh/id_rsa"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0600
+
+- name: Fixing SSH PUB Key Permissions
+  become: yes
+  file:
+    path: "/home/{{ myusername }}/.ssh/id_rsa.pub"
+    owner: "{{  myusername }}"
+    group: "{{ myusername }}"
+    mode: 0600

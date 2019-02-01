@@ -1,0 +1,54 @@
+## Theme
+- name: Set Cursor Theme
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/interface/cursor-theme"
+    value: "'Breeze_Snow'"
+    state: present
+
+- name: Set System Theme
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    # Needed extra quotes due to unlnown key error
+    value: "'Pocillo-dark-slim'"
+    state: present
+
+- name: Set Icon Theme
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'Pocillo'"
+    state: present
+
+- name: Set Theme to Dark
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/com/solus-project/budgie-panel/dark-theme"
+    value: "true"
+    state: present
+
+## Window Controls
+
+# Next two are needed in tandem
+
+- name: Set Window Controls Button Layout
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/com/solus-project/budgie-wm/button-layout"
+    value: "'close,minimize,maximize:appmenu'"
+    state: present
+
+- name: Set Window Controls Button Style
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/com/solus-project/budgie-wm/button-style"
+    value: "'left'"
+    state: present
+
