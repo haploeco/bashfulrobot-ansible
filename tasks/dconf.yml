@@ -157,3 +157,18 @@
     key: "/org/gnome/desktop/wm/keybindings/switch-input-source"
     value: "['<Primary><Shift><Alt><Super>space']"
     state: present
+# Next two are needed in tandem
+- name: Set Window Controls Button Layout
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/com/solus-project/budgie-wm/button-layout"
+    value: "'close,minimize,maximize:appmenu'"
+    state: present
+- name: Set Window Controls Button Style
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/com/solus-project/budgie-wm/button-style"
+    value: "'left'"
+    state: present
