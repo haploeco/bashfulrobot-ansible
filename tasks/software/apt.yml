@@ -57,6 +57,7 @@
       - flameshot
       - python-psutil
       - psutils
+      - libimage-exiftool-perl
 
 - name: Autoremove and Purge APT Packages
   apt:
