@@ -58,6 +58,7 @@
       - python-psutil
       - psutils
       - libimage-exiftool-perl
+      - firefox
 
 - name: Autoremove and Purge APT Packages
   apt:
