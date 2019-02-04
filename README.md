@@ -20,9 +20,6 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
 
 ## TODO
 
-* ~~Add dotfile cfg~~
-  * ~~https://github.com/bpaulin/DotFiles_Ansible Seems good~~
-  * ~~Create TPL files~~
 * automate chezmoi install
 * Automate ffsend install
 * Add startup items
@@ -45,7 +42,5 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
   * `sudo add-apt-repository ppa:graphics-drivers/ppa`
 * Install gnome-boxes
   * Apply 18.x fixes
-* Configure/Install Fish
-  * Dotfile --> use `chezmoi`
 * Install Standard Notes
 * Install https://github.com/kaepora/diskgem/releases
