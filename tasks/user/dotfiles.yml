@@ -41,3 +41,4 @@
     - umount-std-notes.fish
     - find-sym-loop.fish
     - fish_right_prompt.fish
+    - clean-img.fish
