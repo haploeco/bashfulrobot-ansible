@@ -77,5 +77,5 @@ end
 
 ## Set Snapcraft to use multipass for cleanbuild (could also use `lxd`)
 #set -e SNAPCRAFT_BUILD_ENVIRONMENT
-#set -x SNAPCRAFT_BUILD_ENVIRONMENT lxd
-set -x SNAPCRAFT_BUILD_ENVIRONMENT multipass
+set -x SNAPCRAFT_BUILD_ENVIRONMENT lxd
+#set -x SNAPCRAFT_BUILD_ENVIRONMENT multipass
