@@ -3,3 +3,4 @@
     name:
       - ansible-lint
       - awscli
+      - telegram-send
