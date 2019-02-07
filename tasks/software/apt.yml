@@ -60,6 +60,9 @@
       - libimage-exiftool-perl
       - firefox
       - python3-pip
+      - libcurl4
+      - curl
+      - gnupg-agent
 
 - name: Autoremove and Purge APT Packages
   apt:
