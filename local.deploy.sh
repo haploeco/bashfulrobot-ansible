@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ANSIBLE=$(which ansible-playbook)
+GIT=$(which git)
 MYLOCBASE="$HOME/tmp"
 MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
@@ -28,10 +29,13 @@ if [ ! -f $MYREPO/local.yml ]; then
 
 mkdir -p $MYLOCBASE
 cd $MYLOCBASE
-git clone $MYREPORMT
+$GIT clone $MYREPORMT
 fi
 
 cd $MYREPO
+
+# Get the latest version.
+$GIT pull
 
 # Run ansible-pull no matter what (local dev iteration)
 sudo $ANSIBLE $MYREPO/local.yml --connection=local
