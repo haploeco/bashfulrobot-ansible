@@ -4,7 +4,6 @@
     update_cache: yes
     state: present
   with_items:
-    - ppa:ansible/ansible
+    # - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
-    - ppa:fish-shell/release-3
