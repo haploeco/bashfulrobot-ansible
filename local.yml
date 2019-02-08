@@ -26,6 +26,7 @@
     - include: tasks/system/ufw.yml
 
     # User Settings
+    - include: tasks/user/groups.yml
     - include: tasks/user/users.yml
     - include: tasks/user/cron.yml
     - include: tasks/user/shell.yml
