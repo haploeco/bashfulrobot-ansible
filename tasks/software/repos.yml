@@ -4,6 +4,10 @@
     update_cache: yes
     state: present
   with_items:
-    # - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
+
+- name: Add Canonical Partners PPA
+  apt_repository:
+    repo: deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner
+    state: present
