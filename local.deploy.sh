@@ -7,6 +7,9 @@ MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
 
+git config user.name bashfulrobot
+it config user.email dustin@bashfulrobot.com
+
 if [ ! -f /tmp/foo.txt ]; then
     echo "Ansible not found!"
 
