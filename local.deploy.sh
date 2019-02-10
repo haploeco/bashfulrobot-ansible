@@ -11,7 +11,8 @@ $GIT config user.name bashfulrobot
 $GIT config user.email dustin@bashfulrobot.com
 
 if [ ! -f /tmp/foo.txt ]; then
-    echo "Ansible not found!"
+    echo "Ansible not found; beginning install..."
+    echo
 
     # Bootstrap Ansible
     sudo apt-get install software-properties-common
