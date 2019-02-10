@@ -60,6 +60,8 @@
       - libcurl4
       - curl
       - gnupg-agent
+      - font-manager
+      - code
 
 - name: Autoremove and Purge APT Packages
   apt:
