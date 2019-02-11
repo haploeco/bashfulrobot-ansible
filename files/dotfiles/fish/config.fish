@@ -1,10 +1,10 @@
 ### Main fish config
 
-### OMF
+# Maintain default keybindings
+#
+fish_default_key_bindings
 
-# omf install budspencer
-#set -U fish_key_bindings fish_vi_key_bindings
-#set -U budspencer_nogreeting
+### OMF
 
 # omf install bobthefish
 # set -g theme_display_git no
