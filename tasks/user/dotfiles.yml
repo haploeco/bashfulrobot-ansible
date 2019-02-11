@@ -42,3 +42,11 @@
     - find-sym-loop.fish
     - fish_right_prompt.fish
     - clean-img.fish
+
+- name: Placing Uncrustify CFG
+  copy:
+    src: files/dotfiles/uncrustify/uncrustify.cfg
+    dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
