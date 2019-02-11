@@ -62,6 +62,7 @@
       - gnupg-agent
       - font-manager
       - code
+      - gnome-calculator
 
 - name: Autoremove and Purge APT Packages
   apt:
