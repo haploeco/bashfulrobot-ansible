@@ -21,7 +21,7 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
-    value: "'Pocillo'"
+    value: "'Emerald-Dark'"
     state: present
 
 - name: Set Theme to Dark
