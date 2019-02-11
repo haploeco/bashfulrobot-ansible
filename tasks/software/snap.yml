@@ -14,7 +14,6 @@
     - bw
     - discord
     - mailspring
-    #- gravit-designer
     - serve
     - icdiff
     - pocket-casts
@@ -33,6 +32,8 @@
     - slack
     - snapdiff
     - aws-cli
+    - kubectl
+
 - name: Install Node Snap Package
   command: 'snap install node --channel=11/stable --classic'
 - name: Remmina Snap CFG
