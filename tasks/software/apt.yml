@@ -37,14 +37,11 @@
       - whois
       - apt-transport-https
       - ca-certificates
-      - curl
       - software-properties-common
-      - docker-ce
       - cowsay
       - python-pip
       - meld
       - figlet
-      - typora
       - nomacs
       - uncrustify
       - snapd-xdg-open
@@ -63,6 +60,9 @@
       - libcurl4
       - curl
       - gnupg-agent
+      - font-manager
+      - code
+      - gnome-calculator
 
 - name: Autoremove and Purge APT Packages
   apt:

@@ -7,15 +7,18 @@ MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
 
-# Bootstrap Ansible
-if ! grep -q "$MYPPA" /etc/apt/sources.list.d/*; then
-    echo "Ansible Repo not available"
+$GIT config user.name bashfulrobot
+$GIT config user.email dustin@bashfulrobot.com
+
+if [ ! -f "$ANSIBLE" ]; then
+    echo "Ansible not found; beginning install..."
+    echo
+
+    # Bootstrap Ansible
     sudo apt-get install software-properties-common
-    sudo apt-add-repository ppa:ansible/ansible
     sudo apt-get update
     sudo apt-get install git ansible -y
 fi
-
 
 if [ ! -f $HOME/.ansible.cfg ]; then
     touch $HOME/.ansible.cfg
@@ -40,4 +43,4 @@ $GIT pull
 # Run ansible-pull no matter what (local dev iteration)
 sudo $ANSIBLE $MYREPO/local.yml --connection=local
 
-sudo rm -rf $HOME/.ansible/
+#sudo rm -rf $HOME/.ansible/

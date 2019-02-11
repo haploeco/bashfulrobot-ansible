@@ -1,6 +1,6 @@
 - name: Copy Default Wallpaper
   copy:
-    src: files/Btf.jpg
+    src: files/ubuntu_budgie_01.jpg
     dest: "/home/{{ myusername }}/Pictures/wallpaper.jpg"
 
 - name: Set Wallpaper File Permissions

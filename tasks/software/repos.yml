@@ -1,33 +1,23 @@
-- name: Add Docker GPG Key for APT
-  apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
-    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
-    state: present
-  register: add_repository_key
-  ignore_errors: true
-- name: Add Typora GPG Key
-  apt_key:
-    url: https://typora.io/linux/public-key.asc
-    state: present
 - name: Add Launchpad PPAs
   apt_repository:
     repo: "{{ item }}"
     update_cache: yes
     state: present
   with_items:
-    - ppa:ansible/ansible
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
-    - ppa:fish-shell/release-3
-- name: Add Docker PPA
+
+- name: Add Canonical Partners PPA
   apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
-    filename: docker
-    update_cache: yes
+    repo: deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner
     state: present
-- name: Add Typora PPA
+
+- name: Add an Apt signing key for Vscode
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+
+- name: Add Vscode MS PPA
   apt_repository:
-    repo: deb https://typora.io/linux ./
-    filename: typora
-    update_cache: yes
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present

@@ -4,7 +4,7 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/cursor-theme"
-    value: "'Breeze_Snow'"
+    value: "'DMZ-White'"
     state: present
 
 - name: Set System Theme
