@@ -63,9 +63,12 @@
       - font-manager
       - code
       - gnome-calculator
-      - vala
       - valac
       - uncrustify
+      - devscripts
+      - software-properties-gtk
+      - meson
+
 
 - name: Autoremove and Purge APT Packages
   apt:
