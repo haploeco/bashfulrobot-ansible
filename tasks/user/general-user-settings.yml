@@ -29,3 +29,11 @@
     key: "/org/gnome/desktop/session/idle-delay"
     value: "uint32 600"
     state: present
+
+- name: Set Mouse Sensitivity
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+    key: "/org/gnome/desktop/peripherals/mouse/speed"
+    value: "0.50"
+    state: present
