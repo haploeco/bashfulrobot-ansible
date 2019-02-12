@@ -1,62 +1,62 @@
 # Sanity Home Permissions
-- name: Fix 'home' permissions
-  file:
-    path: "/home/{{ myusername }}"
-    owner: "{{ myusername }}"
-    group: "{{ myusername }}"
-    mode: 0700
-    state: directory
-    recurse: no
+# - name: Fix 'home' permissions
+#   file:
+#     path: "/home/{{ myusername }}"
+#     owner: "{{ myusername }}"
+#     group: "{{ myusername }}"
+#     mode: 0700
+#     state: directory
+#     recurse: no
 
 # Have to separate until I can figure
 # out how to exclude the snap dir
-- name: Fix 'home' subfolder permissions
-  file:
-    path: "/home/{{ myusername }}/{{ item }}"
-    owner: "{{ myusername }}"
-    group: "{{ myusername }}"
-    mode: 0700
-    state: directory
-    recurse: yes
-  with_items:
-    - appimg
-    - apps
-    - Desktop
-    - Documents
-    - dotfiles
-    - Downloads
-    - exercism
-    - fish-config
-    - go
-    - InputClass
-    - Music
-    - notes
-    - Pictures
-    - Projects
-    - Public
-    - qownnotes
-    - seafile-client
-    - Section
-    - "Standard Notes Backups"
-    - Steam
-    - Templates
-    - tmp
-    - vala
-    - Videos
-    - .ansible
-    - .bazaar
-    - .cache
-    - .ccnet
-    - .config
-    - .fonts
-    - .gnupg
-    - .icons
-    - .local
-    - .mozilla
-    - .ssh
-    - .texpander
-    - .themes
-    - .vscode
+# - name: Fix 'home' subfolder permissions
+#   file:
+#     path: "/home/{{ myusername }}/{{ item }}"
+#     owner: "{{ myusername }}"
+#     group: "{{ myusername }}"
+#     mode: 0700
+#     state: directory
+#     recurse: yes
+#   with_items:
+#     - appimg
+#     - apps
+#     - Desktop
+#     - Documents
+#     - dotfiles
+#     - Downloads
+#     - exercism
+#     - fish-config
+#     - go
+#     - InputClass
+#     - Music
+#     - notes
+#     - Pictures
+#     - Projects
+#     - Public
+#     - qownnotes
+#     - seafile-client
+#     - Section
+#     - "Standard Notes Backups"
+#     - Steam
+#     - Templates
+#     - tmp
+#     - vala
+#     - Videos
+#     - .ansible
+#     - .bazaar
+#     - .cache
+#     - .ccnet
+#     - .config
+#     - .fonts
+#     - .gnupg
+#     - .icons
+#     - .local
+#     - .mozilla
+#     - .ssh
+#     - .texpander
+#     - .themes
+#     - .vscode
 
 
 - name: Fixing SSH PRIV Key Permissions
