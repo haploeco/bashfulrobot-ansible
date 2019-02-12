@@ -20,7 +20,11 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
 
 ## TODO
 
-* automate chezmoi install
+* Fix permission issues. Causes `ansible-pull` to choke due to local changes (permissions in the local repo).
+  * Can be fixed with:
+    * fish: `cd $HOME/.ansible/pull/bashfulrobot && git checkout -- (git ls-files -m)`
+    * bash: `cd $HOME/.ansible/pull/bashfulrobot && git checkout -- $(git ls-files -m)`
+  * This can cause the cronjob to not work.
 * Automate ffsend install
 * Add startup items
 * create skeleton for removing software
