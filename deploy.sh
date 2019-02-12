@@ -2,15 +2,15 @@
 
 APULL=$(which ansible-pull)
 MYREPO="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
-MYPPA="ansible"
 
 # Bootstrap Ansible
-if ! grep -q "$MYPPA" /etc/apt/sources.list.d/*; then
-	echo "Ansible Repo not available"
-	sudo apt-get install software-properties-common
-	sudo apt-add-repository ppa:ansible/ansible
-	sudo apt-get update
-	sudo apt-get install git ansible -y
+if [ ! -f "$ANSIBLE" ]; then
+    echo "Ansible not found; beginning install..."
+    echo
+
+    # Bootstrap Ansible
+    sudo apt-get update
+    sudo apt-get install git ansible software-properties-common -y
 fi
 
 if [ ! -f $HOME/.ansible.cfg ]; then
