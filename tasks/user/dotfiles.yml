@@ -42,6 +42,7 @@
     - find-sym-loop.fish
     - fish_right_prompt.fish
     - clean-img.fish
+    - git-drop.fish
 
 - name: Placing Uncrustify CFG
   copy:
