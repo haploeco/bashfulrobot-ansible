@@ -68,6 +68,7 @@
       - devscripts
       - software-properties-gtk
       - meson
+      - gnome-disk-utility
 
 
 - name: Autoremove and Purge APT Packages
