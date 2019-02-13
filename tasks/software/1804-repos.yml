@@ -1,0 +1,7 @@
+- name: Add Launchpad PPAs
+  apt_repository:
+    repo: "{{ item }}"
+    update_cache: yes
+    state: present
+  with_items:
+    - ppa:fish-shell/release-3
