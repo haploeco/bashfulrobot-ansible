@@ -1,14 +1,17 @@
-- git_config:
+- name: Set GIT core editor
+  git_config:
     name: core.editor
     scope: global
     value: code
 
-- git_config:
+- name: Set GIT User Email
+  git_config:
     name: user.email
     scope: global
     value: 'dustin@bashfulrobot.com'
 
-- git_config:
+- name: Set GIT User Name
+  git_config:
     name: user.name
     scope: global
     value: 'bashfulrobot'
