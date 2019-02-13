@@ -13,9 +13,9 @@
 
     # Software Settings
     - include: tasks/software/repos.yml
-    - include: 1810-repos.yml
+    - include: tasks/software/1810-repos.yml
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'cosmic'
-    - include: 1804-repos.yml
+    - include: tasks/software/1804-repos.yml
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'bionic'
     - include: tasks/software/apt.yml
     - include: tasks/software/snap.yml
