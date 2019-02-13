@@ -69,6 +69,7 @@
       - software-properties-gtk
       - meson
       - gnome-disk-utility
+      - dlocate
 
 
 - name: Autoremove and Purge APT Packages
