@@ -1,4 +1,4 @@
-- name: Add Launchpad PPAs
+- name: Add Launchpad PPAs for 1810
   apt_repository:
     repo: "{{ item }}"
     update_cache: yes
