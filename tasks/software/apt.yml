@@ -71,6 +71,7 @@
       - gnome-disk-utility
       - dlocate
       - ttf-mscorefonts-installer
+      - fonts-emojione
 
 
 - name: Autoremove and Purge APT Packages
