@@ -4,7 +4,6 @@
     state: absent
   vars:
     rempackages:
-      - geary
       - libreoffice-*
       - docker
       - docker-engine
@@ -73,6 +72,7 @@
       - ttf-mscorefonts-installer
       - fonts-emojione
       - libgtk-3-dev
+      - geary
 
 
 - name: Autoremove and Purge APT Packages
