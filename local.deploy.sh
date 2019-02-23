@@ -9,6 +9,7 @@ MYPPA="ansible"
 
 $GIT config user.name bashfulrobot
 $GIT config user.email dustin@bashfulrobot.com
+$GIT config user.editor micro
 
 if [ ! -f "$ANSIBLE" ]; then
     echo "Ansible not found; beginning install..."

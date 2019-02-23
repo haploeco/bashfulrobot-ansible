@@ -3,6 +3,10 @@
 APULL=$(which ansible-pull)
 MYREPO="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 
+$GIT config user.name bashfulrobot
+$GIT config user.email dustin@bashfulrobot.com
+$GIT config user.editor micro
+
 # Bootstrap Ansible
 if [ ! -f "$ANSIBLE" ]; then
     echo "Ansible not found; beginning install..."
