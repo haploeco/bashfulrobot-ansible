@@ -38,6 +38,7 @@
     - include: tasks/user/shortcuts.yml
     - include: tasks/user/general-user-settings.yml
     - include: tasks/user/dotfiles.yml
+    - include: tasks/user/scripts.yml
     - include: tasks/user/permissions.yml
 
     # User Visual Settings

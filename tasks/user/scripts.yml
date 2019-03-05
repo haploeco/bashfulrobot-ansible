@@ -1,0 +1,15 @@
+- name: Create Scripts BIN Folder
+  file:
+    path: /home/{{ myusername }}/bin
+    state: directory
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+
+- name: Placing slackup.sh Script
+  copy:
+    src: files/scripts/slackup.sh
+    dest: "/home/{{ myusername }}/bin/slackup.sh"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
