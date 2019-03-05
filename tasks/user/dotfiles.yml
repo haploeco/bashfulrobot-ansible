@@ -43,6 +43,7 @@
     - fish_right_prompt.fish
     - clean-img.fish
     - git-drop.fish
+    - slackup.fish
 
 - name: Placing Uncrustify CFG
   copy:
