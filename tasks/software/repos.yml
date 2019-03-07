@@ -6,7 +6,6 @@
   with_items:
     - ppa:ubuntubudgie/backports
     - ppa:seafile/seafile-client
-    - ppa:geary-team/releases
 
 - name: Add Canonical Partners PPA
   apt_repository:
