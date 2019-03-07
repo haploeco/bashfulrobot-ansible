@@ -19,7 +19,7 @@ declare -a EDITFILES=("ssb-interop.js" "index.js")
 for i in "${EDITFILES[@]}"
 do
     $ECHO "Creating $i.."
-#    $CAT $RUNNINGDIR/$i.template >> $SLACKFILESPATH/$i
+    $CAT $RUNNINGDIR/$i.template >> $SLACKFILESPATH/$i
 
 done
 
