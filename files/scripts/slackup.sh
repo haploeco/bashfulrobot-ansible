@@ -23,12 +23,6 @@ declare -r SVER=$(curl -s https://slack.com/intl/es/release-notes/linux | sed -n
 
 # Compare installed version
 # Using text file - less compute
-
-echo $PSVER
-echo $SVER
-
-exit 1
-
 if [ "$PSVER" = "$SVER" ]; then
   $ECHO "Slack is already up to date. EXITING"
   exit 0
