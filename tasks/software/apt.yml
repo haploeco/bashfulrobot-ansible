@@ -10,6 +10,8 @@
       - docker.io
       - ibus
       - plank
+      - geary
+      
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
@@ -72,7 +74,6 @@
       - ttf-mscorefonts-installer
       - fonts-emojione
       - libgtk-3-dev
-      - geary
 
 
 - name: Autoremove and Purge APT Packages

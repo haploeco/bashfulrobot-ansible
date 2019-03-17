@@ -1,9 +1,7 @@
 - name: Install Snap Packages
   command: 'snap install "{{ item }}"'
   with_items:
-    - yakyak
     - irccloud-desktop
-    - hugo
     - libreoffice
     - remmina
     - spotify
@@ -13,17 +11,15 @@
     - bitwarden
     - bw
     - discord
-    - mailspring
     - serve
     - icdiff
-    - pocket-casts
     - gnome-twitch
     - gotop
     - mumble
     - docker
     - typora-alanzanattadev
     - youtube-dl
-    - wavebox
+    - shfmt
 
 - name: Install Classic Snap Packages
   command: 'snap install "{{ item }}" --classic'
@@ -31,7 +27,6 @@
     - go
     - restic
     - snapcraft
-    - slack
     - snapdiff
     - aws-cli
     - kubectl
@@ -49,3 +44,6 @@
 
 - name: Install Multipass Snap Package
   command: 'snap install multipass --beta --classic'
+
+- name: Install Hugo Extended
+  command: 'sudo snap install hugo --channel=extended/edge'

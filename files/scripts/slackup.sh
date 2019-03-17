@@ -8,21 +8,21 @@ declare -r APT="$(which apt)"
 declare -r SUDO="$(which sudo)"
 declare -r ECHO="$(which echo)"
 declare -r CAT="$(which cat)"
+declare -r TOUCH="$(which touch)"
 
 declare -r SLACKUPCFG="$HOME/.config/slackup"
 declare -r PREVER="$SLACKUPCFG/prev.ver"
 declare -r PSVER="$($CAT $PREVER)"
 
-# Create CFG dir if it does not exist
-[ -d  "$SLACKUPCFG" ] || $MKDIR -p "$SLACKUPCFG"
+$MKDIR -p "$SLACKUPCFG"
+
+$TOUCH "$PREVER"
 
 # Parse version from release notes
 declare -r SVER=$(curl -s https://slack.com/intl/es/release-notes/linux | sed -n "/^.*<h2>Slack /{;s///;s/[^0-9.].*//p;q;}")
 
 # Compare installed version
 # Using text file - less compute
-
-
 if [ "$PSVER" = "$SVER" ]; then
   $ECHO "Slack is already up to date. EXITING"
   exit 0
