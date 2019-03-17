@@ -49,6 +49,6 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/com/solus-project/budgie-wm/button-style"
-    value: "'left'"
+    value: "'right'"
     state: present
 
