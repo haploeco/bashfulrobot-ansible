@@ -43,6 +43,6 @@
 
     # User Visual Settings
     # Running defaults for now
-    # - include: tasks/user/visual/theme.yml
+    - include: tasks/user/visual/theme.yml
     # - include: tasks/user/visual/wallpaper.yml
     - include: tasks/user/visual/desktop-icons.yml
