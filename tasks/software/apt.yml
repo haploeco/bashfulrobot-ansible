@@ -62,7 +62,7 @@
       - dlocate
       - ttf-mscorefonts-installer
       - fonts-emojione
-      - vscode
+      - code
 
 - name: Autoremove and Purge APT Packages
   apt:
