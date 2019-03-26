@@ -11,7 +11,7 @@
       - ibus
       - plank
       - geary
-      
+
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
@@ -22,6 +22,7 @@
   vars:
     packages:
       - git
+      - inxi
       - neovim
       - xclip
       - ncdu
@@ -32,37 +33,25 @@
       - lftp
       - htop
       - deluge-gtk
-      - budgie-*-applet
       - gnome-mpv
       - calibre
       - whois
       - apt-transport-https
       - ca-certificates
       - software-properties-common
-      - cowsay
       - python-pip
-      - meld
-      - figlet
       - nomacs
-      - uncrustify
       - snapd-xdg-open
-      - rtv
-      - breeze-icon-theme
-      - breeze-gtk-theme
-      - breeze-cursor-theme
-      - grub-theme-breeze
       - asciinema
       - flameshot
       - python-psutil
       - psutils
       - libimage-exiftool-perl
-      - firefox
       - python3-pip
       - libcurl4
       - curl
       - gnupg-agent
       - font-manager
-      - code
       - gnome-calculator
       - valac
       - uncrustify
@@ -73,8 +62,6 @@
       - dlocate
       - ttf-mscorefonts-installer
       - fonts-emojione
-      - libgtk-3-dev
-
 
 - name: Autoremove and Purge APT Packages
   apt:

@@ -38,10 +38,11 @@
     - include: tasks/user/shortcuts.yml
     - include: tasks/user/general-user-settings.yml
     - include: tasks/user/dotfiles.yml
-    - include: tasks/user/scripts.yml
+    # - include: tasks/user/scripts.yml
     - include: tasks/user/permissions.yml
 
     # User Visual Settings
-    - include: tasks/user/visual/theme.yml
-    - include: tasks/user/visual/wallpaper.yml
+    # Running defaults for now
+    # - include: tasks/user/visual/theme.yml
+    # - include: tasks/user/visual/wallpaper.yml
     - include: tasks/user/visual/desktop-icons.yml

@@ -10,11 +10,8 @@
     - simplescreenrecorder
     - bitwarden
     - bw
-    - discord
     - serve
     - icdiff
-    - gnome-twitch
-    - gotop
     - mumble
     - docker
     - typora-alanzanattadev
@@ -30,10 +27,10 @@
     - snapdiff
     - aws-cli
     - kubectl
-    - micro
+    - vscode
 
 - name: Install Node Snap Package
-  command: 'snap install node --channel=11/stable --classic'
+  command: "snap install node --channel=11/stable --classic"
 - name: Remmina Snap CFG
   command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
   with_items:
@@ -43,7 +40,7 @@
     - password-manager-service
 
 - name: Install Multipass Snap Package
-  command: 'snap install multipass --beta --classic'
+  command: "snap install multipass --beta --classic"
 
 - name: Install Hugo Extended
-  command: 'sudo snap install hugo --channel=extended/edge'
+  command: "sudo snap install hugo --channel=extended/edge"
