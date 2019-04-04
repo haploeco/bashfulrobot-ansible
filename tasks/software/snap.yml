@@ -42,5 +42,4 @@
   command: "snap install multipass --beta --classic"
 
 - name: Install Hugo Extended
-  become: yes
   command: "snap install hugo --channel=extended/edge"
