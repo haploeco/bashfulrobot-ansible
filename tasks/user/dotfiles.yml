@@ -44,8 +44,8 @@
     - clean-img.fish
     - git-drop.fish
     - slackup.fish
-    - nvim.fish
-    - vi.fish	
+    - vi.fish
+    - dlang.fish
 
 - name: Placing Uncrustify CFG
   copy:
