@@ -1,5 +1,5 @@
 function vi
 
-$HOME/appimg/nvim.appimage $argv
+/usr/bin/nvim $argv
 
 end
