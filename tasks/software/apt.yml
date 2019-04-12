@@ -64,6 +64,7 @@
       - fonts-emojione
       - code
       - ppa-purge
+      - pylint
 
 - name: Autoremove and Purge APT Packages
   apt:
