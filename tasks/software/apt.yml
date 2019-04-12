@@ -63,6 +63,7 @@
       - ttf-mscorefonts-installer
       - fonts-emojione
       - code
+      - ppa-purge
 
 - name: Autoremove and Purge APT Packages
   apt:
