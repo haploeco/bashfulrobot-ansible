@@ -1,11 +1,8 @@
 ### Main fish config
 
-# Maintain default keybindings
-#
-fish_default_key_bindings
-
 ### OMF
 
+# omf install dangerous
 # omf install bobthefish
 # set -g theme_display_git no
 # set -g theme_display_git_untracked no
