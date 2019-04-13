@@ -1,43 +1,44 @@
 - name: Install Snap Packages
   command: 'snap install "{{ item }}"'
   with_items:
-        - irccloud-desktop
-        - libreoffice
-        - remmina
-        - spotify
-        - lxd
-        - telegram-desktop
-        - simplescreenrecorder
-        - bitwarden
-        - bw
-        - serve
-        - icdiff
-        - mumble
-        - docker
-        - typora-alanzanattadev
-        - youtube-dl
-        - shfmt
+    - irccloud-desktop
+    - libreoffice
+    - remmina
+    - spotify
+    - lxd
+    - telegram-desktop
+    - simplescreenrecorder
+    - bitwarden
+    - bw
+    - serve
+    - icdiff
+    - mumble
+    - docker
+    - typora-alanzanattadev
+    - youtube-dl
+    - shfmt
 
 - name: Install Classic Snap Packages
   command: 'snap install "{{ item }}" --classic'
   with_items:
-        - go
-        - restic
-        - snapcraft
-        - snapdiff
-        - aws-cli
-        - kubectl
-        - code
+    - go
+    - restic
+    - snapcraft
+    - snapdiff
+    - aws-cli
+    - kubectl
+    - code
+    - slack
 
 - name: Install Node Snap Package
   command: "snap install node --channel=11/stable --classic"
 - name: Remmina Snap CFG
   command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
   with_items:
-        - avahi-observe
-        - cups-control
-        - mount-observe
-        - password-manager-service
+    - avahi-observe
+    - cups-control
+    - mount-observe
+    - password-manager-service
 
 - name: Install Multipass Snap Package
   command: "snap install multipass --beta --classic"
