@@ -11,6 +11,7 @@
       - ibus
       - plank
       - geary
+      - code
 
 - name: Autoremove and Purge APT Packages
   apt:
@@ -62,7 +63,6 @@
       - dlocate
       - ttf-mscorefonts-installer
       - fonts-emojione
-      - code
       - ppa-purge
       - pylint
       - gtk-3-examples
