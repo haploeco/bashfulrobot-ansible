@@ -61,9 +61,23 @@
   become: no
   register: created_zshrc
 
-- name: Placing zshrc-custom.zsh CFG
+- name: Placing general.zsh CFG
   copy:
-    src: files/dotfiles/zsh/zshrc-custom.zsh
-    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/zshrc-custom.zsh"
+    src: files/dotfiles/zsh/general.zsh
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/general.zsh"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+
+- name: Placing plugins.zsh CFG
+  copy:
+    src: files/dotfiles/zsh/plugins.zsh
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/plugins.zsh"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+
+- name: Placing aliases.zsh CFG
+  copy:
+    src: files/dotfiles/zsh/aliases.zsh
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/aliases.zsh"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"

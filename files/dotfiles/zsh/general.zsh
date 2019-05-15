@@ -1,6 +1,7 @@
-# This file overrides any settings in the main ~/.zshrc file.
-# - may want to split into different files for plugins,
-#   aliases, ecports, etc.
+# You can put files here to add functionality separated per file, which
+# will be ignored by git.
+# Files on the custom/ directory will be automatically loaded by the init
+# script, in alphabetical order.
 
 # Set Shell Theme
 # - Note this is a custom theme
@@ -8,28 +9,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Support additional terminal 
 export TERM=xterm-256color
-
-# My zsh plugins
-plugins=(
-  git
-  ansible
-  aws
-  colored-man-pages
-  colorize
-  common-aliases
-  docker
-  docker-compose
-  github
-  rsync
-  systemd
-  themes
-  tmux
-  ubuntu
-  ufw
-  vscode
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-)
 
 # Daily updates - default is every 2 weeks
 UPDATE_ZSH_DAYS=1
