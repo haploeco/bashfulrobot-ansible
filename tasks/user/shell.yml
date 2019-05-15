@@ -81,3 +81,10 @@
     dest: "/home/{{ myusername }}/.oh-my-zsh/custom/aliases.zsh"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
+
+- name: Placing functions.zsh CFG
+  copy:
+    src: files/dotfiles/zsh/functions.zsh
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/functions.zsh"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"

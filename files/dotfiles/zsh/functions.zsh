@@ -2,5 +2,3 @@
 # will be ignored by git.
 # Files on the custom/ directory will be automatically loaded by the init
 # script, in alphabetical order.
-
-alias pcp='rsync -aP'
