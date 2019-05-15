@@ -1,25 +1,69 @@
-- name: Install FISH Shell
+- name: Install ZSH Shell
   apt:
     name: "{{ packages }}"
   vars:
     packages:
-      - fish
+      - git
+      - zsh
+      - fonts-powerline
+      - powerline
+  register: install_zsh
 
 - name: Change current user shell
   user:
     name: "{{ myusername }}"
-    shell: /usr/bin/fish
+    shell: /usr/bin/zsh
   become: yes
-# - name: Fetch oh-my-fish
-#   get_url:
-#     url: https://get.oh-my.fish
-#     dest: /tmp/install-oh-my-fish.sh
-#     mode: 0755
 
-# - name: Setup Bootstrap script for OMF
-#   copy:
-#     src: files/wa/bootstrap-omf.sh
-#     dest: "/tmp/bootstrap-omf.sh"
+- name: Clone oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: /home/{{ myusername }}/.oh-my-zsh
+    update: no
+  become: no
+  register: omz_clone
 
-# - name: Install oh-my-fish
-#   command: bash /tmp/bootstrap-omf.sh
+- name: Clone zsh-autosuggestions
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    update: yes
+
+- name: Clone zsh-syntax-highlighting
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    update: yes
+
+- name: Clone powerlevel10k Theme
+  git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: /home/{{ myusername }}/.oh-my-zsh/custom/themes/powerlevel10k
+    update: yes
+
+- name: check if .zshrc exists
+  when: install_zsh is success
+  stat:
+    path: /home/{{ myusername }}/.zshrc
+  register: zshrc
+
+- name: back up existing .zshrc file if it exists
+  when: zshrc.stat.exists
+  copy:
+    src: /home/{{ myusername }}/.zshrc
+    dest: /home/{{ myusername }}/.zshrc-orig
+
+- name: Creating new ~/.zshrc
+  copy:
+    src: /home/{{ myusername }}/.oh-my-zsh/templates/zshrc.zsh-template
+    dest: /home/{{ myusername }}/.zshrc
+  when: omz_clone is success
+  become: no
+  register: created_zshrc
+
+- name: Placing zshrc-custom.zsh CFG
+  copy:
+    src: files/dotfiles/zsh/zshrc-custom.zsh
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/zshrc-custom.zsh"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
