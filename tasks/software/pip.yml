@@ -3,3 +3,5 @@
     name:
       - ansible-lint
       - telegram-send
+      - aws-shell
+      - awscli
