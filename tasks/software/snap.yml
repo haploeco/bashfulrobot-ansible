@@ -26,7 +26,7 @@
       - snapcraft
       - snapdiff
       - kubectl
-      - code
+      - code-insiders
       - slack
 
 - name: Install Node Snap Package
