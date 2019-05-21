@@ -2,6 +2,12 @@
 
 Ansible Repo that utilizes an ansible-pull command to configure my workstations.
 
+## Status
+
+I plan to refactor this into tasks. Currently working without issue; however the repo includes a few "work in progress" and testing scripts that are never called in the main automation. I plan to clean up the repo and weed out what is not actually used. Considering putting the "tasks" based approach into a branch for the history.
+
+Open to suggestions via issues for improvements.
+
 ## My Workflow
 
 ```bash
