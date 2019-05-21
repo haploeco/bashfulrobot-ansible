@@ -94,3 +94,10 @@
     dest: "/home/{{ myusername }}/.oh-my-zsh/custom/functions.zsh"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
+
+- name: Placing path.zsh CFG
+  copy:
+    src: files/dotfiles/zsh/path.zsh
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/path.zsh"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
