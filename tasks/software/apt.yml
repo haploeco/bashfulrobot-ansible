@@ -67,6 +67,7 @@
       - pylint
       - gtk-3-examples
       - libgtk-3-0
+      - ss
 
 - name: Autoremove and Purge APT Packages
   apt:
