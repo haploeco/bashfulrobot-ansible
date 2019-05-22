@@ -5,3 +5,7 @@
 
 # Add example bin
 #export PATH=/path/to/bin:$PATH
+
+# Add GOBIN
+export GOBIN=$HOME/go/bin
+export PATH=$GOBIN:$PATH
