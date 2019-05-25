@@ -69,6 +69,7 @@
       - libgtk-3-0
       - pop-icon-theme-extra
       - pop-gtk-theme
+      - hidpi-daemon
 
 - name: Autoremove and Purge APT Packages
   apt:
