@@ -1,4 +1,4 @@
-- name: Remove APT Packages
+- name: Remove Desktop APT Packages
   apt:
     name: "{{ rempackages }}"
     state: absent
@@ -17,7 +17,7 @@
   apt:
     autoremove: yes
     purge: yes
-- name: Install APT Packages
+- name: Install Desktop APT Packages
   apt:
     name: "{{ packages }}"
   vars:
