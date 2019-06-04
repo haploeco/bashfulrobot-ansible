@@ -11,18 +11,3 @@
       line: "dustin ALL=(ALL) NOPASSWD: /usr/bin/ansible-pull"
       # state: present
       validate: "/usr/sbin/visudo -cf %s"
-
-- name: Add do-update Sudoer File
-  file:
-      path: /etc/sudoers.d/do_update
-      state: touch
-      owner: root
-      group: root
-      mode: 0440
-
-- name: Allow do-update With No Password
-  lineinfile:
-      path: /etc/sudoers.d/do_update
-      line: "dustin ALL=(ALL) NOPASSWD: do-update"
-      # state: present
-      validate: "/usr/sbin/visudo -cf %s"
