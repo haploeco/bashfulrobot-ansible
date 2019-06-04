@@ -28,17 +28,5 @@ function echoSection () {
 }
 
 function checkInstalledApt () {
-  if ! command -v $1 &> /dev/null; then
-        echo "$1 is not installed."
-        echo "Installing."
-        sudo apt install -y $1
-fi
-}
-
-function checkInstalledSnap () {
-  if ! command -v $1 &> /dev/null; then
-        echo "$1 is not installed."
-        echo "Installing."
-        sudo snap install $1
-fi
+dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
 }

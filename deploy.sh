@@ -4,11 +4,11 @@
 ANSIBLE=$(which ansible-playbook)
 APULL=$(which ansible-pull)
 GIT=$(which git)
+DPKG=$(which dpkg)
 MYLOCBASE="$HOME/tmp"
 MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
-RANUPDATE="NO"
 
 ### SCRIPT FUNCTIONS
 
@@ -25,6 +25,9 @@ function checkInstalledApt () {
   fi
 }
 
+function checkInstalled() {
+$DPKG -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
+}
 # Ansible Deploy from local GIT repo
 function deployLocal() {
   if [ ! -f "$MYYAML" ]; then
@@ -43,7 +46,7 @@ function deployLocal() {
 }
 
 # Update APT Repos
-
+sudo apt update
 
 neededSoftware=( software-properties-common ansible dialog git )
 
@@ -51,7 +54,7 @@ neededSoftware=( software-properties-common ansible dialog git )
 
 for sw in "${neededSoftware[@]}"
   do
-    checkInstalledApt "$sw"
+    checkInstalled "$sw"
   done
 
 # Configure git
