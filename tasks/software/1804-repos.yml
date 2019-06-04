@@ -1,7 +1,0 @@
-- name: Add Launchpad PPAs for 1804
-  apt_repository:
-    repo: "{{ item }}"
-    update_cache: yes
-    state: present
-  with_items:
-    - ppa:fish-shell/release-3

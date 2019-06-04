@@ -1,13 +1,14 @@
 - name: Add Launchpad PPAs
   apt_repository:
-      repo: "{{ item }}"
-      update_cache: yes
-      state: present
+        repo: "{{ item }}"
+        update_cache: yes
+        state: present
   with_items:
-      - ppa:ubuntubudgie/backports
-      - ppa:seafile/seafile-client
+        - ppa:ubuntubudgie/backports
+        - ppa:seafile/seafile-client
+        - ppa:system76/pop
 
 - name: Add Canonical Partners PPA
   apt_repository:
-      repo: deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner
-      state: present
+        repo: deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner
+        state: present

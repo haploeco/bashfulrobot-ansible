@@ -13,7 +13,6 @@
       - serve
       - icdiff
       - mumble
-      - docker
       - typora-alanzanattadev
       - youtube-dl
       - shfmt
