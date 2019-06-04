@@ -71,6 +71,7 @@
       - pop-gtk-theme
       - hidpi-daemon
       - dialog
+      - dfarranger
 
 - name: Autoremove and Purge APT Packages
   apt:
