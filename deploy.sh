@@ -18,7 +18,7 @@ function checkInstalledApt () {
     echo "$1 is not installed."
     echo "Installing."
     # Need better option. Set on script first run.
-    if $RANUPDATE == "NO"; then
+    if "$RANUPDATE" = "NO"; then
     sudo apt update && RANUPDATE="YES"
     fi
     sudo apt install -y $1
