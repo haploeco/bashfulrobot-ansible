@@ -8,9 +8,7 @@ curl -v -u $USER:$(cat ~/.config/asciinema/install-id) https://asciinema.org/api
 }
 
 function do-update() {
-  echoHeader "Starting System Update"
-  echoSection "Updating Sources"
-  sudo apt update
+  runAptUpdateIfNeeded
   sleep 1
   echoSection "Updating Distro"
   sudo apt dist-upgrade -y
