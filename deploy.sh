@@ -86,7 +86,6 @@ case $CHOICE in
         3)
             echo "Running ansible-pull from $MYREPORMT"
             sudo $APULL -U $MYREPORMT
-            exit 0
             ;;
         4)
             echo "Running $MYREPO/local-test.yml"
@@ -95,3 +94,4 @@ case $CHOICE in
             ;;
 esac
 
+exit 0
