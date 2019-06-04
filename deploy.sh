@@ -64,8 +64,8 @@ fi
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
-BACKTITLE="Deploying ansible scripts locally"
-TITLE="Local Deploy"
+BACKTITLE="Deploying ansible scripts"
+TITLE="Ansible Deploy"
 MENU="Choose one of the following options:"
 
 OPTIONS=(1 "Local Repo Deploy All"
