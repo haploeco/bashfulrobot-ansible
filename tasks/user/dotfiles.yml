@@ -1,7 +1,14 @@
 - name: Placing Uncrustify CFG
   copy:
-        src: files/dotfiles/uncrustify/uncrustify.cfg
-        dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
-        owner: "{{ myusername }}"
-        group: "{{ myusername }}"
-        mode: 0700
+    src: files/dotfiles/uncrustify/uncrustify.cfg
+    dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+
+- name: Setup vscode custom styles
+  copy: files/dotfiles/vscode/vscodestyles
+  dest: "/home/{{ myusername }}/.config/vscodestyles.cfg"
+  owner: "{{ myusername }}"
+  group: "{{ myusername }}"
+  mode: 0700
