@@ -48,7 +48,7 @@ function deployLocal() {
 # Update APT Repos of older than 12 hours
 #!/bin/sh
 if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
-  apt update
+  sudo apt update
 fi
 
 
