@@ -70,6 +70,7 @@
       - pop-icon-theme-extra
       - pop-gtk-theme
       - hidpi-daemon
+      - dialog
 
 - name: Autoremove and Purge APT Packages
   apt:
