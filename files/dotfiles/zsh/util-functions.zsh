@@ -30,3 +30,10 @@ function echoSection () {
 function checkInstalledApt () {
 dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
 }
+
+function runAptUpdateIfNeeded() {
+# Update APT Repos of older than 12 hours
+if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
+  sudo apt update
+fi
+}
