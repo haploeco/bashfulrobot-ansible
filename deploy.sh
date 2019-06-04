@@ -45,8 +45,12 @@ function deployLocal() {
   sudo $ANSIBLE $MYYAML --connection=local
 }
 
-# Update APT Repos
-sudo apt update
+# Update APT Repos of older than 12 hours
+#!/bin/sh
+if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
+  apt update
+fi
+
 
 neededSoftware=( software-properties-common ansible dialog git )
 
