@@ -7,7 +7,7 @@
     mode: 0700
 
 - name: Setup vscode custom styles
-  copy: files/dotfiles/vscode/vscodestyles
+  copy: files/dotfiles/vscode/vscodestyles.cfg
   dest: "/home/{{ myusername }}/.config/vscodestyles.cfg"
   owner: "{{ myusername }}"
   group: "{{ myusername }}"
