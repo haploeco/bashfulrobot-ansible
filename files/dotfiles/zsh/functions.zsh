@@ -24,3 +24,9 @@ function do-update() {
   sleep 1
   echoHeader "Completed System Update"
 }
+
+function br-clone() {
+  checkInstalledApt git
+  git clone git@github.com:bashfulrobot/$1 "$HOME/tmp/$1"
+  ls "$HOME/tmp/$1"
+}
