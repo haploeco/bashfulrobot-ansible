@@ -26,7 +26,23 @@ function do-update() {
 }
 
 function br-clone() {
+  # Is GIT installed?
   checkInstalledApt git
-  git clone git@github.com:bashfulrobot/$1 "$HOME/tmp/$1"
+  # Check if the repo exists already
+  # GIT PULL if it does
+  if [ -d "$HOME/tmp/$1" ]; then
+    echo "Directory $HOME/tmp/$1 exists. Pulling remote repo instead."
+    echo
+    cd "$HOME/tmp/$1"
+    git pull
+    echo
+  else
+    # Repo does not exist, clone
+    git clone git@github.com:bashfulrobot/$1 "$HOME/tmp/$1"
+  fi
+
+  echo
+  echo "Current repo files ----"
   ls "$HOME/tmp/$1"
+  echo
 }
