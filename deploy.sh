@@ -8,6 +8,7 @@ MYLOCBASE="$HOME/tmp"
 MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
+RANUPDATE="NO"
 
 ### SCRIPT FUNCTIONS
 
@@ -16,6 +17,10 @@ function checkInstalledApt () {
   if ! command -v $1 &> /dev/null; then
     echo "$1 is not installed."
     echo "Installing."
+    # Need better option. Set on script first run.
+    if $RANUPDATE == "NO"; then
+    sudo apt update && RANUPDATE="YES"
+    fi
     sudo apt install -y $1
   fi
 }
@@ -38,11 +43,12 @@ function deployLocal() {
 }
 
 # Update APT Repos
-sudo apt-get update
+
 
 neededSoftware=( software-properties-common ansible dialog git )
 
 # Install Software if needed
+
 for sw in "${neededSoftware[@]}"
   do
     checkInstalledApt "$sw"
