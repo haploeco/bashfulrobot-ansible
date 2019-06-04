@@ -46,3 +46,9 @@ function br-clone() {
   ls "$HOME/tmp/$1"
   echo
 }
+
+function update-system-cfg() {
+  APULL=$(which ansible-pull)
+  MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
+  sudo $APULL -U $MYREPORMT
+}
