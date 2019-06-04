@@ -1,5 +1,6 @@
 #!/bin/bash
 
+### SCRIPT VARS
 ANSIBLE=$(which ansible-playbook)
 APULL=$(which ansible-pull)
 GIT=$(which git)
@@ -8,48 +9,58 @@ MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 MYPPA="ansible"
 
+### SCRIPT FUNCTIONS
+
+# Check if software is installed and install with APT if needed.
+function checkInstalledApt () {
+  if ! command -v $1 &> /dev/null; then
+    echo "$1 is not installed."
+    echo "Installing."
+    sudo apt install -y $1
+  fi
+}
+
+# Ansible Deploy from local GIT repo
+function deployLocal() {
+  if [ ! -f "$MYYAML" ]; then
+    # Get the repo if needed
+    mkdir -p $MYLOCBASE
+    cd $MYLOCBASE
+    $GIT clone $MYREPORMT
+  else
+    cd $MYREPO
+    # Get the latest version if exists.
+    $GIT pull
+  fi
+
+  # Run ansible-pull no matter what (local dev iteration)
+  sudo $ANSIBLE $MYYAML --connection=local
+}
+
+# Update APT Repos
+sudo apt-get update
+
+neededSoftware=( software-properties-common ansible dialog git )
+
+# Install Software if needed
+for sw in "${neededSoftware[@]}"
+  do
+    checkInstalledApt "$sw"
+  done
+
+# Configure git
 $GIT config user.name bashfulrobot
 $GIT config user.email dustin@bashfulrobot.com
 $GIT config user.editor code
 
-if [ ! -f "$ANSIBLE" ]; then
-    echo "Ansible not found; beginning install..."
-    echo
-
-    # Bootstrap Ansible
-    sudo apt-get install software-properties-common
-    sudo apt-get update
-    sudo apt-get install git dialog ansible -y
-fi
-
+# Setup Ansible CFG
 if [ ! -f $HOME/.ansible.cfg ]; then
-    touch $HOME/.ansible.cfg
-    echo '[defaults]' > $HOME/.ansible.cfg
-    echo 'remote_tmp     = /tmp/$USER/ansible' >> $HOME/.ansible.cfg
+  touch $HOME/.ansible.cfg
+  echo '[defaults]' > $HOME/.ansible.cfg
+  echo 'remote_tmp     = /tmp/$USER/ansible' >> $HOME/.ansible.cfg
 fi
 
-function deployLocal() {
-
-    # Get the repo
-
-    if [ ! -f "$MYYAML" ]; then
-
-    mkdir -p $MYLOCBASE
-    cd $MYLOCBASE
-    $GIT clone $MYREPORMT
-fi
-
-cd $MYREPO
-
-# Get the latest version.
-$GIT pull
-
-# Run ansible-pull no matter what (local dev iteration)
-sudo $ANSIBLE $MYYAML --connection=local
-
-#sudo rm -rf $HOME/.ansible/
-}
-
+# Build Menu
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
