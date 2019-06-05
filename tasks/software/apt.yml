@@ -11,7 +11,6 @@
       - ibus
       - plank
       - geary
-      - code
 
 - name: Autoremove and Purge APT Packages
   apt:
@@ -71,7 +70,7 @@
       - pop-gtk-theme
       - hidpi-daemon
       - dialog
-      - dfarranger
+      - pdfarranger
 
 - name: Autoremove and Purge APT Packages
   apt:
