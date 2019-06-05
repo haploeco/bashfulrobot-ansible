@@ -1,2 +1,16 @@
 - name: Install Cron Jobs
   cron: user="dustin" name="Ansible provision" minute="*/10" job="sudo /usr/bin/ansible-pull -o -U https://github.com/bashfulrobot/bashfulrobot-ansible.git > /dev/null"
+
+- name: Add Ansible Cron Log
+  file:
+    path: /home/{{ myusername }}/.ansible-cron
+    state: touch
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Tap Ansible Cron Log
+  shell: date >> /home/{{ myusername }}/.ansible-cron
+
+- name: Rotate Ansible Cron Log
+  shell: tail -n5 /home/{{ myusername }}/.ansible-cron > /home/{{ myusername }}/.ansible-cron.tmp && mv /home/{{ myusername }}/.ansible-cron.tmp /home/{{ myusername }}/.ansible-cron
