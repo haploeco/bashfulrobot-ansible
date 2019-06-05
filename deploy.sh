@@ -13,17 +13,6 @@ MYPPA="ansible"
 ### SCRIPT FUNCTIONS
 
 # Check if software is installed and install with APT if needed.
-function checkInstalledApt () {
-  if ! command -v $1 &> /dev/null; then
-    echo "$1 is not installed."
-    echo "Installing."
-    # Need better option. Set on script first run.
-    if "$RANUPDATE" = "NO"; then
-    sudo apt update && RANUPDATE="YES"
-    fi
-    sudo apt install -y $1
-  fi
-}
 
 function checkInstalled() {
 $DPKG -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
