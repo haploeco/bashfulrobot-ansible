@@ -4,46 +4,46 @@
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/wm/keybindings/switch-input-source"
-    value: "['<Primary><Shift><Alt><Super>space']"
-    state: present
+      key: "/org/gnome/desktop/wm/keybindings/switch-input-source"
+      value: "['<Primary><Shift><Alt><Super>space']"
+      state: present
 
 - name: Set Remove Super Space Defaults
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/wm/keybindings/switch-input-source-backward"
-    value: "['<Primary><Alt><Super>space']"
-    state: present
+      key: "/org/gnome/desktop/wm/keybindings/switch-input-source-backward"
+      value: "['<Primary><Alt><Super>space']"
+      state: present
 
 - name: Changing IBUS Emjoi Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/desktop/ibus/panel/emoji/hotkey"
-    value: "['<Control><Alt><Shift>e']"
-    state: present
+      key: "/desktop/ibus/panel/emoji/hotkey"
+      value: "['<Control><Alt><Shift>e']"
+      state: present
 
 - name: Changing Terminal Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/terminal"
-    value: "'<Super>Return'"
-    state: present
+      key: "/org/gnome/settings-daemon/plugins/media-keys/terminal"
+      value: "'<Super>Return'"
+      state: present
 
 - name: Changing Close Application Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/wm/keybindings/close"
-    value: "['<Super>q']"
-    state: present
-    
+      key: "/org/gnome/desktop/wm/keybindings/close"
+      value: "['<Super>q']"
+      state: present
+
 - name: Changing Run Application Keyboard Shortcut
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
-    value: "['<Super>space']"
-    state: present
+      key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog"
+      value: "['<Super>space']"
+      state: present
