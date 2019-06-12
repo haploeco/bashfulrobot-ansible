@@ -37,3 +37,24 @@ if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
   sudo apt update
 fi
 }
+
+function send-notify() {
+MYTOKEN="$(bw get password b43eb18a-1806-45dc-8dfd-aa6901533182)"
+
+THEURL="https://integram.org/webhook/$MYTOKEN"
+
+MYMSG="$1"
+
+PAYLOAD=$(printf "{\"text\":\"%s\"}" "$MYMSG")
+
+
+
+# Check if Bitwarden is logged in.
+if [[ -z "${BW_SESSION}" ]]; then
+  echo "W_SESSION is undefined - Likely need to login to BW CLI or set the export"
+else
+curl -X POST -H "Content-Type: application/json" --data "$PAYLOAD" $THEURL
+
+
+fi
+}
