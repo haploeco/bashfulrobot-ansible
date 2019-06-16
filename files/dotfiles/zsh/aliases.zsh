@@ -4,3 +4,4 @@
 # script, in alphabetical order.
 
 alias pcp='rsync -aP'
+alias cfg-pull='sudo ansible-pull -U https://github.com/bashfulrobot/bashfulrobot-ansible.git'
