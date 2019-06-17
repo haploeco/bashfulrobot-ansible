@@ -13,9 +13,9 @@ Open to suggestions via issues for improvements.
 ## My Workflow
 
 ```bash
-wget http://deploy.domain.com/laptop
-chmod u+x ./laptop
-./laptop
+git clone https://github.com/bashfulrobot/bashfulrobot-ansible.git
+cd bashfulrobot-ansible
+bash deploy.sh
 ```
 
 This is simply a redirect that pulls the raw output of the `deploy.sh` script in this repo. This will bootstrap Ansible, and add a cronjob that will check the repo every 10 minutes for changes, and only run on the machine *if* the repo has a change.
