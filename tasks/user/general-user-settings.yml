@@ -2,38 +2,102 @@
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
-    value: "true"
-    state: present
+      key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+      value: "true"
+      state: present
 
 - name: Changing Scroll Direction
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
-    value: "false"
-    state: present
+      key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
+      value: "false"
+      state: present
 
 - name: Set gtk-im-module
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/interface/gtk-im-module"
-    value: "'gtk-im-context-simple'"
-    state: present
+      key: "/org/gnome/desktop/interface/gtk-im-module"
+      value: "'gtk-im-context-simple'"
+      state: present
 
 - name: Set Screen Idle Time
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/session/idle-delay"
-    value: "uint32 600"
-    state: present
+      key: "/org/gnome/desktop/session/idle-delay"
+      value: "uint32 600"
+      state: present
 
 - name: Set Mouse Sensitivity
   become: true
   become_user: "{{ myusername }}"
   dconf:
-    key: "/org/gnome/desktop/peripherals/mouse/speed"
-    value: "0.50"
-    state: present
+      key: "/org/gnome/desktop/peripherals/mouse/speed"
+      value: "0.50"
+      state: present
+
+- name: Allow Volume Over 100% in Raven
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/com/solus-project/budgie-raven/allow-volume-overdrive]"
+      value: "true"
+      state: present
+
+- name: Allow Volume Over 100% in Gnome
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/org/gnome/desktop/sound/allow-volume-above-100-percent]"
+      value: "true"
+      state: present
+
+- name: Showing Mic Input in Raven
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/com/solus-project/budgie-raven/show-mic-input-widget]"
+      value: "true"
+      state: present
+
+- name: Showing Sound Output in Raven
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/com/solus-project/budgie-raven/show-sound-output-widget]"
+      value: "true"
+      state: present
+
+- name: Showing Calendar in Raven
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/com/solus-project/budgie-raven/show-calendar-widget]"
+      value: "true"
+      state: present
+
+- name: Showing Powerstrip in Raven
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/com/solus-project/budgie-raven/show-power-strip]"
+      value: "true"
+      state: present
+
+- name: Set New Windows to Center on Launch
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/com/solus-project/budgie-wm/center-windows]"
+      value: "true"
+      state: present
+
+- name: Set New Windows to Center on Launch (Gnome)
+  become: true
+  become_user: "{{ myusername }}"
+  dconf:
+      key: "/org/gnome/mutter/center-new-windows]"
+      value: "true"
+      state: present
