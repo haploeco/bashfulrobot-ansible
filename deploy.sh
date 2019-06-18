@@ -8,7 +8,6 @@ DPKG=$(which dpkg)
 MYLOCBASE="$HOME/tmp"
 MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
-MYPPA="ansible"
 
 ### SCRIPT FUNCTIONS
 
