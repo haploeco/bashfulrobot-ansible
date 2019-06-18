@@ -28,33 +28,29 @@ function echoSection () {
 }
 
 function checkInstalledApt () {
-dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
+  dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
 }
 
 function runAptUpdateIfNeeded() {
-# Update APT Repos of older than 12 hours
-if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
-  sudo apt update
-fi
+  # Update APT Repos of older than 12 hours
+  if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
+    sudo apt update
+  fi
 }
 
 function send-notify() {
-MYTOKEN="$(bw get password b43eb18a-1806-45dc-8dfd-aa6901533182)"
+  # This is not actually a token in the code - just a UUID for the entry in Bitwarden.
 
-THEURL="https://integram.org/webhook/$MYTOKEN"
+  # Get my token from my vault.
+  MYTOKEN="$(bw get password b43eb18a-1806-45dc-8dfd-aa6901533182)"
+  THEURL="https://integram.org/webhook/$MYTOKEN"
+  MYMSG="$1"
+  PAYLOAD=$(printf "{\"text\":\"%s\"}" "$MYMSG")
 
-MYMSG="$1"
-
-PAYLOAD=$(printf "{\"text\":\"%s\"}" "$MYMSG")
-
-
-
-# Check if Bitwarden is logged in.
-if [[ -z "${BW_SESSION}" ]]; then
-  echo "W_SESSION is undefined - Likely need to login to BW CLI or set the export"
-else
-curl -X POST -H "Content-Type: application/json" --data "$PAYLOAD" $THEURL
-
-
-fi
+  # Check if Bitwarden is logged in.
+  if [[ -z "${BW_SESSION}" ]]; then
+    echo "W_SESSION is undefined - Likely need to login to BW CLI or set the export"
+  else
+    curl -X POST -H "Content-Type: application/json" --data "$PAYLOAD" $THEURL
+  fi
 }
