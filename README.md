@@ -4,7 +4,7 @@ Ansible Repo that utilizes an ansible-pull command to configure my workstations.
 
 ## Status
 
-Currently this repo is working without issue (using a tasks based approach); however the repo includes a few "work in progress" and testing scripts that are never called in the main automation. I plan to clean up the repo and weed out what is not actually used.
+Currently this repo is working without issue (using a tasks based approach); however the repo includes a few "work in progress" and testing scripts that are never called in the main automation. They may be utilized at a later date. I have tried to make it clear so that if anyone decides to use this as a base - it is easy to remove (if unwanted or needed).
 
 I am considering a refactor to Ansible Roles. If I do so, I will likely put the "tasks" based approach into a branch for the history. With this I am currently considering how to impliment roles due to the larger number of desktop software packages installed. It does not make sense to me to have an individual role for each package.
 
