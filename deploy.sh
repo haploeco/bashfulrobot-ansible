@@ -30,7 +30,7 @@ function deployLocal() {
   fi
 
   # Run ansible-pull no matter what (local dev iteration)
-  sudo $ANSIBLE $MYYAML --connection=local
+  $ANSIBLE $MYYAML --connection=local
 }
 
 # Update APT Repos of older than 12 hours
@@ -96,7 +96,7 @@ case $CHOICE in
             ;;
         3)
             echo "Running ansible-pull from $MYREPORMT"
-            sudo $APULL -U $MYREPORMT
+            $APULL -U $MYREPORMT
             ;;
         4)
             echo "Running $MYREPO/local-test.yml"
