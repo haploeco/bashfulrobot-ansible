@@ -8,7 +8,6 @@
     - ppa:seafile/seafile-client
     - ppa:system76/pop
     - ppa:sebastian-stenzel/cryptomator
-    - ppa:nilarimogard/webupd8
 
 - name: Add Canonical Partners PPA
   apt_repository:

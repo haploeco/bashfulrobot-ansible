@@ -73,7 +73,6 @@
       - pdfarranger
       - cryptomator
       - hub
-      - metamorphose2
 
 - name: Autoremove and Purge APT Packages
   apt:
