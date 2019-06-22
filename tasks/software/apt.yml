@@ -74,6 +74,7 @@
       - cryptomator
       - hub
       - rename
+      - lazygit
 
 - name: Autoremove and Purge APT Packages
   apt:
