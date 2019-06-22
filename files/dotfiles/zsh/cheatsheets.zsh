@@ -1,5 +1,6 @@
 ## List available cheatsheets
 function cheatsheets() {
+  # This is an ugly filter, but lazy.
 cat ~/.oh-my-zsh/custom/cheatsheets.zsh | grep function | grep -v "function cheatsheets" | grep -v "cheatsheets.zsh" | cut -d " " -f2 | cut -d "(" -f1
 }
 
@@ -117,4 +118,5 @@ EOF
 )
 
 echo $lazygitcs | less
+unset lazygitcs
 }
