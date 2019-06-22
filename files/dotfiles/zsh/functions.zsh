@@ -48,5 +48,13 @@ function br-clone() {
 function update-system-cfg() {
   APULL=$(which ansible-pull)
   MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
-  sudo $APULL -U $MYREPORMT
+  $APULL -U $MYREPORMT
+}
+
+function rename-pad-num() {
+	rename 's/\d+/sprintf("%04d",$&)/e' "$1"
+}
+
+function rename-prefix() {
+	rename "s/^${1}/${2}/" "$3"
 }

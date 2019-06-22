@@ -73,6 +73,7 @@
       - pdfarranger
       - cryptomator
       - hub
+      - rename
 
 - name: Autoremove and Purge APT Packages
   apt:
