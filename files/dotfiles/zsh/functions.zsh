@@ -54,7 +54,3 @@ function update-system-cfg() {
 function rename-pad-num() {
 	rename 's/\d+/sprintf("%04d",$&)/e' "$1"
 }
-
-function rename-prefix() {
-	rename "s/^${1}/${2}/" "$3"
-}
