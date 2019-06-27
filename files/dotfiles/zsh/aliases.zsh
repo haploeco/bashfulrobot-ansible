@@ -5,3 +5,5 @@
 
 alias pcp='rsync -aP'
 alias cfg-pull='ansible-pull -U https://github.com/bashfulrobot/bashfulrobot-ansible.git'
+
+alias e='code-insiders -r'
