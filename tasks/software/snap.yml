@@ -29,6 +29,7 @@
         - kubectl
         - code-insiders
         - slack
+        - snippetpixie
 
 - name: Install Node Snap Package
   command: "snap install node --channel=11/stable --classic"
