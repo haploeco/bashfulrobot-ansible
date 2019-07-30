@@ -75,6 +75,7 @@
       - hub
       - rename
       - lazygit
+      - encfs
 
 - name: Autoremove and Purge APT Packages
   apt:

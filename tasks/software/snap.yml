@@ -44,5 +44,8 @@
 - name: Install Multipass Snap Package
   command: "snap install multipass --beta --classic"
 
+- name: Install IRCCLOUD Desktop Snap Package
+  command: "snap install irccloud --edge"
+
 - name: Install Hugo Extended
   command: "snap install hugo --channel=extended/edge"
