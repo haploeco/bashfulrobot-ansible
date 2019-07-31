@@ -76,6 +76,7 @@
       - rename
       - lazygit
       - encfs
+      - graphviz
 
 - name: Autoremove and Purge APT Packages
   apt:
