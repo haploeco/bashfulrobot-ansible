@@ -3,7 +3,6 @@
   with_items:
     - irccloud
     - libreoffice
-    - remmina
     - spotify
     - lxd
     - telegram-desktop
