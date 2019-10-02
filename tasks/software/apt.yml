@@ -66,12 +66,13 @@
       - pylint
       - gtk-3-examples
       - libgtk-3-0
-      - pop-icon-theme-extra
-      - pop-gtk-theme
-      - hidpi-daemon
+      - seafile-cli
+        #      - pop-icon-theme-extra
+        #     - pop-gtk-theme
+        #    - hidpi-daemon
       - dialog
       - pdfarranger
-      - cryptomator
+        #   - cryptomator
       - hub
       - rename
       - lazygit

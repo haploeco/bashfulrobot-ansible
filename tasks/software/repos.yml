@@ -5,9 +5,9 @@
     state: present
   with_items:
     - ppa:ubuntubudgie/backports
-    - ppa:seafile/seafile-client
-    - ppa:system76/pop
-    - ppa:sebastian-stenzel/cryptomator
+      #    - ppa:seafile/seafile-client
+      #    - ppa:system76/pop
+      #    - ppa:sebastian-stenzel/cryptomator
     - ppa:lazygit-team/release
 
 - name: Add Canonical Partners PPA
