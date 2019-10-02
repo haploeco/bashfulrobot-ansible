@@ -24,7 +24,6 @@
     - restic
     - snapcraft
     - snapdiff
-    - kubectl
     - code-insiders
     - slack
 
