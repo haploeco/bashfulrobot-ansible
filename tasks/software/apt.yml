@@ -69,7 +69,6 @@
       - seafile-cli
       - dialog
       - pdfarranger
-        #   - cryptomator
       - hub
       - rename
       - lazygit
