@@ -35,12 +35,5 @@
 
 - name: Install IRCCLOUD Desktop Snap Package
   command: "snap install irccloud --edge"
-- name: Remmina Snap CFG
-  command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
-  with_items:
-    - avahi-observe
-    - cups-control
-    - mount-observe
-    - password-manager-service
 - name: Install Hugo Extended
   command: "snap install hugo --channel=extended/edge"
