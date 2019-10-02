@@ -31,13 +31,6 @@
 
 - name: Install Node Snap Package
   command: "snap install node --channel=11/stable --classic"
-- name: Remmina Snap CFG
-  command: 'snap connect remmina:"{{ item }}" :"{{ item }}"'
-  with_items:
-    - avahi-observe
-    - cups-control
-    - mount-observe
-    - password-manager-service
 
 - name: Install Multipass Snap Package
   command: "snap install multipass --beta --classic"
