@@ -67,9 +67,6 @@
       - gtk-3-examples
       - libgtk-3-0
       - seafile-cli
-        #      - pop-icon-theme-extra
-        #     - pop-gtk-theme
-        #    - hidpi-daemon
       - dialog
       - pdfarranger
         #   - cryptomator
