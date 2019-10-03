@@ -4,6 +4,8 @@ Ansible Repo that utilizes an ansible-pull command to configure my workstations.
 
 ## Status
 
+Tested for Ubuntu 19.10. Dropped support for pre-19.10. BUT the only issue would be the `seafile-cli` package as it was not in the main PPA's previously (but now is).
+
 Currently this repo is working without issue (using a tasks based approach); however, the repo includes a few "work in progress" and testing scripts that are never called in the main automation. They may be utilized at a later date. I have tried to make it clear so that if anyone decides to use this as a base - it is easy to remove (if unwanted or needed).
 
 I am considering a refactor to Ansible Roles. If I do so, I will likely put the "tasks" based approach into a branch for the history. With this I am currently considering how to impliment roles due to the larger number of desktop software packages installed. It does not make sense to me to have an individual role for each package.
@@ -53,10 +55,6 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
   - Remove panel shadows
     - depends on panel work
   - Add github release files such as shfmt, etc.
-  - Install NVIDIA drivers based on host <<< May be moot as of 19.10 due to inclusiong of Nvidia drivers on Ubuntu ISO.
-  - How to reliably detect if there is nvidia on host in Ansible.
-  - `sudo ubuntu-drivers autoinstall`
-  - `sudo add-apt-repository ppa:graphics-drivers/ppa`
 - Install virtualbox
 - Install Standard Notes
 - Install <https://github.com/kaepora/diskgem/releases>
