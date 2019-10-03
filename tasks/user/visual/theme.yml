@@ -3,34 +3,34 @@
   become: true
   become_user: "{{ myusername }}"
   dconf:
-      key: "/org/gnome/desktop/interface/cursor-theme"
-      value: "'Pop'"
-      state: present
+    key: "/org/gnome/desktop/interface/cursor-theme"
+    value: "'DMZ-Black'"
+    state: present
 
 - name: Set System Theme
   become: true
   become_user: "{{ myusername }}"
   dconf:
-      key: "/org/gnome/desktop/interface/gtk-theme"
-      # Needed extra quotes due to unlnown key error
-      value: "'Pop-slim-dark'"
-      state: present
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    # Needed extra quotes due to unlnown key error
+    value: "'QogirBudgie-dark'"
+    state: present
 
 - name: Set Icon Theme
   become: true
   become_user: "{{ myusername }}"
   dconf:
-      key: "/org/gnome/desktop/interface/icon-theme"
-      value: "'Pop'"
-      state: present
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'Zafiro'"
+    state: present
 
 - name: Set Theme to Dark
   become: true
   become_user: "{{ myusername }}"
   dconf:
-      key: "/com/solus-project/budgie-panel/dark-theme"
-      value: "true"
-      state: present
+    key: "/com/solus-project/budgie-panel/dark-theme"
+    value: "true"
+    state: present
 
 ## Window Controls
 
@@ -40,14 +40,14 @@
   become: true
   become_user: "{{ myusername }}"
   dconf:
-      key: "/com/solus-project/budgie-wm/button-layout"
-      value: "'close,minimize,maximize:appmenu'"
-      state: present
+    key: "/com/solus-project/budgie-wm/button-layout"
+    value: "'close,minimize,maximize:appmenu'"
+    state: present
 
 - name: Set Window Controls Button Style
   become: true
   become_user: "{{ myusername }}"
   dconf:
-      key: "/com/solus-project/budgie-wm/button-style"
-      value: "'right'"
-      state: present
+    key: "/com/solus-project/budgie-wm/button-style"
+    value: "'right'"
+    state: present

@@ -13,7 +13,8 @@
 
     # Software Settings
     - include: tasks/software/repos.yml
-    - include: tasks/software/docker.yml
+      # Tmp removed until the repo supports 19.10
+      #- include: tasks/software/docker.yml
     - include: tasks/software/apt.yml
     - include: tasks/software/snap.yml
     - include: tasks/software/pip.yml
@@ -25,8 +26,8 @@
     - include: tasks/system/services.yml
     - include: tasks/system/timezone.yml
     - include: tasks/system/ufw.yml
-      #- include: tasks/system/dns.yml
 
+      #- include: tasks/system/dns.yml
     # User Settings
     - include: tasks/user/groups.yml
     - include: tasks/user/users.yml
