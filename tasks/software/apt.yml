@@ -8,7 +8,6 @@
       - docker
       - docker-engine
       - docker.io
-      - ibus
       - plank
       - geary
 
