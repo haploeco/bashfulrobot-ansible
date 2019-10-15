@@ -17,6 +17,7 @@
     - ffsend
     - pick-colour-picker
     - mailspring
+    - bluemail
     - docker
     - audacity
 - name: Install Classic Snap Packages
