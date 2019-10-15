@@ -9,3 +9,6 @@
 # Add GOBIN
 export GOBIN=$HOME/go/bin
 export PATH=$GOBIN:$PATH
+
+# Add Rust/Cargo
+source $HOME/.cargo/env
