@@ -9,3 +9,4 @@ alias cfg-pull='ansible-pull -U https://github.com/bashfulrobot/bashfulrobot-ans
 alias e='code-insiders -r'
 
 alias opermissions="stat -c '%A %a %n'"
+alias octperm="stat -c '%A %a %n'"
