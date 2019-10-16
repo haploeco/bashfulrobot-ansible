@@ -13,7 +13,7 @@
   service:
     name: ondemand
     state: stopped
-- name: Enable service ondemand, and not touch the state
+- name: Disable service ondemand
   service:
     name: ondemand
     enabled: no
