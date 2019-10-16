@@ -23,6 +23,7 @@
       - git
       - telegram-desktop
       - inxi
+      - audacity
       - neovim
       - xclip
       - ncdu
