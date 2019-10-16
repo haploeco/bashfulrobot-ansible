@@ -21,6 +21,7 @@
   vars:
     packages:
       - git
+      - telegram-desktop
       - inxi
       - neovim
       - xclip

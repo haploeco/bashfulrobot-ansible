@@ -3,7 +3,6 @@
   with_items:
     - spotify
     - lxd
-    - telegram-desktop
     - simplescreenrecorder
     - bitwarden
     - bw
