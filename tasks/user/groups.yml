@@ -3,3 +3,7 @@
   group:
     name: docker
     state: present
+- name: Ensure group "audio" exists
+  group:
+    name: audio
+    state: present

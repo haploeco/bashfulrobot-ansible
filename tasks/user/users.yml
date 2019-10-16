@@ -1,14 +1,14 @@
 - name: Adding System Users
   user:
-      name: dustin
-      comment: Dustin Krysak
-      groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd
-      append: yes
+    name: dustin
+    comment: Dustin Krysak
+    groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd, audio
+    append: yes
 
 - name: Install GH SSH Pub keys
   authorized_key:
-      user: "{{ myusername }}"
-      state: present
-      key: https://github.com/{{item}}.keys
+    user: "{{ myusername }}"
+    state: present
+    key: https://github.com/{{item}}.keys
   with_items:
-      - bashfulrobot
+    - bashfulrobot
