@@ -9,3 +9,11 @@
   lineinfile:
     path: /etc/default/cpufrequtils
     line: 'GOVERNOR="performance"'
+- name: Stop service ondemand, if started - Settinbg CPU to perf permanently
+  service:
+    name: ondemand
+    state: stopped
+- name: Enable service ondemand, and not touch the state
+  service:
+    name: ondemand
+    enabled: no
