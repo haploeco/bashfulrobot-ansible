@@ -74,6 +74,7 @@
       - lazygit
       - encfs
       - graphviz
+      - code-insiders
 
 - name: Autoremove and Purge APT Packages
   apt:

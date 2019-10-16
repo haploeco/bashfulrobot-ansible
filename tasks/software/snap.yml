@@ -19,7 +19,6 @@
     - restic
     - snapcraft
     - snapdiff
-    - code-insiders
     - slack
 
 - name: Install Node Snap Package
