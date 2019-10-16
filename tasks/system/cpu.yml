@@ -1,0 +1,11 @@
+- name: Add /etc/default/cpufrequtils File
+  file:
+    path: /etc/default/cpufrequtils
+    state: touch
+    owner: root
+    group: root
+    mode: 0644
+- name: Set CPU GOVERNOR to performance
+  lineinfile:
+    path: /etc/default/cpufrequtils
+    line: 'GOVERNOR="performance"'

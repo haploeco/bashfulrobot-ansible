@@ -75,6 +75,7 @@
       - encfs
       - graphviz
       - code-insiders
+      - cpufrequtils
 
 - name: Autoremove and Purge APT Packages
   apt:
