@@ -8,7 +8,7 @@
       apt: update_cache=yes
       changed_when: false
   tasks:
-          #- name: Adding Ansible Settings
+    #- name: Adding Ansible Settings
     # Ansible Settings
     - include: tasks/ansible/sudoers.yml
 
@@ -27,7 +27,7 @@
     - include: tasks/system/services.yml
     - include: tasks/system/timezone.yml
     - include: tasks/system/ufw.yml
-
+    - include: tasks/system/cpu.yml
       #- include: tasks/system/dns.yml
     # User Settings
     - include: tasks/user/groups.yml
