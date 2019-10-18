@@ -4,7 +4,7 @@
   become_user: "{{ myusername }}"
   dconf:
     key: "/org/gnome/desktop/interface/cursor-theme"
-    value: "'DMZ-Black'"
+    value: "'DMZ-White'"
     state: present
 
 - name: Set System Theme
@@ -13,7 +13,7 @@
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     # Needed extra quotes due to unlnown key error
-    value: "'QogirBudgie-dark'"
+    value: "'Pocillo-dark'"
     state: present
 
 - name: Set Icon Theme
