@@ -6,6 +6,7 @@
   with_items:
     - ppa:ubuntubudgie/backports
     - ppa:lazygit-team/release
+    - ppa:peek-developers/stable
 
 - name: Add Canonical Partners PPA
   apt_repository:

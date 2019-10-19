@@ -24,6 +24,7 @@
       - telegram-desktop
       - inxi
       - audacity
+      - peek
       - neovim
       - xclip
       - ncdu
