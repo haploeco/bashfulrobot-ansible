@@ -7,6 +7,15 @@ function asciinema-upload() {
 curl -v -u $USER:$(cat ~/.config/asciinema/install-id) https://asciinema.org/api/asciicasts -F asciicast=@$1
 }
 
+function myint() {
+	ip -4 a | grep -v valid_lft | awk '{print $2}'
+}
+
+function myip() {
+	hostname -I | awk '{print $1}'
+}
+
+
 function do-update() {
   runAptUpdateIfNeeded
   sleep 1
