@@ -10,5 +10,8 @@
 export GOBIN=$HOME/go/bin
 export PATH=$GOBIN:$PATH
 
+# Add PIP binaries
+export PATH=$HOME/.local/bin:$PATH
+
 # Add Rust/Cargo
 source $HOME/.cargo/env
