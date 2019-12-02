@@ -67,6 +67,12 @@
   become: no
   register: created_zshrc
 
+- name: Enable 10k theme in ZSH
+  lineinfile:
+        path: /home/{{ myusername }}/.zshrc
+        regexp: "^ZSH_THEME="
+        line: "ZSH_THEME=powerlevel10k/powerlevel10k"
+
 - name: Placing general.zsh CFG
   copy:
         src: files/dotfiles/zsh/general.zsh
