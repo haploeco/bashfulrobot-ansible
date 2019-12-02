@@ -1,7 +1,15 @@
 - name: Placing Uncrustify CFG
   copy:
-        src: files/dotfiles/uncrustify/uncrustify.cfg
-        dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
-        owner: "{{ myusername }}"
-        group: "{{ myusername }}"
-        mode: 0700
+    src: files/dotfiles/uncrustify/uncrustify.cfg
+    dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
+
+- name: Placing Ncspot CFG
+  copy:
+    src: files/dotfiles/ncspot/config.toml
+    dest: "/home/{{ myusername }}/.config/ncspot/config.toml"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
