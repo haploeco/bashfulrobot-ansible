@@ -78,6 +78,7 @@
       - graphviz
       - code-insiders
       - cpufrequtils
+      - kitty
 
 - name: Autoremove and Purge APT Packages
   apt:
