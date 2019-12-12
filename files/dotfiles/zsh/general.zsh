@@ -16,5 +16,8 @@ UPDATE_ZSH_DAYS=1
 # Suggest corrections for incorrect commands.
 ENABLE_CORRECTION="true"
 
+# Go Settings
+export GO111MODULE=on
+
 # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-3-install-awesome-powerline-fonts
 #POWERLEVEL9K_MODE='awesome-patched'
