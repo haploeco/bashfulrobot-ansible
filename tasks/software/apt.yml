@@ -79,6 +79,7 @@
       - code-insiders
       - cpufrequtils
       - kitty
+      - budgie-applications-menu
 
 - name: Autoremove and Purge APT Packages
   apt:

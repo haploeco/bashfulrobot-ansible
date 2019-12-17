@@ -7,6 +7,7 @@
     - ppa:ubuntubudgie/backports
     - ppa:lazygit-team/release
     - ppa:peek-developers/stable
+    - ppa:ubuntubudgie-dev/applications-menu
 
 - name: Add Canonical Partners PPA
   apt_repository:
