@@ -128,3 +128,10 @@
         dest: "/home/{{ myusername }}/.p10k.zsh"
         owner: "{{ myusername }}"
         group: "{{ myusername }}"
+
+- name: Placing cheatsheets.zsh CFG
+  copy:
+        src: files/dotfiles/zsh/cheatsheets.zsh
+        dest: "/home/{{ myusername }}/.oh-my-zsh/custom/cheatsheets.zsh"
+        owner: "{{ myusername }}"
+        group: "{{ myusername }}"
