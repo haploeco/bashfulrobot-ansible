@@ -4,17 +4,20 @@
 # script, in alphabetical order.
 
 function asciinema-upload() {
-curl -v -u $USER:$(cat ~/.config/asciinema/install-id) https://asciinema.org/api/asciicasts -F asciicast=@$1
+  curl -v -u $USER:$(cat ~/.config/asciinema/install-id) https://asciinema.org/api/asciicasts -F asciicast=@$1
 }
 
 function myint() {
-	ip -4 a | grep -v valid_lft | awk '{print $2}'
+  ip -4 a | grep -v valid_lft | awk '{print $2}'
 }
 
 function myip() {
-	hostname -I | awk '{print $1}'
+  hostname -I | awk '{print $1}'
 }
 
+function myip() {
+  curl -s https://myip.biturl.top/ | cut -d "%" -f1
+}
 
 function do-update() {
   runAptUpdateIfNeeded
@@ -61,5 +64,5 @@ function update-system-cfg() {
 }
 
 function rename-pad-num() {
-	rename 's/\d+/sprintf("%04d",$&)/e' "$1"
+  rename 's/\d+/sprintf("%04d",$&)/e' "$1"
 }

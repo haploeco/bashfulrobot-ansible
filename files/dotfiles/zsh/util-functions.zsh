@@ -10,8 +10,7 @@ NC=$(tput sgr0)
 ONLINE="${GREEN}online$NC"
 OFFLINE="${RED}offline$NC"
 
-
-function echoHeader () {
+function echoHeader() {
   echo
   echo
   printf "%40s \n" "[$RED $1 $NC]"
@@ -19,7 +18,7 @@ function echoHeader () {
   echo
 }
 
-function echoSection () {
+function echoSection() {
   echo
   echo
   printf "$GREEN > > > $NC %1s \n" "$YELLOW $1 $NC"
@@ -27,8 +26,8 @@ function echoSection () {
   echo
 }
 
-function checkInstalledApt () {
-  dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
+function checkInstalledApt() {
+  dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT install "$1" -y
 }
 
 function runAptUpdateIfNeeded() {
@@ -43,40 +42,40 @@ function runAptUpdateIfNeeded() {
 # gets a valid answer.
 
 ask() {
-    # https://gist.github.com/davejamesmiller/1965569
-    local prompt default reply
+  # https://gist.github.com/davejamesmiller/1965569
+  local prompt default reply
 
-    if [ "${2:-}" = "Y" ]; then
-        prompt="Y/n"
-        default=Y
-    elif [ "${2:-}" = "N" ]; then
-        prompt="y/N"
-        default=N
-    else
-        prompt="y/n"
-        default=
+  if [ "${2:-}" = "Y" ]; then
+    prompt="Y/n"
+    default=Y
+  elif [ "${2:-}" = "N" ]; then
+    prompt="y/N"
+    default=N
+  else
+    prompt="y/n"
+    default=
+  fi
+
+  while true; do
+
+    # Ask the question (not using "read -p" as it uses stderr not stdout)
+    echo -n "$1 [$prompt] "
+
+    # Read the answer (use /dev/tty in case stdin is redirected from somewhere else)
+    read reply </dev/tty
+
+    # Default?
+    if [ -z "$reply" ]; then
+      reply=$default
     fi
 
-    while true; do
+    # Check if the reply is valid
+    case "$reply" in
+    Y* | y*) return 0 ;;
+    N* | n*) return 1 ;;
+    esac
 
-        # Ask the question (not using "read -p" as it uses stderr not stdout)
-        echo -n "$1 [$prompt] "
-
-        # Read the answer (use /dev/tty in case stdin is redirected from somewhere else)
-        read reply </dev/tty
-
-        # Default?
-        if [ -z "$reply" ]; then
-            reply=$default
-        fi
-
-        # Check if the reply is valid
-        case "$reply" in
-            Y*|y*) return 0 ;;
-            N*|n*) return 1 ;;
-        esac
-
-    done
+  done
 }
 
 ######
@@ -118,9 +117,6 @@ ask() {
 #ask "Do you want to do such-and-such?" && said_yes
 
 #ask "Do you want to do such-and-such?" || said_no
-
-
-
 
 function send-notify() {
   # This is not actually a token in the code - just a UUID for the entry in Bitwarden.
