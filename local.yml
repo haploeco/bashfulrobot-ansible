@@ -14,8 +14,7 @@
 
     # Software Settings
     - include: tasks/software/repos.yml
-      # Tmp removed until the repo supports 19.10
-      #- include: tasks/software/docker.yml
+    - include: tasks/software/docker.yml
     - include: tasks/software/apt.yml
     - include: tasks/software/snap.yml
     - include: tasks/software/pip.yml
