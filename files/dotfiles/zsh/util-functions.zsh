@@ -27,7 +27,7 @@ function echoSection() {
 }
 
 function checkInstalledApt() {
-  dpkg -s "$1" 2>/dev/null >/dev/null || sudo $APT install "$1" -y
+  dpkg -s "$1" 2>/dev/null >/dev/null || sudo apt install -y "$1"
 }
 
 function runAptUpdateIfNeeded() {
