@@ -80,7 +80,7 @@
       - cpufrequtils
       - kitty
       - budgie-applications-menu
-      - budgie-extras
+      - budgie-window-shuffler
 
 - name: Autoremove and Purge APT Packages
   apt:
