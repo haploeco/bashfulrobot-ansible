@@ -8,6 +8,7 @@
     - ppa:lazygit-team/release
     - ppa:peek-developers/stable
     - ppa:ubuntubudgie-dev/applications-menu
+    - ppa:ubuntubudgie-dev/budgie-extras-daily
 
 - name: Add Canonical Partners PPA
   apt_repository:
