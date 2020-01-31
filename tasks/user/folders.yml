@@ -13,8 +13,8 @@
     path: "{{item.item}}"
     state: directory
     mode: 0755
-    group: {{ myusername }}
-    owner: {{ myusername }}
+    group: "{{ myusername }}"
+    owner: "{{ myusername }}"
     when: item.stat.exists == false
     with_items:
     - "{{folder_stats.results}}"
