@@ -2,7 +2,7 @@
   user:
     name: dustin
     comment: Dustin Krysak
-    groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd, audio
+    groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd, audio, sbuild
     append: yes
 
 - name: Install GH SSH Pub keys

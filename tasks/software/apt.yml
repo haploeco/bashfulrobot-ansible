@@ -32,6 +32,10 @@
       - openssh-server
       - ubuntu-restricted-extras
       - debconf-utils
+      - debhelper
+      - ubuntu-dev-tools
+      - piuparts
+      - sbuild
       - lftp
       - htop
       - deluge-gtk
