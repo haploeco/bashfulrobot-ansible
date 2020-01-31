@@ -23,4 +23,5 @@ plugins=(
   vscode
   zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-z
 )

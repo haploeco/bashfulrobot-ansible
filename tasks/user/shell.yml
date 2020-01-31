@@ -47,6 +47,12 @@
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/themes/powerlevel10k
         update: yes
 
+- name: Clone zsh-z
+  git:
+        repo: https://github.com/agkozak/zsh-z.git
+        dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-z
+        update: yes
+
 - name: check if .zshrc exists
   when: install_zsh is success
   stat:
