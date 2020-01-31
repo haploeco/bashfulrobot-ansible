@@ -1,0 +1,20 @@
+- name: "Checking folders"
+  stat:
+    path: "{{item}}"
+    register: folder_stats
+    with_items:
+    - "/home/{{ myusername }}/ubuntu/scratch"
+    - "/home/{{ myusername }}/tmp"
+    - "/home/{{ myusername }}/sync/gdrive-br"
+    - "/home/{{ myusername }}/private"
+    - "/home/{{ myusername }}/.config/ncspot"
+- name: "Creating multiple folders without disturbing previous permissions"
+  file:
+    path: "{{item.item}}"
+    state: directory
+    mode: 0755
+    group: {{ myusername }}
+    owner: {{ myusername }}
+    when: item.stat.exists == false
+    with_items:
+    - "{{folder_stats.results}}"
