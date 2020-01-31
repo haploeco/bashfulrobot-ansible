@@ -12,5 +12,3 @@ alias opermissions="stat -c '%A %a %n'"
 alias octperm="stat -c '%A %a %n'"
 
 alias s="gnome-control-center sound"
-
-alias cdr="cd $(git rev-parse --show-toplevel)"
