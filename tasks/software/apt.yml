@@ -85,6 +85,8 @@
       - kitty
       - budgie-applications-menu
       - budgie-window-shuffler
+      - pulseaudio
+      - pavucontrol
 
 - name: Autoremove and Purge APT Packages
   apt:
