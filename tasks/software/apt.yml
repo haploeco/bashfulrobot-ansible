@@ -10,6 +10,7 @@
       - docker.io
       - plank
       - geary
+      - gnome-screenshot
 
 - name: Autoremove and Purge APT Packages
   apt:
