@@ -22,8 +22,6 @@ cd bashfulrobot-ansible
 bash deploy.sh
 ```
 
-This is simply a redirect that pulls the raw output of the `deploy.sh` script in this repo. This will bootstrap Ansible, and add a cronjob that will check the repo every 10 minutes for changes, and only run on the machine _if_ the repo has a change.
-
 Then anytime I install _any_ software, I do so via this repo, so that all of my workstations inherit the changes and configuration.
 
 If you combine the above with some sort of file sync solution (I ue Seafile) that supports encryption, I can usually recover a system to about 95% completion within 40 minutes or so. And there is very little I have to remember (documented via code), or complete manually.
