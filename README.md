@@ -34,7 +34,6 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
 
 - Fix permission issues. Causes `ansible-pull` to choke due to local changes (permissions in the local repo).
   - Can be fixed with:
-    - fish: `cd $HOME/.ansible/pull/bashfulrobot && git checkout -- (git ls-files -m)`
     - bash/zsh: `cd $HOME/.ansible/pull/bashfulrobot && git checkout -- $(git ls-files -m)`
   - This can cause the cronjob to not work.
 - Add startup items
@@ -48,11 +47,8 @@ This might serve as a good starting point for configuring an Ubuntu system. If f
     - How to add a panel via dconf (is it possible?)
       - but can get and edit primary panel settings.
     - Look into leveraging the default install panel INI file.
-  - Add compact mode for budgie menu
-    - depends on panel work
   - Remove panel shadows
     - depends on panel work
   - Add github release files such as shfmt, etc.
 - Install virtualbox
-- Install Standard Notes
 - Install <https://github.com/kaepora/diskgem/releases>
