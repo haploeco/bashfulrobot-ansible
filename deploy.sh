@@ -1,21 +1,54 @@
 #!/bin/bash
 
-### SCRIPT VARS
-ANSIBLE=$(which ansible-playbook)
-APULL=$(which ansible-pull)
-GIT=$(which git)
-DPKG=$(which dpkg)
-MYLOCBASE="$HOME/tmp"
-MYREPO="$MYLOCBASE/bashfulrobot-ansible"
-MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
+# Software Dependencies
+neededSoftware=( software-properties-common ansible dialog git )
 
-### SCRIPT FUNCTIONS
+# These application vars are set here to avoid a chicken/egg scenario
+
+# Where is the DPKG command?
+DPKG=$(which dpkg)
+# Where is the APT command?
+APT=$(which apt)
 
 # Check if software is installed and install with APT if needed.
-
 function checkInstalled() {
 $DPKG -s "$1" 2>/dev/null >/dev/null || sudo $APT -y install "$1"
 }
+
+# Update APT Repos of older than 12 hours
+if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
+  sudo apt update
+fi
+
+# Install Software if needed
+for sw in "${neededSoftware[@]}"
+  do
+    checkInstalled "$sw"
+  done
+  
+### SCRIPT VARS
+
+# These application vars are set after software deps are met
+
+# Where is the ansible-playbook command?
+ANSIBLE=$(which ansible-playbook)
+# Where is the ansible-pull command?
+APULL=$(which ansible-pull)
+# Where is the git command?
+GIT=$(which git)
+
+# Local working root folder
+MYLOCBASE="$HOME/tmp"
+# Local repo path
+MYREPO="$MYLOCBASE/bashfulrobot-ansible"
+# Remote repo path
+MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
+
+# Configure git
+$GIT config user.name bashfulrobot
+$GIT config user.email dustin@bashfulrobot.com
+$GIT config user.editor code-insiders
+
 # Ansible Deploy from local GIT repo
 function deployLocal() {
   if [ ! -f "$MYYAML" ]; then
@@ -32,26 +65,6 @@ function deployLocal() {
   # Run ansible-pull no matter what (local dev iteration)
   $ANSIBLE $MYYAML --connection=local
 }
-
-# Update APT Repos of older than 12 hours
-if [ -z "$(find /var/cache/apt/pkgcache.bin -mmin -720)" ]; then
-  sudo apt update
-fi
-
-
-neededSoftware=( software-properties-common ansible dialog git )
-
-# Install Software if needed
-
-for sw in "${neededSoftware[@]}"
-  do
-    checkInstalled "$sw"
-  done
-
-# Configure git
-$GIT config user.name bashfulrobot
-$GIT config user.email dustin@bashfulrobot.com
-$GIT config user.editor code
 
 # Setup Ansible CFG
 if [ ! -f $HOME/.ansible.cfg ]; then
