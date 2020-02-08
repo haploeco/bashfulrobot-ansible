@@ -2,7 +2,7 @@
   git_config:
     name: core.editor
     scope: global
-    value: code
+    value: code-insiders
 
 - name: Set GIT User Email
   git_config:
