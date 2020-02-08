@@ -36,6 +36,7 @@
       - debhelper
       - ubuntu-dev-tools
       - piuparts
+      - schroot
       - sbuild
       - lftp
       - htop

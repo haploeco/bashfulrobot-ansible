@@ -29,3 +29,11 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0700
+
+- name: Placing .sbuildrc
+  copy:
+    src: files/dotfiles/sbuild/.sbuildrc
+    dest: "/home/{{ myusername }}/.sbuildrc"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0700
