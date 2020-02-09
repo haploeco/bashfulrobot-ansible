@@ -11,7 +11,7 @@
     - shfmt
     - bluemail
     - review-tools
-    - wormhole
+    - croc
     - standard-notes
     - scrcpy
     - htmldoc
