@@ -84,7 +84,6 @@
       - graphviz
       - code-insiders
       - cpufrequtils
-      - kitty
       - budgie-applications-menu
       - budgie-window-shuffler
       - pulseaudio
