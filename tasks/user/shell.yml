@@ -29,6 +29,12 @@
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
         update: yes
 
+- name: Clone starship
+  git:
+        repo: https://github.com/denysdovhan/spaceship-prompt.git
+        dest: /home/{{ myusername }}/.oh-my-zsh/custom/themes/spaceship-prompt
+        update: yes
+
 - name: Clone zsh-history-substring-search
   git:
         repo: https://github.com/zsh-users/zsh-history-substring-search.git
