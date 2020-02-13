@@ -9,3 +9,4 @@
     - "/home/{{ myusername }}/sync/gdrive-br"
     - "/home/{{ myusername }}/private"
     - "/home/{{ myusername }}/.config/ncspot"
+    - "/home/{{ myusername }}/.config/kitty"
