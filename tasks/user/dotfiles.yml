@@ -1,10 +1,24 @@
+- name: Placing init.vim
+  copy:
+    src: files/dotfiles/nvim/init.vim
+    dest: "/home/{{ myusername }}/.config/nvim/init.vim"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Create vimrc link
+  file:
+    src: "/home/{{ myusername }}/.config/nvim/init.vim"
+    dest: "/home/{{ myusername }}/.vimrc"
+    state: link
+
 - name: Placing Uncrustify CFG
   copy:
     src: files/dotfiles/uncrustify/uncrustify.cfg
     dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 0700
+    mode: 0640
 
 - name: Placing Ncspot CFG
   copy:
@@ -12,7 +26,7 @@
     dest: "/home/{{ myusername }}/.config/ncspot/config.toml"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 0700
+    mode: 0640
 
 - name: Placing Kitty CFG
   copy:
@@ -20,7 +34,7 @@
     dest: "/home/{{ myusername }}/.config/kitty/kitty.conf"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 0700
+    mode: 0640
 
 - name: Placing Kitty Theme
   copy:
@@ -28,7 +42,7 @@
     dest: "/home/{{ myusername }}/.config/kitty/snazzy.conf"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 0700
+    mode: 0640
 
 - name: Placing .sbuildrc
   copy:
@@ -36,4 +50,4 @@
     dest: "/home/{{ myusername }}/.sbuildrc"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-    mode: 0700
+    mode: 0640
