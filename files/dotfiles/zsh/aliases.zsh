@@ -4,7 +4,7 @@
 # script, in alphabetical order.
 
 alias pcp='rsync -aP'
-alias cfg-pull='ansible-pull -U https://github.com/haploeco/bashfulrobot-ansible.git'
+alias cfg-pull='ansible-pull -U https://github.com/haploeco/haploeco-ansible.git'
 
 alias e='code-insiders -r'
 

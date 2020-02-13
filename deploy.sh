@@ -40,9 +40,9 @@ GIT=$(which git)
 # Local working root folder
 MYLOCBASE="$HOME/tmp"
 # Local repo path
-MYREPO="$MYLOCBASE/bashfulrobot-ansible"
+MYREPO="$MYLOCBASE/haploeco-ansible"
 # Remote repo path
-MYREPORMT="https://github.com/haploeco/bashfulrobot-ansible.git"
+MYREPORMT="https://github.com/haploeco/haploeco-ansible.git"
 
 # Configure git
 $GIT config user.name haplo

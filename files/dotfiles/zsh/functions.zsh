@@ -59,7 +59,7 @@ function hap-clone() {
 
 function update-system-cfg() {
   APULL=$(which ansible-pull)
-  MYREPORMT="https://github.com/haploeco/bashfulrobot-ansible.git"
+  MYREPORMT="https://github.com/haploeco/haploeco-ansible.git"
   $APULL -U $MYREPORMT
 }
 
