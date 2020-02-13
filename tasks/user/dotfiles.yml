@@ -51,3 +51,11 @@
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0640
+
+- name: Download pathogen vim plugin
+  get_url:
+    url: https://tpo.pe/pathogen.vim
+    dest: "/home/{{ myusername }}/.config/nvim/autoload"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+
