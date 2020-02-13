@@ -65,6 +65,11 @@
         src: /home/{{ myusername }}/.zshrc
         dest: /home/{{ myusername }}/.zshrc-orig
 
+- name: Create new ~/.zshenv
+  copy:
+    src: files/dotfiles/zsh/zshenv.zsh
+    dest: /home/{{ myusername }}/.zshenv
+
 - name: Creating new ~/.zshrc
   copy:
         src: /home/{{ myusername }}/.oh-my-zsh/templates/zshrc.zsh-template
