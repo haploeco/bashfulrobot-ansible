@@ -10,3 +10,4 @@
     - "/home/{{ myusername }}/private"
     - "/home/{{ myusername }}/.config/ncspot"
     - "/home/{{ myusername }}/.config/kitty"
+    - "/home/{{ myusername }}/.config/nvim"
