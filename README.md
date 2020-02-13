@@ -10,14 +10,14 @@ Currently this repo is working without issue (using a tasks based approach); how
 
 I am considering a refactor to Ansible Roles. If I do so, I will likely put the "tasks" based approach into a branch for the history. With this I am currently considering how to impliment roles due to the larger number of desktop software packages installed. It does not make sense to me to have an individual role for each package.
 
-I seem to have an occasional time where I commit a change to the repository and for some reason `ansible-pull` reports that there are no changes. WHen I know there are, I may run `sudo ansible-pull -U https://github.com/bashfulrobot/bashfulrobot-ansible.git`. I suspect it has something to do 
+I seem to have an occasional time where I commit a change to the repository and for some reason `ansible-pull` reports that there are no changes. WHen I know there are, I may run `sudo ansible-pull -U https://github.com/haploeco/bashfulrobot-ansible.git`. I suspect it has something to do 
 
 Open to suggestions via issues for improvements.
 
 ## My Workflow
 
 ```bash
-git clone https://github.com/bashfulrobot/bashfulrobot-ansible.git
+git clone https://github.com/haploeco/bashfulrobot-ansible.git
 cd bashfulrobot-ansible
 bash deploy.sh
 ```

@@ -35,7 +35,7 @@ function do-update() {
   echoHeader "Completed System Update"
 }
 
-function br-clone() {
+function hap-clone() {
   # Is GIT installed?
   checkInstalledApt git
   # Check if the repo exists already
@@ -48,7 +48,7 @@ function br-clone() {
     echo
   else
     # Repo does not exist, clone
-    git clone git@github.com:bashfulrobot/$1 "$HOME/tmp/$1"
+    git clone git@github.com:haploeco/$1 "$HOME/tmp/$1"
   fi
 
   echo
@@ -59,7 +59,7 @@ function br-clone() {
 
 function update-system-cfg() {
   APULL=$(which ansible-pull)
-  MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
+  MYREPORMT="https://github.com/haploeco/bashfulrobot-ansible.git"
   $APULL -U $MYREPORMT
 }
 
