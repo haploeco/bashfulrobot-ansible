@@ -1,6 +1,6 @@
 # Name to use as override in .changes files for the Maintainer: field
 # (mandatory, no default!).
-$maintainer_name='Dustin Krysak <dustin@bashfulrobot.com>';
+$maintainer_name='Nate Thompson<haplo@haplolabs.io';
 
 # Default distribution to build.
 $distribution = "focal";

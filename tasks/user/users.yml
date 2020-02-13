@@ -1,7 +1,7 @@
 - name: Adding System Users
   user:
-    name: dustin
-    comment: Dustin Krysak
+    name: haplo
+    comment: Nate Thompson
     groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, docker, lxd, audio, sbuild
     append: yes
 
@@ -11,4 +11,4 @@
     state: present
     key: https://github.com/{{item}}.keys
   with_items:
-    - bashfulrobot
+    - haploeco

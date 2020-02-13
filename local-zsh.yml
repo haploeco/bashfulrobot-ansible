@@ -1,8 +1,8 @@
 - hosts: localhost
   become: true
   vars:
-    myusername: dustin
-    myhome: /home/dustin
+    myusername: haplo
+    myhome: /home/haplo
   pre_tasks:
     - name: Update Repositories
       apt: update_cache=yes

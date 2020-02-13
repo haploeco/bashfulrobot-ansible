@@ -2,16 +2,16 @@
   git_config:
     name: core.editor
     scope: global
-    value: code-insiders
+    value: vim
 
 - name: Set GIT User Email
   git_config:
     name: user.email
     scope: global
-    value: 'dustin@bashfulrobot.com'
+    value: 'haplo@haplolabs.io'
 
 - name: Set GIT User Name
   git_config:
     name: user.name
     scope: global
-    value: 'bashfulrobot'
+    value: 'haplo'

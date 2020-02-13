@@ -45,9 +45,9 @@ MYREPO="$MYLOCBASE/bashfulrobot-ansible"
 MYREPORMT="https://github.com/bashfulrobot/bashfulrobot-ansible.git"
 
 # Configure git
-$GIT config user.name bashfulrobot
-$GIT config user.email dustin@bashfulrobot.com
-$GIT config user.editor code-insiders
+$GIT config user.name haplo
+$GIT config user.email haplo@haplolabs.io
+$GIT config user.editor vim
 
 # Ansible Deploy from local GIT repo
 function deployLocal() {
