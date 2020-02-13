@@ -88,6 +88,9 @@
       - budgie-window-shuffler
       - pulseaudio
       - pavucontrol
+      - pulsemixer
+      - vifm
+      - zathura
 
 - name: Autoremove and Purge APT Packages
   apt:
