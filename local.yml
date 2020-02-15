@@ -17,6 +17,8 @@
     #- name: Adding Ansible Settings
     # Ansible Settings
     - include: tasks/ansible/sudoers.yml
+    # Create folders
+    - include: tasks/user/folders.yml
 
     # Software Settings
     - include: tasks/software/repos.yml
@@ -39,7 +41,6 @@
     # User Settings
     - include: tasks/user/groups.yml
     - include: tasks/user/users.yml
-    - include: tasks/user/folders.yml
     - include: tasks/user/dotfiles.yml
     - include: tasks/user/git-config.yml
     - include: tasks/user/cron.yml
