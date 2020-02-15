@@ -84,11 +84,11 @@
   become: no
   register: created_zshrc
 
-- name: Enable 10k theme in ZSH
+- name: Enable starship theme in zsh
   lineinfile:
         path: /home/{{ myusername }}/.zshrc
         regexp: "^ZSH_THEME="
-        line: "ZSH_THEME='powerlevel10k/powerlevel10k'"
+        line: "ZSH_THEME='spaceship'"
 
 - name: Placing general.zsh CFG
   copy:

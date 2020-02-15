@@ -3,6 +3,10 @@
   vars:
     myusername: haplo
     myhome: /home/haplo
+    # defaults file for terraform-role
+    terraform_version: 0.12.14
+    terraform_dir: /opt/terraform
+    terraform_user: terraform
   pre_tasks:
     - name: Update Repositories
       apt: update_cache=yes
@@ -20,6 +24,7 @@
     - include: tasks/software/apt.yml
     - include: tasks/software/snap.yml
     - include: tasks/software/pip.yml
+    - include: tasks/software/terraform.yml
 
     # System Settings
     - include: tasks/system/sysctl.yml
