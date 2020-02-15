@@ -91,6 +91,7 @@
       - pulsemixer
       - vifm
       - zathura
+      - fzf
 
 - name: Autoremove and Purge APT Packages
   apt:
