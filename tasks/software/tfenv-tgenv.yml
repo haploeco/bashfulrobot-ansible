@@ -3,6 +3,7 @@
     repo: https://github.com/tfutils/tfenv.git
     dest: /home/{{ myusername }}/.tfenv
     update: yes
+  become: no
   register: tfenv_clone
 
 - name: Install tgenv
@@ -10,6 +11,7 @@
     repo: https://github.com/cunymatthieu/tgenv.git
     dest: /home/{{ myusername }}/.tgenv
     update: yes
+  become: no
   register: tgenv_clone
 
 - name: Linking tfenv to path
