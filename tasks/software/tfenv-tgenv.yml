@@ -18,8 +18,20 @@
     dest: "/home/{{ myusername }}/.local/bin/tfenv"
     state: link
 
+- name: Linking terraform wrapper to path
+  file:
+    src: "/home/{{ myusername }}/.tfenv/bin/terraform"
+    dest: "/home/{{ myusername }}/.local/bin/terraform"
+    state: link
+
 - name: Linking tgenv to path
   file:
     src: "/home/{{ myusername }}/.tgenv/bin/tgenv"
     dest: "/home/{{ myusername }}/.local/bin/tgenv"
+    state: link
+
+- name: Linking terragrunt wrapper to path
+  file:
+    src: "/home/{{ myusername }}/.tgenv/bin/terragrunt"
+    dest: "/home/{{ myusername }}/.local/bin/terragrunt"
     state: link
