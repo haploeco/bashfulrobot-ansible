@@ -1,0 +1,25 @@
+- name: Install tfenv
+  git:
+    repo: https://github.com/tfutils/tfenv.git
+    dest: /home/{{ myusername }}/.tfenv
+    update: yes
+  register: tfenv_clone
+
+- name: Install tgenv
+  git:
+    repo: https://github.com/cunymatthieu/tgenv.git
+    dest: /home/{{ myusername }}/.tgenv
+    update: yes
+  register: tgenv_clone
+
+- name: Linking tfenv to path
+  file:
+    src: "/home/{{ myusername }}/.tfenv/bin/tfenv"
+    dest: "/home/{{ myusername }}/.local/bin/tfenv"
+    state: link
+
+- name: Linking tgenv to path
+  file:
+    src: "/home/{{ myusername }}/.tgenv/bin/tgenv"
+    dest: "/home/{{ myusername }}/.local/bin/tgenv"
+    state: link

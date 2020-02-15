@@ -13,3 +13,5 @@
     - "/home/{{ myusername }}/.config/ncspot"
     - "/home/{{ myusername }}/.config/kitty"
     - "/home/{{ myusername }}/.config/nvim"
+    - "/home/{{ myusername }}/.local/bin"
+    - "/home/{{ myusername }}/bin"
