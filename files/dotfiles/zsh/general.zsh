@@ -5,9 +5,10 @@
 
 # Set Shell Theme
 # - Note this is a custom theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="spaceship"
 
-# Support additional terminal 
+# Support additional terminal
 export TERM=xterm-256color
 
 # Daily updates - default is every 2 weeks

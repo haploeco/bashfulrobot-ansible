@@ -13,6 +13,7 @@ plugins=(
   common-aliases
   docker
   docker-compose
+  fzf
   github
   rsync
   systemd
@@ -20,6 +21,7 @@ plugins=(
   tmux
   ubuntu
   ufw
+  vi-mode
   vscode
   zsh-syntax-highlighting
   zsh-autosuggestions

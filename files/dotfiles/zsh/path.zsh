@@ -17,4 +17,4 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
 # Add Rust/Cargo
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
