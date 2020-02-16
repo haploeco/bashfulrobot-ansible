@@ -92,6 +92,7 @@
       - vifm
       - zathura
       - fzf
+      - sxiv
 
 - name: Autoremove and Purge APT Packages
   apt:
