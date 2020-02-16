@@ -35,6 +35,12 @@
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/themes/spaceship-prompt
         update: yes
 
+- name: Create spaceship link in themes directory
+  file:
+    src: "/home/{{ myusername }}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme"
+    dest: "/home/{{ myusername }}/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+    state: link
+
 - name: Clone zsh-history-substring-search
   git:
         repo: https://github.com/zsh-users/zsh-history-substring-search.git
