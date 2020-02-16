@@ -93,6 +93,7 @@
       - zathura
       - fzf
       - sxiv
+      - highlight
 
 - name: Autoremove and Purge APT Packages
   apt:
