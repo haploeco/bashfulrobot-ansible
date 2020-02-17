@@ -94,6 +94,7 @@
       - fzf
       - sxiv
       - highlight
+      - neofetch
 
 - name: Autoremove and Purge APT Packages
   apt:
