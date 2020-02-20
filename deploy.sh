@@ -25,7 +25,7 @@ for sw in "${neededSoftware[@]}"
   do
     checkInstalled "$sw"
   done
-  
+
 ### SCRIPT VARS
 
 # These application vars are set after software deps are met
@@ -84,7 +84,8 @@ MENU="Choose one of the following options:"
 OPTIONS=(1 "Local Repo Deploy All"
          2 "Local Repo Deploy ZSH"
          3 "Remote Repo Deploy All"
-         4 "Local Repo Test Script")
+         4 "Local Repo Deploy Dev"
+         5 "Local Repo Test Script")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -112,6 +113,11 @@ case $CHOICE in
             $APULL -U $MYREPORMT
             ;;
         4)
+            echo "Running $MYREPO/local-dev.yml"
+            MYYAML="$MYREPO/local-dev.yml"
+            deployLocal
+            ;;
+        5)
             echo "Running $MYREPO/local-test.yml"
             MYYAML="$MYREPO/local-test.yml"
             deployLocal

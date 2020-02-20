@@ -1,0 +1,9 @@
+- name: Install Desktop APT Packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - libx11-dev
+      - libxcb1-dev
+      - x11proto-dev
+      - libxft-dev
