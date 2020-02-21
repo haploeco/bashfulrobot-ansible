@@ -7,3 +7,4 @@
       - libxcb1-dev
       - x11proto-dev
       - libxft-dev
+      - libxinerama-dev
