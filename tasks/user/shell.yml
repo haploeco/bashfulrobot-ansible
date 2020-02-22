@@ -28,12 +28,14 @@
         repo: https://github.com/zsh-users/zsh-autosuggestions.git
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
         update: yes
+  become: no
 
 - name: Clone starship
   git:
         repo: https://github.com/denysdovhan/spaceship-prompt.git
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/themes/spaceship-prompt
         update: yes
+  become: no
 
 - name: Create spaceship link in themes directory
   file:
@@ -46,24 +48,28 @@
         repo: https://github.com/zsh-users/zsh-history-substring-search.git
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-history-substring-search
         update: yes
+  become: no
 
 - name: Clone zsh-syntax-highlighting
   git:
         repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
         update: yes
+  become: no
 
 - name: Clone powerlevel10k Theme
   git:
         repo: https://github.com/romkatv/powerlevel10k.git
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/themes/powerlevel10k
         update: yes
+  become: no
 
 - name: Clone zsh-z
   git:
         repo: https://github.com/agkozak/zsh-z.git
         dest: /home/{{ myusername }}/.oh-my-zsh/custom/plugins/zsh-z
         update: yes
+  become: no
 
 - name: check if .zshrc exists
   when: install_zsh is success
@@ -84,7 +90,7 @@
 
 - name: Creating new ~/.zshrc
   copy:
-        src: /home/{{ myusername }}/.oh-my-zsh/templates/zshrc.zsh-template
+        src: files/dotfiles/zsh/zshrc
         dest: /home/{{ myusername }}/.zshrc
   when: omz_clone is success
   become: no
@@ -100,13 +106,6 @@
   copy:
         src: files/dotfiles/zsh/general.zsh
         dest: "/home/{{ myusername }}/.oh-my-zsh/custom/general.zsh"
-        owner: "{{ myusername }}"
-        group: "{{ myusername }}"
-
-- name: Placing plugins.zsh CFG
-  copy:
-        src: files/dotfiles/zsh/plugins.zsh
-        dest: "/home/{{ myusername }}/.oh-my-zsh/custom/plugins.zsh"
         owner: "{{ myusername }}"
         group: "{{ myusername }}"
 
