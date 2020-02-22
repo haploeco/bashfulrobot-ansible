@@ -96,6 +96,7 @@
       - highlight
       - neofetch
       - xfonts-terminus
+      - pass
 
 - name: Autoremove and Purge APT Packages
   apt:
