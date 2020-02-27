@@ -8,7 +8,7 @@
 export PATH=$HOME/.tfenv/bin:$HOME/.tgenv/bin:$PATH:$HOME/bin:/$(du "$HOME/.local/bin" | cut -f2 | tr '\n' ':' | sed 's/:*$//'):/snap/bin:/usr/local/go/bin:$HOME/go/bin
 
 # non-reparenting for java in dwm/i3/etc
-export _JAVA_AWS_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Define my applications
 export EDITOR="nvim"
