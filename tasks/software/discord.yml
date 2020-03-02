@@ -15,5 +15,4 @@
   file:
     path: "{{ discord_installer.path }}"
     state: absent
-  when: discord_installer.path is defined
 ...
