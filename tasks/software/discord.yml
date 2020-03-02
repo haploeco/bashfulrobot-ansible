@@ -13,6 +13,6 @@
 
 - name: Remove file after install is complete
   file:
-    path: "{{ discord_installer.path }}"
+    path: "{{ discord_installer.dest }}"
     state: absent
 ...
