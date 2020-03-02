@@ -28,6 +28,7 @@
     - include: tasks/software/snap.yml
     - include: tasks/software/pip.yml
     - include: tasks/software/tfenv-tgenv.yml
+    - include: tasks/software/discord.yml
     # - include: tasks/software/terraform.yml
 
     # System Settings
