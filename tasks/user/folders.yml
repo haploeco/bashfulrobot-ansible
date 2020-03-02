@@ -10,6 +10,7 @@
     - "/home/{{ myusername }}/tmp"
     - "/home/{{ myusername }}/sync/gdrive-br"
     - "/home/{{ myusername }}/private"
+    - "/home/{{ myusername }}/Downloads/software"
     - "/home/{{ myusername }}/.config/ncspot"
     - "/home/{{ myusername }}/.config/kitty"
     - "/home/{{ myusername }}/.config/nvim"
