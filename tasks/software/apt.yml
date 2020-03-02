@@ -1,3 +1,4 @@
+---
 - name: Remove Desktop APT Packages
   apt:
     name: "{{ rempackages }}"
@@ -103,3 +104,8 @@
   apt:
     autoremove: yes
     purge: yes
+
+- name: Gather package facts
+  package_facts:
+    manager: auto
+...

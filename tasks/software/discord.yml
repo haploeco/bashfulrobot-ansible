@@ -3,9 +3,16 @@
   get_url:
     url: https://discordapp.com/api/download?platform=linux&format=deb
     dest: /tmp/discord.deb
-  when: "'64' in ansible_architecture and 'Ubuntu' == ansible_distribution"
+  when: "'64' in ansible_architecture and 'Ubuntu' == ansible_distribution and not 'discord' in ansible_facts.packages"
+  register: discord_installer
 
 - name: Install Discord latest deb
   apt:
     deb: /tmp/discord.deb
+  when: not 'discord' in ansible_facts.packages
+
+- name: Remove file after install is complete
+  debug:
+    msg: "{{ ansible_facts.packages['discord'] | length }} versions of discord are installed!"
+  when: discord_installer.path is defined
 ...
