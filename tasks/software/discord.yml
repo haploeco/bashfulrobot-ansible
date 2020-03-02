@@ -12,7 +12,8 @@
   when: not 'discord' in ansible_facts.packages
 
 - name: Remove file after install is complete
-  debug:
-    msg: "{{ ansible_facts.packages['discord'] | length }} versions of discord are installed!"
+  file:
+    path: "{{ discord_installer.path }}"
+    state: absent
   when: discord_installer.path is defined
 ...
