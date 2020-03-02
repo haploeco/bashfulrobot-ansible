@@ -2,17 +2,11 @@
 - name: Download debian package for Discord if on Ubuntu
   get_url:
     url: https://discordapp.com/api/download?platform=linux&format=deb
-    dest: /tmp/discord.deb
-  when: "'64' in ansible_architecture and 'Ubuntu' == ansible_distribution and not 'discord' in ansible_facts.packages"
+    dest: /home/{{ myusername }}/Downloads/software/discord.deb
+  when: "'64' in ansible_architecture and 'Ubuntu' == ansible_distribution"
   register: discord_installer
 
 - name: Install Discord latest deb
   apt:
-    deb: /tmp/discord.deb
-  when: not 'discord' in ansible_facts.packages
-
-- name: Remove file after install is complete
-  file:
-    path: "{{ discord_installer.dest }}"
-    state: absent
+    deb: {{ discord_installer.dest }}
 ...
