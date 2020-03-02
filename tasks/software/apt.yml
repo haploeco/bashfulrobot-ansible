@@ -97,6 +97,7 @@
       - neofetch
       - xfonts-terminus
       - pass
+      - regolith-desktop
 
 - name: Autoremove and Purge APT Packages
   apt:
