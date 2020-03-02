@@ -8,5 +8,5 @@
 
 - name: Install Discord latest deb
   apt:
-    deb: {{ discord_installer.dest }}
+    deb: "{{ discord_installer.dest }}"
 ...
