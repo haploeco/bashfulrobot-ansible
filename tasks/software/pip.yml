@@ -6,3 +6,4 @@
       - aws-shell
       - awscli
       - gcp
+      - pywal
