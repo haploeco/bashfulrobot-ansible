@@ -7,4 +7,4 @@
       - awscli
       - gcp
       - pywal
-      - ansible-cli
+      - linode-cli
