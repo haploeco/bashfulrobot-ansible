@@ -9,4 +9,5 @@
       - pywal
       - linode-cli
       - boto3
+      - boto
       - botocore
