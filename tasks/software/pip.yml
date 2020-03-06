@@ -7,3 +7,4 @@
       - awscli
       - gcp
       - pywal
+      - ansible-cli
