@@ -8,3 +8,5 @@
       - gcp
       - pywal
       - linode-cli
+      - boto3
+      - botocore
