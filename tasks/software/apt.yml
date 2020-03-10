@@ -104,6 +104,7 @@
       - regolith-desktop
       - sxhkd
       - dunst
+      - xcape
 
 - name: Autoremove and Purge APT Packages
   apt:
