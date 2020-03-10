@@ -103,6 +103,7 @@
       - s3cmd
       - regolith-desktop
       - sxhkd
+      - dunst
 
 - name: Autoremove and Purge APT Packages
   apt:
