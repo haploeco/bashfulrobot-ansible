@@ -105,6 +105,8 @@
       - sxhkd
       - dunst
       - xcape
+      - mpc
+      - mpd
 
 - name: Autoremove and Purge APT Packages
   apt:
