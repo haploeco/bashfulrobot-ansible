@@ -107,6 +107,8 @@
       - xcape
       - mpc
       - mpd
+      - dmenu
+      - transmission-cli
 
 - name: Autoremove and Purge APT Packages
   apt:
