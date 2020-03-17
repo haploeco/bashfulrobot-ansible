@@ -7,19 +7,10 @@
     - ppa:ubuntubudgie/backports
     - ppa:lazygit-team/release
     - ppa:peek-developers/stable
-    - ppa:ubuntubudgie-dev/applications-menu
     - ppa:ubuntubudgie-dev/budgie-extras-daily
+    - ppa:regolith-linux/release
 
 - name: Add Canonical Partners PPA
   apt_repository:
     repo: deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner
-    state: present
-- name: Add Microsoft APT signing Keys
-  apt_key:
-    url: https://packages.microsoft.com/keys/microsoft.asc
-    state: present
-
-- name: Add Vscode Microsoft PPA
-  apt_repository:
-    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present

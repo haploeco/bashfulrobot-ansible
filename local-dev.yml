@@ -1,0 +1,15 @@
+- hosts: localhost
+  become: true
+  vars:
+    myusername: haplo
+    myhome: /home/haplo
+  pre_tasks:
+    - name: Update Repositories
+      apt: update_cache=yes
+      changed_when: false
+  tasks:
+    # Update entire system
+    - include: tasks/software/update-system.yml
+    # Software Settings
+    - include: tasks/software/ubuntu-dev.yml
+

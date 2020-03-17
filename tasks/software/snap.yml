@@ -18,7 +18,6 @@
     - polar-bookshelf
     - mailspring
     - ncspot
-    - ncspot
 - name: Install Classic Snap Packages
   command: 'snap install "{{ item }}" --classic'
   with_items:

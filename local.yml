@@ -7,6 +7,7 @@
     terraform_version: 0.12.20
     terraform_dir: /opt/terraform
     terraform_user: terraform
+    terraform_master: blah
   pre_tasks:
     - name: Update Repositories
       apt: update_cache=yes
@@ -27,6 +28,8 @@
     - include: tasks/software/snap.yml
     - include: tasks/software/pip.yml
     - include: tasks/software/tfenv-tgenv.yml
+    - include: tasks/software/discord.yml
+    - include: tasks/software/lbry.yml
     # - include: tasks/software/terraform.yml
 
     # System Settings

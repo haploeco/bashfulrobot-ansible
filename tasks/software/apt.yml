@@ -1,3 +1,4 @@
+---
 - name: Remove Desktop APT Packages
   apt:
     name: "{{ rempackages }}"
@@ -93,8 +94,28 @@
       - zathura
       - fzf
       - sxiv
+      - feh
+      - highlight
+      - neofetch
+      - xfonts-terminus
+      - pass
+      - jq
+      - s3cmd
+      - regolith-desktop
+      - sxhkd
+      - dunst
+      - xcape
+      - mpc
+      - mpd
+      - dmenu
+      - transmission-cli
 
 - name: Autoremove and Purge APT Packages
   apt:
     autoremove: yes
     purge: yes
+
+- name: Gather package facts
+  package_facts:
+    manager: auto
+...

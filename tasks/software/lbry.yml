@@ -1,0 +1,12 @@
+---
+- name: Download debian package for LBRY if on Ubuntu
+  get_url:
+    url: https://lbry.com/get/lbry.deb
+    dest: /home/{{ myusername }}/Downloads/software/lbry.deb
+  when: "'64' in ansible_architecture and 'Ubuntu' == ansible_distribution"
+  register: discord_installer
+
+- name: Install LBRY latest deb
+  apt:
+    deb: "{{ discord_installer.dest }}"
+...

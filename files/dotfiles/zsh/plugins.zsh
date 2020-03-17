@@ -3,6 +3,8 @@
 # Files on the custom/ directory will be automatically loaded by the init
 # script, in alphabetical order.
 
+# NOTE: fzf must come after vi-mode so that fuzzy history works!
+
 # My zsh plugins
 plugins=(
   git
@@ -20,6 +22,8 @@ plugins=(
   tmux
   ubuntu
   ufw
+  vi-mode
+  fzf
   vscode
   zsh-syntax-highlighting
   zsh-autosuggestions

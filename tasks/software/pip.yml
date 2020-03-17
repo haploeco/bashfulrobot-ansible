@@ -6,3 +6,8 @@
       - aws-shell
       - awscli
       - gcp
+      - pywal
+      - linode-cli
+      - boto3
+      - boto
+      - botocore
