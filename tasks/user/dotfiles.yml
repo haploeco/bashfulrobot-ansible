@@ -20,6 +20,22 @@
     group: "{{ myusername }}"
     mode: 0640
 
+- name: Placing directories file for shortcuts script
+  copy:
+    src: files/dotfiles/shortcuts/directories
+    dest: "/home/{{ myusername }}/.config/directories"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Placing files file for shortcuts script
+  copy:
+    src: files/dotfiles/shortcuts/files
+    dest: "/home/{{ myusername }}/.config/files"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
 - name: Placing Ncspot CFG
   copy:
     src: files/dotfiles/ncspot/config.toml
