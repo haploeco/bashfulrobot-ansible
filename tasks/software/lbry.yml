@@ -9,4 +9,5 @@
 - name: Install LBRY latest deb
   apt:
     deb: "{{ discord_installer.dest }}"
+  ignore_errors: true
 ...
