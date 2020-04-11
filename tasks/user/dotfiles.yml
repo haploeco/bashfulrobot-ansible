@@ -36,6 +36,22 @@
     group: "{{ myusername }}"
     mode: 0640
 
+- name: Placing functionsrc file in .config
+  copy:
+    src: files/dotfiles/zsh/functionsrc
+    dest: "/home/{{ myusername }}/.config/functionsrc"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Placing aliasrc file in .config
+  copy:
+    src: files/dotfiles/zsh/aliasrc
+    dest: "/home/{{ myusername }}/.config/aliasrc"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
 - name: Placing Ncspot CFG
   copy:
     src: files/dotfiles/ncspot/config.toml
