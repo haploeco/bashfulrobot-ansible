@@ -1,7 +1,7 @@
 ---
 - name: Clone dotfiles
   git:
-        repo: https://gitlab.com/haploeco/dotfiles.git
+        repo: git@gitlab.com:haploeco/dotfiles.git
         dest: /home/{{ myusername }}/tmp/dotfiles
         update: yes
   become: no
