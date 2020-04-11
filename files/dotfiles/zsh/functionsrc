@@ -1,0 +1,140 @@
+
+# User specific aliases and functions
+_build_git_api_url() {
+  local readonly git_org="$1"
+  local readonly git_api_url="https://api.github.com/orgs/${git_org}/repos?access_token=${GITHUB_OAUTH_TOKEN}&per_page=100"
+  echo "${git_api_url}"
+}
+
+function ssh_add_key {
+  select TIME in 300 7200 14400 28800; do
+    ssh-add -t $TIME $IDENTFILE
+    return 0
+  done
+}
+
+function start_ssh-agent {
+  #AGENTFILE="${HOME}/.ssh/.agentinfo.$(hostname -s)"
+  ssh-agent > $AGENTFILE
+  . $AGENTFILE
+  ssh_add_key
+}
+
+function ssh_agent {
+  AGENTFILE="${HOME}/.ssh/.agentinfo.$(hostname -s)"
+  IDENTFILE="${HOME}/.ssh/id_ed25519"
+
+  # If we don't have an AGENTFILE, start a new one!
+  if [[ -z $AGENTFILE || ! -e $AGENTFILE ]]
+  then
+    echo "No agentfile.  Starting new ssh agent..."
+    start_ssh-agent
+    return 0
+  fi
+
+  # Find PIDs from $AGENTFILE and build array of running ssh-agent process PIDs
+  PID_FROM_FILE=$(awk '/SSH_AGENT_PID/{ print gensub(/^SSH_AGENT_PID\=([[:digit:]]+);.*$/, "\\1", "g")}' $AGENTFILE)
+  PID_FROM_PROC=($(ps -u $USER | awk '$4 ~ /ssh-agent/ {print $1}'))
+
+  # If no ssh-agent processes, start one and exit
+  if [ ${#PID_FROM_PROC[@]} -eq 0  ] ; then
+    echo "No running ssh agents. Starting one...."
+    start_ssh-agent
+    return 0
+  fi
+
+  # Loop through existing ssh-agent processes and add key if needed when match found
+  for PID in ${PID_FROM_PROC[@]}; do
+    if [[ $PID_FROM_FILE == $PID ]]
+    then
+      . $AGENTFILE
+      AGENTKEY=$(ssh-add -L)
+      if [[ $AGENTKEY =~ "no identities" ]]
+      then
+        ssh_add_key
+      fi
+      return 0
+    else
+      echo "$PID is not what is in $AGENTFILE"
+    fi
+  done
+
+  # If we made it here, there are some ssh-agents, but not ours in $AGENTFILE
+  # Let's start a new one!
+  start_ssh-agent
+}
+
+function colorgrid() {
+    iter=16
+    while [ $iter -lt 52 ]
+    do
+        second=$[$iter+36]
+        third=$[$second+36]
+        four=$[$third+36]
+        five=$[$four+36]
+        six=$[$five+36]
+        seven=$[$six+36]
+        if [ $seven -gt 250 ];then seven=$[$seven-251]; fi
+
+        echo -en "\033[38;5;$(echo $iter)m█ "
+        printf "%03d" $iter
+        echo -en "   \033[38;5;$(echo $second)m█ "
+        printf "%03d" $second
+        echo -en "   \033[38;5;$(echo $third)m█ "
+        printf "%03d" $third
+        echo -en "   \033[38;5;$(echo $four)m█ "
+        printf "%03d" $four
+        echo -en "   \033[38;5;$(echo $five)m█ "
+        printf "%03d" $five
+        echo -en "   \033[38;5;$(echo $six)m█ "
+        printf "%03d" $six
+        echo -en "   \033[38;5;$(echo $seven)m█ "
+        printf "%03d" $seven
+
+        iter=$[$iter+1]
+        printf '\r\n'
+    done
+}
+
+function parse_git_branch() {
+  GBRANCH=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/git:\1/')
+  if [[ -z $GBRANCH ]]; then
+    echo "git::0"
+  else
+    echo "$GBRANCH"
+  fi
+}
+
+function aws_profile_display() {
+  if [[ -z "$AWS_PROFILE" ]]; then
+    echo "null"
+  else
+    echo "$AWS_PROFILE"
+  fi
+}
+
+function token () {
+  cat /dev/urandom | tr -dc 'a-z' | fold -w 16 | head -n 1 | awk '{print tolower($0)}'
+}
+
+_get_account_full_access_arn() {
+  local readonly account="$1"
+  local readonly account_num=$(_get_account_number "${account}")
+
+  if [[ "${account}" =~ "govcloud" ]]; then
+    local readonly arn_region="aws-us-gov"
+  else
+    local readonly arn_region="aws"
+  fi
+  local readonly account_arn="arn:${arn_region}:iam::${account_num}:role/allow-full-access-from-other-accounts"
+
+  echo "${account_arn}"
+}
+
+_get_account_from_directory() {
+  toplevel=$(git rev-parse --show-toplevel)
+  working_dir=$(pwd)
+  my_account_dir=$(echo "${working_dir}" | sed -E "s|${toplevel}/([^/]*).*|\1|")
+
+  echo $my_account_dir
+}
