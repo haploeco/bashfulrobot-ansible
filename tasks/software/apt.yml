@@ -109,6 +109,7 @@
       - mpd
       - dmenu
       - transmission-cli
+      - shellcheck
 
 - name: Autoremove and Purge APT Packages
   apt:
