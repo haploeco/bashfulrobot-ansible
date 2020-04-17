@@ -1,3 +1,13 @@
+---
+- name: Clone dotfiles
+  git:
+        repo: git@gitlab.com:haploeco/dotfiles.git
+        version: master
+        dest: /home/{{ myusername }}/tmp/dotfiles
+        update: yes
+        accept_hostkey: yes
+  become: no
+
 - name: Placing init.vim
   copy:
     src: files/dotfiles/nvim/init.vim
@@ -16,6 +26,38 @@
   copy:
     src: files/dotfiles/uncrustify/uncrustify.cfg
     dest: "/home/{{ myusername }}/.config/uncrustify.cfg"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Placing directories file for shortcuts script
+  copy:
+    src: files/dotfiles/shortcuts/directories
+    dest: "/home/{{ myusername }}/.config/directories"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Placing files file for shortcuts script
+  copy:
+    src: files/dotfiles/shortcuts/files
+    dest: "/home/{{ myusername }}/.config/files"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Placing functionsrc file in .config
+  copy:
+    src: files/dotfiles/zsh/functionsrc
+    dest: "/home/{{ myusername }}/.config/functionsrc"
+    owner: "{{ myusername }}"
+    group: "{{ myusername }}"
+    mode: 0640
+
+- name: Placing aliasrc file in .config
+  copy:
+    src: files/dotfiles/zsh/aliasrc
+    dest: "/home/{{ myusername }}/.config/aliasrc"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
     mode: 0640
@@ -58,4 +100,4 @@
     dest: "/home/{{ myusername }}/.config/nvim/autoload"
     owner: "{{ myusername }}"
     group: "{{ myusername }}"
-
+...
