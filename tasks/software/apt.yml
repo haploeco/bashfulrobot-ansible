@@ -110,6 +110,7 @@
       - dmenu
       - transmission-cli
       - shellcheck
+      - sshfs
 
 - name: Autoremove and Purge APT Packages
   apt:
