@@ -110,6 +110,7 @@
       - dmenu
       - transmission-cli
       - shellcheck
+      - sshfs
       - xscreensaver
       - xscreensaver-data
       - xscreensaver-data-extra
