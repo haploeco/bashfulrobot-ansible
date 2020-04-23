@@ -110,6 +110,11 @@
       - dmenu
       - transmission-cli
       - shellcheck
+      - xscreensaver
+      - xscreensaver-data
+      - xscreensaver-data-extra
+      - xscreensaver-gl
+      - xscreensaver-gl-extra
 
 - name: Autoremove and Purge APT Packages
   apt:
