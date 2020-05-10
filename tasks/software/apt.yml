@@ -111,6 +111,8 @@
       - transmission-cli
       - shellcheck
       - sshfs
+      - openvswitch-switch
+      - ethtool
 
 - name: Autoremove and Purge APT Packages
   apt:
