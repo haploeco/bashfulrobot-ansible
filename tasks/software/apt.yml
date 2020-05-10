@@ -111,6 +111,11 @@
       - transmission-cli
       - shellcheck
       - sshfs
+      - xscreensaver
+      - xscreensaver-data
+      - xscreensaver-data-extra
+      - xscreensaver-gl
+      - xscreensaver-gl-extra
       - openvswitch-switch
       - ethtool
 
