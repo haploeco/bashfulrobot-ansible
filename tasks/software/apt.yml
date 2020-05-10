@@ -48,12 +48,12 @@
       - apt-transport-https
       - ca-certificates
       - software-properties-common
-      - python-pip
+      - python3-pip
       - nomacs
       - snapd-xdg-open
       - asciinema
       - flameshot
-      - python-psutil
+      - python3-psutil
       - psutils
       - libimage-exiftool-perl
       - python3-pip
