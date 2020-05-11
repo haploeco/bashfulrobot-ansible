@@ -118,6 +118,7 @@
       - xscreensaver-gl-extra
       - openvswitch-switch
       - ethtool
+      - nfs-common
 
 - name: Autoremove and Purge APT Packages
   apt:
