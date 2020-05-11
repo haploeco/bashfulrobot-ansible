@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: drizzt.int.hazmac.com
   become: true
   vars:
     myusername: haplo
