@@ -1,0 +1,27 @@
+- name: Mount backups
+  mount:
+    src: abyss.int.hazmac.com:/nas/backups
+    path: /nas/backups
+    fstype: nfs
+    opts: rw,soft,bg,intr,tcp
+    state: mounted
+    backup: yes
+
+- name: Mount software
+  mount:
+    src: abyss.int.hazmac.com:/nas/software
+    path: /nas/software
+    fstype: nfs
+    opts: rw,soft,bg,intr,tcp
+    state: mounted
+    backup: yes
+
+- name: Mount media
+  mount:
+    src: abyss.int.hazmac.com:/nas/media
+    path: /nas/media
+    fstype: nfs
+    opts: rw,soft,bg,intr,tcp
+    state: mounted
+    backup: yes
+
