@@ -119,6 +119,7 @@
       - openvswitch-switch
       - ethtool
       - nfs-common
+      - libreoffice
 
 - name: Autoremove and Purge APT Packages
   apt:
