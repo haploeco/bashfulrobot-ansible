@@ -120,6 +120,7 @@
       - ethtool
       - nfs-common
       - libreoffice
+      - parallel
 
 - name: Autoremove and Purge APT Packages
   apt:
