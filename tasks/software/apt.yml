@@ -121,6 +121,8 @@
       - nfs-common
       - libreoffice
       - parallel
+      - dictd
+      - dict-gcide
 
 - name: Autoremove and Purge APT Packages
   apt:
