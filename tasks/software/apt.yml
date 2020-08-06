@@ -131,7 +131,6 @@
       - bluez
       - bluez-tools
       - rfkill
-      - bashtop
       - vagrant
       - vagrant-libvirt
       - cloud-image-utils
