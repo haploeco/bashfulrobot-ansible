@@ -88,6 +88,7 @@
       - budgie-applications-menu
       - budgie-window-shuffler
       - pulseaudio
+      - pulseaudio-equalizer
       - pavucontrol
       - pulsemixer
       - vifm
@@ -109,6 +110,7 @@
       - mpd
       - dmenu
       - transmission-cli
+      - transmission-daemon
       - shellcheck
       - sshfs
       - xscreensaver
@@ -123,6 +125,17 @@
       - parallel
       - dictd
       - dict-gcide
+      - libsecret-tools
+      - figlet
+      - bluetooth
+      - bluez
+      - bluez-tools
+      - rfkill
+      - bashtop
+      - vagrant
+      - vagrant-libvirt
+      - cloud-image-utils
+      - x2gotools
 
 - name: Autoremove and Purge APT Packages
   apt:
