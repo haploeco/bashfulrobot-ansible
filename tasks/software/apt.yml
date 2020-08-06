@@ -134,7 +134,8 @@
       - vagrant
       - vagrant-libvirt
       - cloud-image-utils
-      - x2gotools
+      - x2goclient
+      - x2goserver
       - isync
       - neomutt
 
