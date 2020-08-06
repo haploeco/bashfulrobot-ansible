@@ -136,7 +136,7 @@
       - vagrant-libvirt
       - cloud-image-utils
       - x2gotools
-      - mbsync
+      - isync
       - neomutt
 
 - name: Autoremove and Purge APT Packages
