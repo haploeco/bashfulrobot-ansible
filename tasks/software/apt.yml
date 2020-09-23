@@ -138,6 +138,7 @@
       - x2goserver
       - isync
       - neomutt
+      - syncthing
 
 - name: Autoremove and Purge APT Packages
   apt:
