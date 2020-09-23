@@ -24,8 +24,8 @@
 - name: syncthing preferences.d entry
   copy:
     dest: /etc/apt/preferences.d/syncthing
-    content:
-      Package: "*"
+    content: |
+      Package: '*'
       Pin: origin apt.syncthing.net
       Pin-Priority: 990
 
