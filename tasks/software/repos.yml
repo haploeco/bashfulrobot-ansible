@@ -14,14 +14,16 @@
   apt_repository:
     repo: deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner
     state: present
--name: syncthing preferences.d entry
- copy:
-   dest: /etc/apt/preferences.d/syncthing
-   content:
-     Package: *
-     Pin: origin apt.syncthing.net
-     Pin-Priority: 990
--name: Add syncthing Repo
- apt_repository:
-   repo: deb https://apt.syncthing.net/ syncthing stable
-   state: present
+
+- name: syncthing preferences.d entry
+  copy:
+    dest: /etc/apt/preferences.d/syncthing
+    content:
+      Package: *
+      Pin: origin apt.syncthing.net
+      Pin-Priority: 990
+
+- name: Add syncthing Repo
+  apt_repository:
+    repo: deb https://apt.syncthing.net/ syncthing stable
+    state: present
