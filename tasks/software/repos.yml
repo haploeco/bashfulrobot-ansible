@@ -25,7 +25,7 @@
   copy:
     dest: /etc/apt/preferences.d/syncthing
     content:
-      Package: *
+      Package: "*"
       Pin: origin apt.syncthing.net
       Pin-Priority: 990
 
